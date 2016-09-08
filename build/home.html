@@ -21,7 +21,21 @@
 
 	<!-- App JS -->
 	<script src="js/functions.js"></script>
+
+     <!-- Mailchimp -->
+     <script type="text/javascript">
+          var $mcGoal = {'settings':{'uuid':'a3e08ccb6588d9d43141f24a3','dc':'us1'}};
+          (function() {
+           var sp = document.createElement('script'); 
+           sp.type = 'text/javascript'; 
+           sp.async = true; 
+           sp.defer = true;
+           sp.src = ('https:' == document.location.protocol ? 'https://s3.amazonaws.com/downloads.mailchimp.com' : 'http://downloads.mailchimp.com') + '/js/goal.min.js';
+           var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sp, s);
+           })(); 
+     </script>
 </head>
+
 <body>
 <div class="wrapper">
 	<header class="header">
@@ -461,14 +475,24 @@
 					<h6 class="section-title">Subscribe for the Dao.Casino Newsletter</h6><!-- /.section-title -->
 				
 					<div class="subscribe subscribe-secondary">
-						<form action="?" method="post">
-							<label for="mail" class="hidden">Email</label>
+                              <form action="//casino.us1.list-manage.com/subscribe/post?u=a3e08ccb6588d9d43141f24a3&amp;id=b44ac556 ad" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+
+							<label for="email" class="hidden">Email</label>
+							<input type="email" id="email" name="email" value="" placeholder="Email Address" class="subscribe-field">
 							
-							<input type="email" id="mail" name="mail" value="" placeholder="Email Address" class="subscribe-field">
-							
+                                   <div id="mce-responses">
+                                        <div class="response" id="mce-error-response" style="display:none"></div>
+                                        <div class="response" id="mce-success-response" style="display:none"></div>
+                                   </div> 
+
+                                   <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                                        <input type="text" name="b_a3e08ccb6588d9d43141f24a3_b44ac556ad" tabindex="-1" value=" ">
+                                   </div>
+
 							<input type="submit" value="Subscribe now" class="subscribe-btn subscribe-btn-orange">
 						</form>
 					</div><!-- /.subscribe -->
+
 				</div><!-- /.shell -->
 			</section><!-- /.section-subscribe -->
 
