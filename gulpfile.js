@@ -533,7 +533,7 @@ var modules = {
     images      : function() {
         var gm                  = require('gulp-gm');
         var imagemin            = require('gulp-imagemin');
-        var imageminJpegoptim   = require('imagemin-jpegoptim');
+        //var imageminJpegoptim   = require('imagemin-jpegoptim');
         var postcssSprites      = require('postcss-sprites');
 
         var taskSprites = function() {
@@ -556,6 +556,7 @@ var modules = {
                 .pipe(gulp.dest( config.paths.dist.css ));
         };
 
+        /*
         var taskOptimiseImages = function() {
             return gulp.src([config.paths.build.images + '/**'])
                 .pipe(imagemin({
@@ -570,6 +571,7 @@ var modules = {
                 }))
                 .pipe(gulp.dest(config.paths.build.images));
         };
+        */
 
         var taskResizeSprite3x = function() {
             return gulp.src(config.paths.source.sprite + '/*@3x.png')
@@ -629,7 +631,7 @@ var modules = {
         var register = function() {
             gulp.task('images:sprites', taskSprites);
 
-            gulp.task('images:optimize', taskOptimiseImages);
+            //gulp.task('images:optimize', taskOptimiseImages);
 
             gulp.task('images:resize-sprite-3x', taskResizeSprite3x);
 
@@ -1098,7 +1100,7 @@ gulp.task('serve', ['livereload', 'images:resize-sprite-source', 'css:import-mod
 gulp.task('build', ['build:clean'], function() {
     config.isBuilding = true;
 
-    runSequence('images:resize-sprite-source', 'css:lazy-rules', 'css:import-modules', 'css:compile', 'images:sprites', 'build:copy', 'build:include', 'images:optimize');
+    runSequence('images:resize-sprite-source', 'css:lazy-rules', 'css:import-modules', 'css:compile', 'images:sprites', 'build:copy', 'build:include');
 });
 
 gulp.task('lint', function() {
