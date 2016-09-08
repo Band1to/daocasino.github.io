@@ -19,4 +19,17 @@
 
 	<!-- App JS -->
 	<script src="js/functions.js"></script>
+
+     <!-- Mailchimp -->
+     <script type="text/javascript">
+          var $mcGoal = {'settings':{'uuid':'a3e08ccb6588d9d43141f24a3','dc':'us1'}};
+          (function() {
+           var sp = document.createElement('script'); 
+           sp.type = 'text/javascript'; 
+           sp.async = true; 
+           sp.defer = true;
+           sp.src = ('https:' == document.location.protocol ? 'https://s3.amazonaws.com/downloads.mailchimp.com' : 'http://downloads.mailchimp.com') + '/js/goal.min.js';
+           var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sp, s);
+           })(); 
+     </script>
 </head>
