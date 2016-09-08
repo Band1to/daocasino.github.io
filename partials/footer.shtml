@@ -1,0 +1,56 @@
+	<footer class="footer">
+		<div class="shell">
+			<div class="cols">
+				<div class="col col-1of2">
+					<nav class="footer-nav">
+						<ul>
+							<li>
+								<a href="#">Press kit</a>
+							</li>
+							
+							<li>
+								<a href="#">White Paper</a>
+							</li>
+							
+							<li>
+								<a href="#">Contact Us</a>
+							</li>
+						</ul>
+					</nav><!-- /.footer-nav -->
+				</div><!-- /.col col-1of2 -->
+				
+				<div class="col col-1of2">
+					<div class="socials">
+						<ul>
+							<li>
+								<a href="#">
+									<i class="ico-facebook"></i>
+
+									Facebook
+								</a>
+							</li>
+							
+							<li>
+								<a href="#">
+									<i class="ico-steem"></i>
+
+									Steem
+								</a>
+							</li>
+							
+							<li>
+								<a href="#">
+									<i class="ico-twitter"></i>
+
+									Twitter
+								</a>
+							</li>
+						</ul>
+					</div><!-- /.socials -->
+				</div><!-- /.col col-1of2 -->
+			</div><!-- /.cols -->
+		</div><!-- /.shell -->
+	</footer><!-- /.footer -->
+</div><!-- /.wrapper -->
+</body>
+</html>

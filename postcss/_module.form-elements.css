@@ -1,0 +1,35 @@
+/* ------------------------------------------------------------ *\
+	Form Elements
+\* ------------------------------------------------------------ */
+
+input::placeholder { color: inherit; opacity: 1; }
+textarea::placeholder { color: inherit; opacity: 1; }
+
+input:-webkit-autofill { -webkit-text-fill-color: inherit; -webkit-box-shadow: 0 0 0 1000px #fff inset; }
+
+.field {}
+.textarea {}
+.select {}
+.radio {}
+.checkbox {}
+
+/*Subscribe*/
+
+.subscribe { max-width:620px; margin: 0 auto; position: relative; }
+
+.subscribe .subscribe-field { border: 0; border-radius: 2px; background: #fff; color: #000; display: inline-block; width: 100%; padding: 19px 200px 15px 17px; }
+
+.subscribe .subscribe-btn { display: inline-block; border: 0; border-radius: 0; -webkit-appearance: none; -moz-appearance: none; appearance: none; font-weight: 700; text-transform: uppercase; background: #232351; color: #fff; border-radius: 2px; padding: 16px 27px 15px 28px; position: absolute; top: 0; right: -1px; transition:all .3s; height: 100%; }
+
+.subscribe .subscribe-btn:hover { background: #d08c49; }
+
+.subscribe-secondary .subscribe-btn { background: #d08c49; }
+.subscribe-secondary .subscribe-btn:hover { background: #232351; }
+
+/* Mobile */
+
+$breakpoint-mobile {
+	.subscribe .subscribe-btn { position: static; margin-top: 20px; }
+	
+	.subscribe .subscribe-field { padding-right: 30px; }
+}

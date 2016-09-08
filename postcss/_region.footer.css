@@ -1,0 +1,41 @@
+/* ------------------------------------------------------------ *\
+	Footer
+\* ------------------------------------------------------------ */
+
+.footer { padding: 166px 0; }
+
+.footer .footer-nav { text-transform: uppercase; font-weight: 700; }
+
+.footer .socials { float: right; }
+
+.footer-nav ul:after { @extend clearfix; }
+
+.footer-nav li { float: left; }
+.footer-nav li + li { margin-left: 50px; }
+
+.footer-nav a { text-decoration: none; transition: color .3s;}
+.footer-nav a:hover { color: #d08c49; }
+
+$breakpoint-small-desktop{
+	.footer { padding: 80px 0; }
+}
+
+/* Tablet Portrait */
+
+$breakpoint-tablet-portrait {
+	.footer-nav { text-align: center; margin-bottom: 30px; }
+
+	.footer-nav li { float: none; display: inline-block; }
+
+	.footer .socials { float: none; }
+}
+
+
+$breakpoint-mobile-portrait {
+
+	.footer { padding: 30px 0; }
+
+	.footer-nav li { display: block; width: 100%; margin: 0 0 10px; }
+
+	.footer-nav li + li { margin-left: 0; }
+}

@@ -1,0 +1,34 @@
+/* ------------------------------------------------------------ *\
+	Update
+\* ------------------------------------------------------------ */
+
+.updates { list-style: none; }
+
+.update { padding: 32px 0; border-bottom: 1px solid #ececec;  }
+.update:after { @extend clearfix; }
+
+.update .update-image { float: left; width: 25.3%; }
+
+.update .update-content { float: left; width: 74.7%; padding-left: 23px; margin-top: -5px; }
+.update p { font:15px $font-roboto;  }
+.update p span { font-family: $font-proximanova; color: #5c5c5c; font-weight: 600; }
+.update p a { color: #003aa2; }
+
+.update .update-title { text-transform: none; margin-bottom: 18px; }
+
+.update .update-title a { text-decoration: none; }
+
+.update .update-title a:hover { color: #003aa2; }
+
+.update .update-meta { font-size: 14px; color: #8d8d8d; font-weight: 300; margin-left: 7px; }
+
+/* Tablet Portrait */
+
+$breakpoint-tablet-portrait {
+	.update .update-image img {width: 100%; height: auto; }
+}
+
+$breakpoint-mobile-portrait{
+	.update .update-image { float: none; width: 100%; margin-bottom: 15px; }
+	.update .update-content { padding-left: 0; float: none; width: 100%; }
+}

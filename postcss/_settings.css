@@ -1,0 +1,27 @@
+$font-size-base:                    17px;
+$line-height-base:                  1.22;
+
+
+$shell-max-width:                   1180px;
+$shell-gutter:                      10px;
+
+
+$font-family-sans-serif:            'Arial', 'Helvetica', sans-serif;
+$font-family-serif:                 'Times', serif;
+$font-proximanova:                  'ProximaNova', sans-serif;
+$font-roboto:                 		'Roboto', sans-serif;
+
+
+$responsive-xxs:                    479px;
+$responsive-xs:                     767px;
+$responsive-sm:                     1023px;
+$responsive-md:                     1200px;
+$responsive-lg:                     1850px;
+
+
+$breakpoint-mobile-portrait:        @media (max-width: $responsive-xxs);
+$breakpoint-mobile:                 @media (max-width: $responsive-xs);
+$breakpoint-tablet-portrait:        @media (max-width: $responsive-sm);
+$breakpoint-small-desktop:          @media (max-width: $responsive-md);
+$breakpoint-large-desktop:          @media (max-width: $responsive-lg);
+$retina:                            @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi);

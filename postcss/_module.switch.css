@@ -1,0 +1,37 @@
+/* ------------------------------------------------------------ *\
+	Switch
+\* ------------------------------------------------------------ */
+
+.switch input {display:none;}
+
+.switch span { margin-left: 75px; font-weight: 700; color: #d08c49; text-transform: uppercase; transition:color .4s;}
+
+.switch input+ .slider + span { color: #3c5c64; }
+.switch .switch-label { display: inline-block; cursor: pointer; position: relative;  }
+
+.switch .slider { position: absolute; width: 40px; height: 15px; cursor: pointer; top:50%; left: 45%; transform:translateY(-50%); background: #4d656c; border: 6px solid #506970; border-radius: 8px; 
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.switch .slider:before { content: ""; display: inline-block; height: 22px; width: 22px; border-radius: 50%; background-color: #eee5db; -webkit-transition: .4s; transition: .4s; border: 9px solid #d49c66; border-top-width: 6px; border-bottom-width: 6px; position: absolute; top: -10px; left: -8px; }
+
+.switch input:checked + .slider:before { transform:translateX(30px);}
+.switch input:checked + .slider + span { color: #d08c49; }
+
+.switch .not-active { color: #3c5c64; }
+
+$breakpoint-mobile {
+
+	.switch span { margin-left: 70px; }
+
+	.switch span:first-child { margin-left: 0; }
+
+	.switch .slider { left: 28%; }
+}
+
+$breakpoint-mobile-portrait{
+
+	.switch { display: block; width: 100%; text-align: center; }
+
+}

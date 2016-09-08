@@ -1,0 +1,57 @@
+/* ------------------------------------------------------------ *\
+	Feature
+\* ------------------------------------------------------------ */
+
+.features { list-style: none; background: url(images/temp/features-bg.png) no-repeat bottom right; position: relative; min-height:236px; display: inline-block; min-width:303px; text-align: left;  }
+
+.feature .feature-content p { font-weight: 700; text-transform: uppercase; }
+
+.feature-primary { position: absolute; top: -139px;  ; left: -155px; }
+.feature-primary .feature-image { margin-bottom: 18px; position: relative; }
+
+.feature-primary .feature-image:after { content: ''; display: inline-block; background: url(images/temp/arrow1.png) no-repeat 0 0; width: 146px; height: 143px; position: absolute; top: 75%; ; left: 62%; }
+
+/*feature-secondary*/
+
+.feature-secondary { position: absolute; top: -163px; right: 24px; color: #d08c49; width: 98%; }
+
+.feature-secondary .feature-image { float: right; margin-left: 16px; position: relative; }
+.feature-secondary .feature-image:before { content: ''; display: inline-block; background: url(images/temp/draw-1.png) no-repeat 0 0; width: 141px; height: 130px; position: absolute; bottom: -30px; right: -27px; }
+
+.feature-secondary .feature-image:after { content: ''; display: inline-block; background: url(images/temp/arrow2.png) no-repeat 0 0; width: 146px; height: 143px; position: absolute; top: 95%; ; right: 0%; }
+
+.feature-secondary .feature-content { float: left; text-align: right; }
+
+/*feature-tertiary*/
+
+.feature-tertiary { position: absolute; bottom: -134px; right: 16px; }
+
+.feature-tertiary .feature-image { float: right; margin-left: 18px; position: relative; }
+.feature-tertiary .feature-image:before { content: ''; display: inline-block; background: url(images/temp/draw-2.png) no-repeat 0 0; width: 69px; height: 76px; position: absolute; top: -18px; right: -23px; }
+
+.feature-tertiary .feature-image:after { content: ''; display: inline-block; background: url(images/temp/arrow3.png) no-repeat 0 0; width: 33px; height: 83px; position: absolute; top: -105px; right: 6px; }
+
+.feature-tertiary .feature-content { float: left; text-align: right; padding-top: 20px; }
+
+/*feature-quaternary*/
+
+.feature-quaternary { color: #d08c49; position: absolute; bottom: -132px; left: -156px; }
+
+.feature-quaternary .feature-image { margin-bottom: 8px; position: relative; }
+
+.feature-quaternary .feature-image:after { content: ''; display: inline-block; background: url(images/temp/arrow4.png) no-repeat 0 0; width: 93px; height: 37px; position: absolute; top: -47px; right: -50px; }
+
+/* Mobile */
+
+$breakpoint-mobile {
+	.features { background: none; min-width:0; width: 100%; }
+	.features:before { content: none;  }
+	.features .feature { position: static; }
+
+	.feature .feature-image { display: inline-block; vertical-align: middle; width: 35%; text-align: left;  float: none; margin: 0 15px 20px 0; }
+	.feature .feature-image:before { content: none;  }
+	
+	.feature .feature-image:after { content: none;  }
+
+	.feature .feature-content { display: inline-block; float: none; text-align: left; }
+}

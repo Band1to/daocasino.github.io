@@ -1,0 +1,27 @@
+/* ------------------------------------------------------------ *\
+	Callout
+\* ------------------------------------------------------------ */
+
+.callout { color: #fff; text-align: center; }
+
+.callout .callout-title { font-size: 23px; margin-bottom: 30px; }
+
+.callout .callout-actions a { margin: 0 10px; }
+/*callout-primary */
+
+.callout-primary {background: #d08c49; padding: 35px 0; }
+
+/*callout-secodnary*/
+
+.callout-secondary { background: #2d2d2d; padding: 51px 0; }
+
+/* Mobile */
+
+$breakpoint-mobile {
+	.callout .callout-actions a { margin: 0 10px 20px; }
+	.callout .callout-actions a:last-child { margin-bottom: 0; }
+}
+
+$breakpoint-mobile-portrait{
+	.callout .callout-actions a { width: 100%; display: block; margin: 0 0 20px; }
+}

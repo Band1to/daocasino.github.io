@@ -1,0 +1,76 @@
+/* ------------------------------------------------------------ *\
+	Button
+\* ------------------------------------------------------------ */
+
+.btn { display: inline-block; vertical-align: middle; text-align: center; cursor: pointer; border: 2px solid rgba(208, 140, 73, 0.43); -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.66); 
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.66); 
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	 		appearance: none;
+}
+
+/*  Button Block  */
+.btn-block { display: block; padding-left: 0; padding-right: 0; }
+
+.btn-big { font-size: 27px; font-weight: 700; text-transform: uppercase; text-align: center; text-decoration: none; color: #d08c49; padding:35px 105px ; transition: all .3s;}
+.btn-big:hover { background: #d08c49; }
+
+/*Btn-medium*/
+
+.btn-medium { font-size: 21px; }
+
+/*Btn-purple*/
+
+.btn-purple { background: #272647; }
+.btn-purple:hover { color: #272647; }
+
+/* Btn-grey */
+.btn-grey { background: #444646; }
+.btn-grey:hover { color: #444646; }
+
+/*Btn-transparent */
+
+.btn-transparent { display: inline-block; border: 1px solid #976431; font-weight: 700; text-transform: uppercase; text-decoration: none; padding: 25px 80px; transition:border .3s;}
+.btn-transparent:hover { border:1px solid #000; }
+
+.btn-transparent i { position: absolute; top: 50%; transform:translateY(-50%); left: 48px; }
+
+/*Btn-transparent-secondary */
+
+.btn-transparent-secondary { padding: 25px 64px 25px 90px; position: relative; }
+
+
+/* Btn-generate */
+
+.btn-generate { display: inline-block; font-size: 21px; text-transform: uppercase; font-weight: 700; text-decoration: none; color: #232351; border: 2px solid #232351; border-radius: 4px; padding: 23px 42px 22px 45px; transition:all .3s;}
+
+.btn-generate:hover { color: #fff; background: #232351; }
+
+/*Btn-primary */
+
+.btn-primary { font-size: 21px; text-transform: uppercase; text-decoration: none; background: #c68649; box-shadow:none; width:560px; padding: 27px 0 26px; color: #fff; border: 0; transition:background .3s;}
+
+.btn-primary:hover { background: #232351; border: 0; }
+
+/* Tablet Portrait */
+
+$breakpoint-tablet-portrait {
+	.btn-big { font-size: 21px; padding: 25px 60px; }
+}
+
+/* Mobile */
+
+$breakpoint-mobile {
+	.btn-primary { width: auto; padding: 27px 80px 26px; }
+
+}
+
+$breakpoint-mobile-portrait{
+	.btn-primary { display: block; width: 100%; padding: 27px 0 26px; }
+
+	.btn-big { padding: 25px 40px; }
+
+	.btn-transparent { padding: 25px 40px; }
+
+	.btn-medium { font-size: 18px; }
+}
