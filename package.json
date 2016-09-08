@@ -3,9 +3,12 @@
   "version": "2.1.1",
   "description": "Task runner",
   "author": null,
-  "dependencies": {},
   "scripts":{
      "start":"node index.js"
+  },
+  "dependencies": {
+    "ejs": "2.4.1",
+    "express": "4.13.3"
   },
   "devDependencies": {
     "autoprefixer": "~6.3.1",
