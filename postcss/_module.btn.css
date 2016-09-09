@@ -35,11 +35,11 @@
 
 .btn-transparent i { position: absolute; top: 50%; transform:translateY(-50%); left: 48px; }
 
-.btn-transparent-orange { background: #d08c49; line-height: 1.22; }
+.btn-transparent-orange { background: #d08c49; margin: 5px 0px; line-height: 1.22; }
 
-.btn-transparent-blue{ background: #232351; margin: 0 10px; line-height: 1.22; }
+.btn-transparent-blue{ background: #232351; margin: 5px 10px; line-height: 1.22; }
 
-.btn-transparent-black{ background: #2d2d2d; margin: 0 10px; line-height: 1.22; }
+.btn-transparent-black{ background: #2d2d2d; margin: 5px 10px; line-height: 1.22; }
 
 /*Btn-transparent-secondary */
 
