@@ -487,6 +487,9 @@ blockquote:last-child { margin-bottom: 0; }
 .btn-transparent { display: inline-block; border: 1px solid #976431; font-weight: 700; text-transform: uppercase; text-decoration: none; padding: 25px 80px; transition:border .3s;}
 .btn-transparent:hover { border:1px solid #000; }
 .btn-transparent i { position: absolute; top: 50%; -webkit-transform:translateY(-50%); -ms-transform:translateY(-50%); transform:translateY(-50%); left: 48px; }
+.btn-transparent-orange { background: #d08c49; line-height: 1.22; }
+.btn-transparent-blue{ background: #232351; margin: 0 10px; line-height: 1.22; }
+.btn-transparent-black{ background: #2d2d2d; margin: 0 10px; line-height: 1.22; }
 /*Btn-transparent-secondary */
 .btn-transparent-secondary { padding: 25px 64px 25px 90px; position: relative; }
 /* Btn-generate */
