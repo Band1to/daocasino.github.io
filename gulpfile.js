@@ -748,7 +748,7 @@ var modules = {
             task = function() {
                 browserSync.init({
                     proxy : config.user.path || ((config.user.hostname || 'localhost') + utils.getRelativePath(process.env.INIT_CWD, 'server')),
-                    port  : 3000,
+                    port  : 3001,
                     open  : ('open' in config.user ? config.user.open : 'external'),
                     host  : config.user.hostname || 'localhost',
                     notify: {
