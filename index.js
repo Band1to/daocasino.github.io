@@ -37,7 +37,7 @@ app.get('/whitepaper', function(req, res) {
                return next(err);
 
           var subjText = 'Dao.Casino Whitepaper';
-          var text     = 'Dao.Casino Whitepaper';
+          var text     = '';
           var textHtml = data;
 
           // 2 - send email with attachement

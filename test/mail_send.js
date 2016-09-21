@@ -16,7 +16,7 @@ describe('Mail sender',function(){
                var sendTo = 'tony@chain.cloud';
 
                var subjText = 'Dao.Casino Whitepaper';
-               var text     = 'Dao.Casino Whitepaper';
+               var text     = '';
                var textHtml = data;
 
                // 2 - send email with attachement
