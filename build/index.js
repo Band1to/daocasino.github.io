@@ -21,7 +21,7 @@ app.listen(app.get('port'), function() {
 });
 
 app.get('/whitepaper', function(req, res) {
-     var e = request.query.email;
+     var e = req.query.email;
      if(typeof(e)==='undefined'){
           return next();
      }
