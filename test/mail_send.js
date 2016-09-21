@@ -4,7 +4,6 @@ var fs = require('fs');
 var assert = require('assert');
 
 describe('Mail sender',function(){
-
      it('should send e-mail',function(done){
           var someLink = 'http://cool-whitepaper.html';
           ms.makeReport(someLink,function(err,data){
@@ -30,6 +29,5 @@ describe('Mail sender',function(){
                });
           });
      })
-
 })
 
