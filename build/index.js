@@ -45,7 +45,7 @@ app.get('/whitepaper', function(req, res, next) {
           ms.sendEmail(e,subjText,text,textHtml,function(err,response){
                console.log('-->Mail with attachment sent...');
 
-               res.redirect('/home.html');
+               res.redirect('/download_complete.html');
           });
      });
 });
