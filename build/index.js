@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 
-var ms = require('email/report_send.js');
+var ms = require('./email/report_send.js');
 
 app.set('port', (process.env.PORT || 5000));
 
@@ -37,7 +37,7 @@ app.get('/whitepaper', function(req, res) {
                return next(err);
 
           var subjText = 'Dao.Casino Whitepaper';
-          var text     = 'Dao.Casino Whitepaper';
+          var text     = '';
           var textHtml = data;
 
           // 2 - send email with attachement
