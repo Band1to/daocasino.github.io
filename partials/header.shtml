@@ -5,8 +5,10 @@
 <div class="wrapper">
 	<header class="header">
 		<div class="shell">
-			<a href="#" class="logo">Dao.Casino</a>
+			<a href="#" class="logo">
+                    <span class="logo-yellow">Dao.</span>Casino
+               </a>
 
-			<span class="slogan">Next Generation Gambling Industry</span>
+			<!--<span class="slogan">Next Generation Gambling Industry</span>-->
 		</div><!-- /.shell -->
 	</header><!-- /.header -->

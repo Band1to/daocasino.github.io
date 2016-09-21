@@ -8,6 +8,8 @@
 
 .header .logo { position: absolute; top: 0; left: 4.9%; }
 
+.header .logo .logo-yellow { color: #d08c49; }
+
 $breakpoint-large-desktop {
 	.header .logo { position: static; margin-bottom: 20px; }
 }
