@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 
-var ms = require('email/report_send.js');
+var ms = require('./email/report_send.js');
 
 app.set('port', (process.env.PORT || 5000));
 
