@@ -5,9 +5,6 @@
 <div class="wrapper">
 	<header class="header">
 		<div class="shell">
-			<a href="#" class="logo">
-               </a>
-
 			<!--<span class="slogan">Next Generation Gambling Industry</span>-->
 		</div><!-- /.shell -->
 	</header><!-- /.header -->
