@@ -20,7 +20,7 @@ app.listen(app.get('port'), function() {
      console.log('Node app is running on port', app.get('port'));
 });
 
-app.get('/whitepaper', function(req, res) {
+app.get('/whitepaper', function(req, res, next) {
      var e = req.query.email;
      if(typeof(e)==='undefined'){
           return next();
@@ -45,7 +45,7 @@ app.get('/whitepaper', function(req, res) {
           ms.sendEmail(e,subjText,text,textHtml,function(err,response){
                console.log('-->Mail with attachment sent...');
 
-               res.send('OK'); 
+               res.redirect('/home.html');
           });
      });
 });
