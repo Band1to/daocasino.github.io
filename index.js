@@ -10,12 +10,18 @@ app.use(express.static(__dirname + '/build'));
 //app.set('view engine', 'ejs');
 
 app.get('/', function(request, response) {
-  //response.render('pages/index');
-  response.redirect('/home.html');
+     //response.render('pages/index');
+     response.redirect('/home.html');
 });
 
 app.listen(app.get('port'), function() {
-  console.log('Node app is running on port', app.get('port'));
+     console.log('Node app is running on port', app.get('port'));
+});
+
+app.get('/whitepaper', function(req, res) {
+     // TODO: 
+
+     res.send('OK'); 
 });
 
 
