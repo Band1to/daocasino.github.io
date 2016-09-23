@@ -5,7 +5,7 @@
 					<nav class="footer-nav">
 						<ul>
 							<li>
-								<a href="https://github.com/DaoCasino">Github</a>
+								<a class="developers-link" href="#dev-start">Developers</a>
 							</li>
 							
 							<li>

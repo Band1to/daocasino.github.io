@@ -17,6 +17,20 @@
 		    }
 		});
 
+		$('.developers-link').on("click", function() {
+		    if($(".switch input").is(':checked')) {
+		        $('.switch input').prev().addClass('not-active');
+
+		        $(this).parents('.intro-outer').addClass('switched');
+
+		    } else {
+		        $('.switch input').prev().removeClass('not-active');
+
+		        $(this).parents('.intro-outer').removeClass('switched');
+
+		    }
+		});
+
 		$win.on('scroll', function() {
 			if (($win.scrollTop() >= $('.section-program').offset().top - 500) && ($('.section-program').hasClass('count'))) {
 				$('.section-program').removeClass('count');
