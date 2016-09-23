@@ -8,7 +8,7 @@
 
 .intro { padding-top: 223px; }
 
-.intro .intro-title { color: #fff; margin-bottom: 40px; }
+.intro .intro-title { color: #d08c49; margin-bottom: 40px; font-size: 57px; }
 
 .intro .intro-inner { padding-bottom: 150px; }
 .intro .intro-inner:after { @extend clearfix; }
