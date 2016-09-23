@@ -690,7 +690,7 @@ var modules = {
         };
 
         var taskBuildCopy = function() {
-            return gulp.src(['**', '!~QA/**', '!partials/**', '!package.json', '!settings.json', '!peon.json', '!drone.json', '!README.md', '!gulpfile.js', '!' + config.paths.source.sprite + '/*', '!' + config.paths.source.css + '/*', '!**/*.map', '!build', '!*.html'])
+            return gulp.src(['**', '!~QA/**', '!partials/**', '!package.json', '!settings.json', '!peon.json', '!drone.json', '!README.md', '!gulpfile.js', '!' + config.paths.source.sprite + '/*', '!' + config.paths.source.css + '/*', '!**/*.map', '!build', '!*.html', '*.pdf'])
                 .pipe(copy('build/'));
         };
 
