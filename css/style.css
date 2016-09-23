@@ -612,7 +612,7 @@ input:-webkit-autofill { -webkit-text-fill-color: inherit; -webkit-box-shadow: 0
 .intro-outer { background: #272647 url(images/temp/intro-bg.png) no-repeat center center; background-size:cover; transition:background .3s;}
 .intro-outer .switch { position: absolute; top: 75px; right: 5.25%; }
 .intro { padding-top: 223px; }
-.intro .intro-title { color: #d08c49; margin-bottom: 40px; font-size: 57px; }
+.intro .intro-title { color: #d08c49; margin-bottom: 40px; font-size: 50px; }
 .intro .intro-inner { padding-bottom: 150px; }
 .intro .intro-inner:after { }
 .intro .intro-image { float: left; width: 39.4%; }
