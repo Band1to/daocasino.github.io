@@ -22,7 +22,7 @@
 
 /*Section-play */
 
-.section-play { padding: 140px 0 190px; }
+.section-play { padding: 140px 0 170px; }
 
 .section-play .section-title { color: #272647; margin-bottom: 23px;  }
 
@@ -34,7 +34,7 @@
 
 .section-play .section-content p strong { font-size: 21px; }
 
-.section-play .section-aside { padding: 178px 37px 0 0; text-align: right; }
+.section-play .section-aside { /*padding: 178px 37px 0 0;*/ text-align: right; }
 
 /*Section-details*/
 
@@ -161,7 +161,7 @@ $breakpoint-small-desktop{
 }
 
 $breakpoint-tablet-portrait{
-	.section-play { padding: 50px 0 140px; }
+	.section-play { padding: 50px 0 120px; }
 
 	.section-play .section-content { padding-right: 0; margin-bottom: 50px; }
 

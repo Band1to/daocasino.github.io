@@ -781,13 +781,13 @@ input:-webkit-autofill { -webkit-text-fill-color: inherit; -webkit-box-shadow: 0
 /*Section-blue*/
 .section-blue { background: #232351; color: #fff; }
 /*Section-play */
-.section-play { padding: 140px 0 190px; }
+.section-play { padding: 140px 0 170px; }
 .section-play .section-title { color: #272647; margin-bottom: 23px;  }
 .section-play .section-content { padding-right: 70px; }
 .section-play .section-content h4 { color: #d08c49; margin-bottom: 28px; }
 .section-play .section-content a {color: #272647; }
 .section-play .section-content p strong { font-size: 21px; }
-.section-play .section-aside { padding: 178px 37px 0 0; text-align: right; }
+.section-play .section-aside { /*padding: 178px 37px 0 0;*/ text-align: right; }
 /*Section-details*/
 .section-details .section-group { padding: 160px 0 165px; border-bottom: 1px solid #c9c9c9; }
 .section-details .section-group:last-child { border-bottom: 0; margin-bottom: 0; }
@@ -866,7 +866,7 @@ input:-webkit-autofill { -webkit-text-fill-color: inherit; -webkit-box-shadow: 0
 	.section-learn .section-aside { float: none; width: 100%; text-align: center; margin-bottom: 50px; }
 }
 @media (max-width: 1023px){
-	.section-play { padding: 50px 0 140px; }
+	.section-play { padding: 50px 0 120px; }
 
 	.section-play .section-content { padding-right: 0; margin-bottom: 50px; }
 
