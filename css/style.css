@@ -781,7 +781,7 @@ input:-webkit-autofill { -webkit-text-fill-color: inherit; -webkit-box-shadow: 0
 /*Section-blue*/
 .section-blue { background: #232351; color: #fff; }
 /*Section-play */
-.section-play { padding: 140px 0 346px; }
+.section-play { padding: 140px 0 190px; }
 .section-play .section-title { color: #272647; margin-bottom: 23px;  }
 .section-play .section-content { padding-right: 70px; }
 .section-play .section-content h4 { color: #d08c49; margin-bottom: 28px; }
@@ -866,7 +866,7 @@ input:-webkit-autofill { -webkit-text-fill-color: inherit; -webkit-box-shadow: 0
 	.section-learn .section-aside { float: none; width: 100%; text-align: center; margin-bottom: 50px; }
 }
 @media (max-width: 1023px){
-	.section-play { padding: 50px 0 170px; }
+	.section-play { padding: 50px 0 140px; }
 
 	.section-play .section-content { padding-right: 0; margin-bottom: 50px; }
 

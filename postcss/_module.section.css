@@ -22,7 +22,7 @@
 
 /*Section-play */
 
-.section-play { padding: 140px 0 346px; }
+.section-play { padding: 140px 0 190px; }
 
 .section-play .section-title { color: #272647; margin-bottom: 23px;  }
 
@@ -161,7 +161,7 @@ $breakpoint-small-desktop{
 }
 
 $breakpoint-tablet-portrait{
-	.section-play { padding: 50px 0 170px; }
+	.section-play { padding: 50px 0 140px; }
 
 	.section-play .section-content { padding-right: 0; margin-bottom: 50px; }
 
