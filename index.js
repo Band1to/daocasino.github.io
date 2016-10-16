@@ -1,4 +1,5 @@
 var express = require('express');
+var request = require('request');
 var app = express();
 
 var ms = require('./email/report_send.js');
@@ -47,6 +48,40 @@ app.get('/whitepaper', function(req, res, next) {
 
                res.redirect('/download_complete.html');
           });
+     });
+});
+
+
+app.post('/invite', function(req, res) {
+     var slackUrl = process.env.SLACK_URL || 'daocasino';
+     var slacktoken = process.env.SLACK_TOKEN;
+
+     var email = req.query.email;
+
+     request.post({
+          url: 'https://'+ slackUrl + '/api/users.admin.invite',
+          form: {
+               email: email,
+               token: slacktoken,
+               set_active: true
+          }
+     }, function(err, httpResponse, body) {
+          // body looks like:
+          //   {"ok":true}
+          //       or
+          //   {"ok":false,"error":"already_invited"}
+
+          if (err) { return res.send('Error:' + err); }
+
+          body = JSON.parse(body);
+          if (body.ok) {
+               console.log('Invited to Slack...');     
+               res.send('OK');
+          } else {
+               var error = body.error;
+               console.log('Error...');     
+               res.send('Bad');
+          }
      });
 });
 
