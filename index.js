@@ -57,6 +57,9 @@ app.get('/invite', function(req, res) {
      var slacktoken = process.env.SLACK_TOKEN;
 
      var email = req.query.email;
+     if(typeof(email)==='undefined'){
+          return next();
+     }
 
      console.log('Slack invite request from: ' + email);
 
@@ -81,11 +84,11 @@ app.get('/invite', function(req, res) {
           body = JSON.parse(body);
           if (body.ok) {
                console.log('Invited to Slack...');     
-               res.send('OK');
+               res.redirect('/invite_complete.html');
           } else {
                var error = body.error;
                console.log('Error...');     
-               res.send('Bad');
+               res.redirect('/invite_bad.html');
           }
      });
 });
