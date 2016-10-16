@@ -52,11 +52,13 @@ app.get('/whitepaper', function(req, res, next) {
 });
 
 
-app.post('/invite', function(req, res) {
-     var slackUrl = process.env.SLACK_URL || 'daocasino';
+app.get('/invite', function(req, res) {
+     var slackUrl = process.env.SLACK_URL || 'daocasino.slack.com';
      var slacktoken = process.env.SLACK_TOKEN;
 
      var email = req.query.email;
+
+     console.log('Slack invite request from: ' + email);
 
      request.post({
           url: 'https://'+ slackUrl + '/api/users.admin.invite',
@@ -72,6 +74,9 @@ app.post('/invite', function(req, res) {
           //   {"ok":false,"error":"already_invited"}
 
           if (err) { return res.send('Error:' + err); }
+
+	  console.log('Response: ');
+	  console.log(body);
 
           body = JSON.parse(body);
           if (body.ok) {
