@@ -84,7 +84,7 @@
  */
 
 .ico-betting { background-image: url(../css/images/sprite.png); background-position: -112px -75px; width: 38px; height: 38px; display: inline-block; vertical-align: middle; font-size: 0; }
-.ico-card { background-image: url(../css/images/sprite.png); background-position: -94px -226px; width: 30px; height: 38px; display: inline-block; vertical-align: middle; font-size: 0; }
+.ico-card { background-image: url(../css/images/sprite.png); background-position: -128px -226px; width: 30px; height: 38px; display: inline-block; vertical-align: middle; font-size: 0; }
 .ico-cards { background-image: url(../css/images/sprite.png); background-position: -162px -226px; width: 30px; height: 38px; display: inline-block; vertical-align: middle; font-size: 0; }
 .ico-chart-2 { background-image: url(../css/images/sprite.png); background-position: -189px -125px; width: 68px; height: 51px; display: inline-block; vertical-align: middle; font-size: 0; }
 .ico-chart { background-image: url(../css/images/sprite.png); background-position: 0 -226px; width: 54px; height: 61px; display: inline-block; vertical-align: middle; font-size: 0; }
@@ -92,23 +92,24 @@
 .ico-check { background-image: url(../css/images/sprite.png); background-position: -248px -31px; width: 60px; height: 32px; display: inline-block; vertical-align: middle; font-size: 0; }
 .ico-dice { background-image: url(../css/images/sprite.png); background-position: -261px -125px; width: 33px; height: 37px; display: inline-block; vertical-align: middle; font-size: 0; }
 .ico-disc { background-image: url(../css/images/sprite.png); background-position: -56px -125px; width: 62px; height: 59px; display: inline-block; vertical-align: middle; font-size: 0; }
-.ico-facebook-small { background-image: url(../css/images/sprite.png); background-position: -202px -188px; width: 20px; height: 20px; display: inline-block; vertical-align: middle; font-size: 0; }
+.ico-facebook-small { background-image: url(../css/images/sprite.png); background-position: -228px -188px; width: 20px; height: 20px; display: inline-block; vertical-align: middle; font-size: 0; }
 .ico-facebook { background-image: url(../css/images/sprite.png); background-position: -123px -188px; width: 23px; height: 23px; display: inline-block; vertical-align: middle; font-size: 0; }
 .ico-github-grey { background-image: url(../css/images/sprite.png); background-position: -56px -188px; width: 30px; height: 28px; display: inline-block; vertical-align: middle; font-size: 0; }
 .ico-github-purple { background-image: url(../css/images/sprite.png); background-position: -90px -188px; width: 29px; height: 28px; display: inline-block; vertical-align: middle; font-size: 0; }
 .ico-github { background-image: url(../css/images/sprite.png); background-position: -298px -125px; width: 30px; height: 28px; display: inline-block; vertical-align: middle; font-size: 0; }
-.ico-github-2 { background-image: url(../css/images/sprite.png); background-position: -250px -188px; width: 20px; height: 20px; display: inline-block; vertical-align: middle; font-size: 0; }
-.ico-linkedin-small { background-image: url(../css/images/sprite.png); background-position: -226px -188px; width: 20px; height: 20px; display: inline-block; vertical-align: middle; font-size: 0; }
-.ico-lottery { background-image: url(../css/images/sprite.png); background-position: -128px -226px; width: 30px; height: 38px; display: inline-block; vertical-align: middle; font-size: 0; }
+.ico-github-2 { background-image: url(../css/images/sprite.png); background-position: -252px -188px; width: 20px; height: 20px; display: inline-block; vertical-align: middle; font-size: 0; }
+.ico-linkedin-small { background-image: url(../css/images/sprite.png); background-position: -276px -188px; width: 20px; height: 20px; display: inline-block; vertical-align: middle; font-size: 0; }
+.ico-lottery { background-image: url(../css/images/sprite.png); background-position: -94px -226px; width: 30px; height: 38px; display: inline-block; vertical-align: middle; font-size: 0; }
 .ico-prediction { background-image: url(../css/images/sprite.png); background-position: -58px -226px; width: 32px; height: 38px; display: inline-block; vertical-align: middle; font-size: 0; }
 .ico-profile { background-image: url(../css/images/sprite.png); background-position: 0 0; width: 108px; height: 121px; display: inline-block; vertical-align: middle; font-size: 0; }
 .ico-screen { background-image: url(../css/images/sprite.png); background-position: -122px -125px; width: 63px; height: 57px; display: inline-block; vertical-align: middle; font-size: 0; }
+.ico-slack { background-image: url(../css/images/sprite.png); background-position: -150px -188px; width: 22px; height: 22px; display: inline-block; vertical-align: middle; font-size: 0; }
 .ico-slot { background-image: url(../css/images/sprite.png); background-position: -224px -75px; width: 37px; height: 19px; display: inline-block; vertical-align: middle; font-size: 0; }
-.ico-steem-small { background-image: url(../css/images/sprite.png); background-position: -274px -188px; width: 19px; height: 20px; display: inline-block; vertical-align: middle; font-size: 0; }
-.ico-steem { background-image: url(../css/images/sprite.png); background-position: -297px -188px; width: 19px; height: 20px; display: inline-block; vertical-align: middle; font-size: 0; }
+.ico-steem-small { background-image: url(../css/images/sprite.png); background-position: -300px -188px; width: 19px; height: 20px; display: inline-block; vertical-align: middle; font-size: 0; }
+.ico-steem { background-image: url(../css/images/sprite.png); background-position: -196px -226px; width: 19px; height: 20px; display: inline-block; vertical-align: middle; font-size: 0; }
 .ico-tumblr-small { background-image: url(../css/images/sprite.png); background-position: -312px -31px; width: 20px; height: 20px; display: inline-block; vertical-align: middle; font-size: 0; }
-.ico-twitter-small { background-image: url(../css/images/sprite.png); background-position: -178px -188px; width: 20px; height: 20px; display: inline-block; vertical-align: middle; font-size: 0; }
-.ico-twitter { background-image: url(../css/images/sprite.png); background-position: -150px -188px; width: 24px; height: 20px; display: inline-block; vertical-align: middle; font-size: 0; }
+.ico-twitter-small { background-image: url(../css/images/sprite.png); background-position: -204px -188px; width: 20px; height: 20px; display: inline-block; vertical-align: middle; font-size: 0; }
+.ico-twitter { background-image: url(../css/images/sprite.png); background-position: -176px -188px; width: 24px; height: 20px; display: inline-block; vertical-align: middle; font-size: 0; }
 .logo { background-image: url(../css/images/sprite.png); background-position: -112px 0; width: 221px; height: 27px; display: inline-block; vertical-align: middle; font-size: 0; }
 .soc { background-image: url(../css/images/sprite.png); background-position: -154px -75px; width: 66px; height: 20px; display: inline-block; vertical-align: middle; font-size: 0; }
 .soc-2 { background-image: url(../css/images/sprite.png); background-position: -112px -31px; width: 132px; height: 40px; display: inline-block; vertical-align: middle; font-size: 0; }
@@ -120,14 +121,15 @@
 	.ico-disc { background-image: url(../css/images/sprite.@2x.png); background-position: -110px -29px; background-size: 331px 220px; width: 62px; height: 59px; display: inline-block; vertical-align: middle; font-size: 0; }
 	.ico-facebook-small { background-image: url(../css/images/sprite.@2x.png); background-position: -161px -90px; background-size: 331px 220px; width: 20px; height: 20px; display: inline-block; vertical-align: middle; font-size: 0; }
 	.ico-facebook { background-image: url(../css/images/sprite.@2x.png); background-position: -110px -90px; background-size: 331px 220px; width: 23px; height: 23px; display: inline-block; vertical-align: middle; font-size: 0; }
-	.ico-github-2 { background-image: url(../css/images/sprite.@2x.png); background-position: -309px -51px; background-size: 331px 220px; width: 20px; height: 20px; display: inline-block; vertical-align: middle; font-size: 0; }
-	.ico-linkedin-small { background-image: url(../css/images/sprite.@2x.png); background-position: -309px -29px; background-size: 331px 220px; width: 20px; height: 20px; display: inline-block; vertical-align: middle; font-size: 0; }
+	.ico-github-2 { background-image: url(../css/images/sprite.@2x.png); background-position: -309px -29px; background-size: 331px 220px; width: 20px; height: 20px; display: inline-block; vertical-align: middle; font-size: 0; }
+	.ico-linkedin-small { background-image: url(../css/images/sprite.@2x.png); background-position: -309px -51px; background-size: 331px 220px; width: 20px; height: 20px; display: inline-block; vertical-align: middle; font-size: 0; }
 	.ico-profile { background-image: url(../css/images/sprite.@2x.png); background-position: 0 0; background-size: 331px 220px; width: 108px; height: 121px; display: inline-block; vertical-align: middle; font-size: 0; }
 	.ico-screen { background-image: url(../css/images/sprite.@2x.png); background-position: -174px -29px; background-size: 331px 220px; width: 63px; height: 57px; display: inline-block; vertical-align: middle; font-size: 0; }
-	.ico-steem-small { background-image: url(../css/images/sprite.@2x.png); background-position: -248px -90px; background-size: 331px 220px; width: 19px; height: 20px; display: inline-block; vertical-align: middle; font-size: 0; }
-	.ico-steem { background-image: url(../css/images/sprite.@2x.png); background-position: -227px -90px; background-size: 331px 220px; width: 19px; height: 20px; display: inline-block; vertical-align: middle; font-size: 0; }
-	.ico-tumblr-small { background-image: url(../css/images/sprite.@2x.png); background-position: -183px -90px; background-size: 331px 220px; width: 20px; height: 20px; display: inline-block; vertical-align: middle; font-size: 0; }
-	.ico-twitter-small { background-image: url(../css/images/sprite.@2x.png); background-position: -205px -90px; background-size: 331px 220px; width: 20px; height: 20px; display: inline-block; vertical-align: middle; font-size: 0; }
+	.ico-slack { background-image: url(../css/images/sprite.@2x.png); background-position: -227px -90px; background-size: 331px 220px; width: 20px; height: 20px; display: inline-block; vertical-align: middle; font-size: 0; }
+	.ico-steem-small { background-image: url(../css/images/sprite.@2x.png); background-position: -270px -90px; background-size: 331px 220px; width: 19px; height: 20px; display: inline-block; vertical-align: middle; font-size: 0; }
+	.ico-steem { background-image: url(../css/images/sprite.@2x.png); background-position: -249px -90px; background-size: 331px 220px; width: 19px; height: 20px; display: inline-block; vertical-align: middle; font-size: 0; }
+	.ico-tumblr-small { background-image: url(../css/images/sprite.@2x.png); background-position: -205px -90px; background-size: 331px 220px; width: 20px; height: 20px; display: inline-block; vertical-align: middle; font-size: 0; }
+	.ico-twitter-small { background-image: url(../css/images/sprite.@2x.png); background-position: -183px -90px; background-size: 331px 220px; width: 20px; height: 20px; display: inline-block; vertical-align: middle; font-size: 0; }
 	.ico-twitter { background-image: url(../css/images/sprite.@2x.png); background-position: -135px -90px; background-size: 331px 220px; width: 24px; height: 20px; display: inline-block; vertical-align: middle; font-size: 0; }
 	.logo { background-image: url(../css/images/sprite.@2x.png); background-position: -110px 0; background-size: 331px 220px; width: 221px; height: 27px; display: inline-block; vertical-align: middle; font-size: 0; }
 }

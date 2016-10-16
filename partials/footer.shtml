@@ -18,6 +18,14 @@
 				<div class="col col-1of2">
 					<div class="socials">
 						<ul>
+                                   <li>
+                                        <a href="/slack-invite.html">
+                                             <i class="ico-slack"></i>
+
+                                             Slack 
+                                        </a>
+                                   </li>
+
 							<li>
 								<a href="https://github.com/DaoCasino">
 									<i class="ico-github-2"></i>
