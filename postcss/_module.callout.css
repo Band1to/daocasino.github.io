@@ -15,6 +15,12 @@
 
 .callout-secondary { background: #2d2d2d; padding: 51px 0; }
 
+/*Nasty inline hack )) */
+
+.callout .callout-actions a.btn-go-back { padding: 20px 66px 20px 50px; border-color: rgba(255, 255, 255, 0.5); border-radius: 3px; }
+.callout .callout-actions a.btn-go-back:hover { border-color: #fff; }
+
+
 /* Mobile */
 
 $breakpoint-mobile {
