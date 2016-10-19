@@ -7,6 +7,8 @@ var fs = require('fs');
 var http = require('http');
 var https = require('https');
 
+var MailChimpAPI = require('mailchimp').MailChimpAPI;
+
 var app = express();
 
 var ms = require('./email/report_send.js');
@@ -127,3 +129,49 @@ httpsServer.on('request', function(req,resp) {
 
 httpServer.listen(app.get('port'));
 httpsServer.listen(app.get('https_port'));
+
+
+////////////////////////////////////////
+////////////////////////////// MAILCHIMP
+////////////////////////////////////////
+/*
+var MailChimpOAuth = require('mailchimp').MailChimpOAuth;
+var MailChimpAPI = require('mailchimp').MailChimpAPI;
+
+var options = {
+    clientId: process.env.MAILCHIMP_ID,
+    clientSecret: process.env.MAILCHIMP_TOKEN,
+
+    redirectUri: '127.0.0.1',
+    ownServer: true,
+    addPort: true,
+    finalUri: '127.0.0.1'
+};
+
+var oauth = new MailChimpOAuth(options);
+
+console.log(oauth.getAuthorizeUri()); // The MailChimp login URI the user needs to be sent to
+oauth.on('error', function (error) {
+    console.log('Mailchimp error: ');
+    console.log(error.err);
+});
+
+oauth.on('authed', function (data) {
+    console.log('Mailchimp auth OK');
+    console.log(data);
+});
+
+try {
+	var api = new MailChimpAPI(options.clientSecret, { version : '1.3', secure : false });
+
+	api.campaigns({ start: 0, limit: 25 }, function (error, data) {
+	if (error)
+	    console.log(error.message);
+	else
+	    console.log(JSON.stringify(data)); // Do something with your data!
+	});
+
+} catch (error) {
+	console.log(error.message);
+}
+*/
