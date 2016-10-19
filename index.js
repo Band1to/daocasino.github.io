@@ -1,10 +1,16 @@
 var express = require('express');
 var request = require('request');
+var fs = require('fs');
+
+var http = require('http');
+var https = require('https');
+
 var app = express();
 
 var ms = require('./email/report_send.js');
 
 app.set('port', (process.env.PORT || 8080));
+app.set('https_port', (process.env.HTTPS_PORT || 443));
 
 app.use(express.static(__dirname + '/build'));
 
@@ -15,10 +21,6 @@ app.use(express.static(__dirname + '/build'));
 app.get('/', function(request, response) {
      //response.render('pages/index');
      response.redirect('/home.html');
-});
-
-app.listen(app.get('port'), function() {
-     console.log('Node app is running on port', app.get('port'));
 });
 
 app.get('/whitepaper', function(req, res, next) {
@@ -93,4 +95,33 @@ app.get('/invite', function(req, res) {
      });
 });
 
+/// Start
+/*
+app.listen(app.get('port'), function() {
+     console.log('Node app is running on port', app.get('port'));
+});
+*/
 
+
+var ca          = fs.readFileSync( 'cert/dao_casino.ca-bundle', 'utf8');
+var certificate = fs.readFileSync( 'cert/dao_casino.crt', 'utf8');
+var privateKey  = fs.readFileSync( 'cert/dao_casino.key', 'utf8');
+var credentials = {ca: ca, key: privateKey, cert: certificate};
+
+var httpServer  = http.createServer(function(req,res){
+    res.writeHead(301, { "Location": "https://" + req.headers['host'] + req.url });
+    res.end();
+});
+
+var httpsServer = https.createServer(credentials, app);
+
+httpsServer.on('connection', function(sock) {
+      console.log('New HTTPS connection: ' + sock.remoteAddress);		
+});
+
+httpsServer.on('request', function(req,resp) {
+      //console.log('New HTTPS request: ' + req.url);		
+});
+
+httpServer.listen(app.get('port'));
+httpsServer.listen(app.get('https_port'));
