@@ -1,10 +1,20 @@
+require('newrelic');
+
 var express = require('express');
 var request = require('request');
+var fs = require('fs');
+
+var http = require('http');
+var https = require('https');
+
+var MailChimpAPI = require('mailchimp').MailChimpAPI;
+
 var app = express();
 
 var ms = require('./email/report_send.js');
 
-app.set('port', (process.env.PORT || 5000));
+app.set('port', (process.env.PORT || 8080));
+app.set('https_port', (process.env.HTTPS_PORT || 443));
 
 app.use(express.static(__dirname + '/build'));
 
@@ -15,10 +25,6 @@ app.use(express.static(__dirname + '/build'));
 app.get('/', function(request, response) {
      //response.render('pages/index');
      response.redirect('/home.html');
-});
-
-app.listen(app.get('port'), function() {
-     console.log('Node app is running on port', app.get('port'));
 });
 
 app.get('/whitepaper', function(req, res, next) {
@@ -52,11 +58,16 @@ app.get('/whitepaper', function(req, res, next) {
 });
 
 
-app.post('/invite', function(req, res) {
-     var slackUrl = process.env.SLACK_URL || 'daocasino';
+app.get('/invite', function(req, res) {
+     var slackUrl = process.env.SLACK_URL || 'daocasino.slack.com';
      var slacktoken = process.env.SLACK_TOKEN;
 
      var email = req.query.email;
+     if(typeof(email)==='undefined'){
+          return next();
+     }
+
+     console.log('Slack invite request from: ' + email);
 
      request.post({
           url: 'https://'+ slackUrl + '/api/users.admin.invite',
@@ -73,16 +84,94 @@ app.post('/invite', function(req, res) {
 
           if (err) { return res.send('Error:' + err); }
 
+	  console.log('Response: ');
+	  console.log(body);
+
           body = JSON.parse(body);
           if (body.ok) {
                console.log('Invited to Slack...');     
-               res.send('OK');
+               res.redirect('/invite_complete.html');
           } else {
                var error = body.error;
                console.log('Error...');     
-               res.send('Bad');
+               res.redirect('/invite_bad.html');
           }
      });
 });
 
+/// Start
+/*
+app.listen(app.get('port'), function() {
+     console.log('Node app is running on port', app.get('port'));
+});
+*/
 
+
+var ca          = fs.readFileSync( 'cert/dao_casino.ca-bundle', 'utf8');
+var certificate = fs.readFileSync( 'cert/dao_casino.crt', 'utf8');
+var privateKey  = fs.readFileSync( 'cert/dao_casino.key', 'utf8');
+var credentials = {ca: ca, key: privateKey, cert: certificate};
+
+var httpServer  = http.createServer(function(req,res){
+    res.writeHead(301, { "Location": "https://" + req.headers['host'] + req.url });
+    res.end();
+});
+
+var httpsServer = https.createServer(credentials, app);
+
+httpsServer.on('connection', function(sock) {
+      console.log('New HTTPS connection: ' + sock.remoteAddress);		
+});
+
+httpsServer.on('request', function(req,resp) {
+      //console.log('New HTTPS request: ' + req.url);		
+});
+
+httpServer.listen(app.get('port'));
+httpsServer.listen(app.get('https_port'));
+
+
+////////////////////////////////////////
+////////////////////////////// MAILCHIMP
+////////////////////////////////////////
+/*
+var MailChimpOAuth = require('mailchimp').MailChimpOAuth;
+var MailChimpAPI = require('mailchimp').MailChimpAPI;
+
+var options = {
+    clientId: process.env.MAILCHIMP_ID,
+    clientSecret: process.env.MAILCHIMP_TOKEN,
+
+    redirectUri: '127.0.0.1',
+    ownServer: true,
+    addPort: true,
+    finalUri: '127.0.0.1'
+};
+
+var oauth = new MailChimpOAuth(options);
+
+console.log(oauth.getAuthorizeUri()); // The MailChimp login URI the user needs to be sent to
+oauth.on('error', function (error) {
+    console.log('Mailchimp error: ');
+    console.log(error.err);
+});
+
+oauth.on('authed', function (data) {
+    console.log('Mailchimp auth OK');
+    console.log(data);
+});
+
+try {
+	var api = new MailChimpAPI(options.clientSecret, { version : '1.3', secure : false });
+
+	api.campaigns({ start: 0, limit: 25 }, function (error, data) {
+	if (error)
+	    console.log(error.message);
+	else
+	    console.log(JSON.stringify(data)); // Do something with your data!
+	});
+
+} catch (error) {
+	console.log(error.message);
+}
+*/
