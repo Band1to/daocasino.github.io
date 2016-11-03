@@ -11,6 +11,10 @@
 							<li>
 								<a href="http://forum.dao.casino">Forum</a>
 							</li>
+
+							<li>
+								<a href="https://medium.com/@dao.casino">Blog</a>
+							</li>
 						</ul>
 					</nav><!-- /.footer-nav -->
 				</div><!-- /.col col-1of2 -->
@@ -34,6 +38,7 @@
 								</a>
 							</li>
 							
+                                   <!--
 							<li>
 								<a href="https://steemit.com/created/cyberfund">
 									<i class="ico-steem"></i>
@@ -41,6 +46,7 @@
 									Steem
 								</a>
 							</li>
+                                   -->
 							
 							<li>
 								<a href="https://twitter.com/daocasino">
