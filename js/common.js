@@ -74,7 +74,7 @@ function lazyLoadImages() {
 		}
 	});
 
-	$(".contant_header h1, .contant_header h2, .contant_header form, .contant_header p").animated("bounceTop");
+	$(".contant_header h1, .contant_header h2, .contant_header form, .email_form").animated("bounceTop");
 
 	$(".accordeon dd").hide().prev().click(function() {
 		$(this).parents(".accordeon").find("dd").not(this).slideUp().prev().removeClass("active");
