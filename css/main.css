@@ -376,6 +376,9 @@ main {
 	padding: 115px 0 166px;
 }
 .how-it-works-wrapper{
+	background-image: url(../img/br_arrow.png);
+	background-repeat: no-repeat;
+	background-position: center center;
 	max-width: 792px;
 	min-height: 750px;
 	width: 100%;
@@ -547,9 +550,31 @@ main {
 	height: 1px;
 	background: #313131;
 }
+.roadmap-progress:before {
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0px;
+	width: 46px;
+	z-index: 10;
+	height: 1px;
+	background-image: url(../img/left-gradient.png);
+}
+.roadmap-progress:after {
+	content: "";
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0px;
+	width: 46px;
+	z-index: 10;
+	height: 1px;
+	background-image: url(../img/right-gradient.png);
+}
 .progress_line{
 	display: block;
-	width: 37%;
+	width: 21%;
 	height: 1px;
 	position: absolute;
 	left: 0;
@@ -569,14 +594,19 @@ main {
 .item_top h6,
 .item_bottom h6{
 	font-size: 14px;
+	font-weight: normal;
+	font-style: normal;
 	color: #f69311;
 	margin-bottom: 16px;
 }
 .item_top p,
 .item_bottom p{
+	font-family: "BasisGrotesquePro-Bold";
 	font-size: 16px;
+	font-style: normal;
 	color: #fff;
 	margin-bottom: 13px;
+	line-height: 24px;
 }
 .item_top span,
 .item_bottom span{
@@ -603,10 +633,10 @@ span.active:before {
 	content: "";
 	display: block;
 	position: absolute;
-	top: -34px;
+	top: -44px;
 	left: 4px;
 	width: 0;
-	height: 20px;
+	height: 32px;
 	border-left: 2px dashed #333;
 }
 .item_top span.active {
@@ -637,35 +667,35 @@ span.enable{
 	top: 22px;
 	left: 4px;
 	width: 0;
-	height: 20px;
+	height: 32px;
 	border-left: 2px dashed #333;
 }
 .item_top_one {
-	left: 155px;
+	left: 229px;
 }
 .item_top_two {
-	left: 404px;
+	left: 522px;
 }
 .item_top_theree{
-	left: 600px;
+	left: 774px;
 }
 .item_top_four{
 	left: 835px;
 }
 .item_bottom_one{
-	left: 61px;
+	left: 60px;
 }
 .item_bottom_two{
 	left: 320px;
 }
 .item_bottom_three{
-	left: 513px;
+	left: 378px;
 }
 .item_bottom_four{
-	left: 729px;
+	left: 649px;
 }
 .item_bottom_five{
-	left: 940px;
+	left: 889px;
 }
 /* OUR TEAM ===================
 ======================================*/
@@ -702,6 +732,65 @@ span.enable{
 }
 .block_collaborator .col_4{
 	margin-bottom: 78px;
+}
+/* OUR TEAM POPUP ===================
+======================================*/
+.popup-dialog {
+	background: #202020;
+	max-width: 800px;
+	margin: 40px auto;
+	position: relative;
+}
+.photo_popup{
+	max-width: 280px;
+	width: 35%;
+	float: left;
+}
+.text_popup h1{
+	font-size: 22px;
+	font-family: "BasisGrotesquePro-Bold";
+	color: #fff;
+	margin-bottom: 21px;
+}
+.text_popup {
+	width: 65%;
+	max-width: 480px;
+	padding-top: 43px;
+	padding-left: 40px;
+	float: left;
+}
+.text_popup span{
+	font-size: 16px;
+	font-family: "BasisGrotesquePro-Regular";
+	color: #f2961e;
+	display: block;
+	margin-bottom: 24px;
+}
+.text_popup p{
+	color: #999999;
+	line-height: 26px;
+	margin-bottom: 26px;
+}
+.text_popup b{
+	color: #fff;
+}
+.text_popup .social{
+	margin-top: 34px;
+	float: none;
+}
+.popup-dialog .mfp-close{
+	background-image: url(../img/close.png);
+	background-repeat: no-repeat;
+	width: 16px;
+	height: 15px;
+	display: block;
+	opacity: 1 !important;
+	color: transparent !important;
+	margin-top: 49px;
+	margin-right: 65px;
+}
+.popup-dialog .mfp-close:active {
+	top: 0px !important;
 }
 /* BLOCK POST ===================
 ======================================*/
@@ -945,9 +1034,6 @@ form input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3
 	-webkit-border-radius: 999px;
 	-moz-border-radius: 999px;
 	border-radius: 999px;
-	//-webkit-box-shadow: inset 0px 0px 12px 5px rgba(255, 255, 255, .8);
-	//-moz-box-shadow: inset 0px 0px 12px 5px rgba(255, 255, 255, .8);
-	//box-shadow: inset 0px 0px 12px 5px rgba(242, 150, 30, 0);
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
@@ -1048,3 +1134,125 @@ form input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3
 		opacity: 0;
 	}
 }
+
+/**
+ * Fade-zoom animation for first dialog
+ */
+
+ /* start state */
+ .my-mfp-zoom-in .zoom-anim-dialog {
+ 	opacity: 0;
+
+ 	-webkit-transition: all 0.2s ease-in-out; 
+ 	-moz-transition: all 0.2s ease-in-out; 
+ 	-o-transition: all 0.2s ease-in-out; 
+ 	transition: all 0.2s ease-in-out; 
+
+
+
+ 	-webkit-transform: scale(0.8); 
+ 	-moz-transform: scale(0.8); 
+ 	-ms-transform: scale(0.8); 
+ 	-o-transform: scale(0.8); 
+ 	transform: scale(0.8); 
+ }
+
+ /* animate in */
+ .my-mfp-zoom-in.mfp-ready .zoom-anim-dialog {
+ 	opacity: 1;
+
+ 	-webkit-transform: scale(1); 
+ 	-moz-transform: scale(1); 
+ 	-ms-transform: scale(1); 
+ 	-o-transform: scale(1); 
+ 	transform: scale(1); 
+ }
+
+ /* animate out */
+ .my-mfp-zoom-in.mfp-removing .zoom-anim-dialog {
+ 	-webkit-transform: scale(0.8); 
+ 	-moz-transform: scale(0.8); 
+ 	-ms-transform: scale(0.8); 
+ 	-o-transform: scale(0.8); 
+ 	transform: scale(0.8); 
+
+ 	opacity: 0;
+ }
+
+ /* Dark overlay, start state */
+ .my-mfp-zoom-in.mfp-bg {
+ 	opacity: 0;
+ 	-webkit-transition: opacity 0.3s ease-out; 
+ 	-moz-transition: opacity 0.3s ease-out; 
+ 	-o-transition: opacity 0.3s ease-out; 
+ 	transition: opacity 0.3s ease-out;
+ }
+ /* animate in */
+ .my-mfp-zoom-in.mfp-ready.mfp-bg {
+ 	opacity: 0.8;
+ }
+ /* animate out */
+ .my-mfp-zoom-in.mfp-removing.mfp-bg {
+ 	opacity: 0;
+ }
+
+
+
+/**
+ * Fade-move animation for second dialog
+ */
+
+ /* at start */
+ .my-mfp-slide-bottom .zoom-anim-dialog {
+ 	opacity: 0;
+ 	-webkit-transition: all 0.2s ease-out;
+ 	-moz-transition: all 0.2s ease-out;
+ 	-o-transition: all 0.2s ease-out;
+ 	transition: all 0.2s ease-out;
+
+ 	-webkit-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+ 	-moz-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+ 	-ms-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+ 	-o-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+ 	transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+
+ }
+
+ /* animate in */
+ .my-mfp-slide-bottom.mfp-ready .zoom-anim-dialog {
+ 	opacity: 1;
+ 	-webkit-transform: translateY(0) perspective( 600px ) rotateX( 0 ); 
+ 	-moz-transform: translateY(0) perspective( 600px ) rotateX( 0 ); 
+ 	-ms-transform: translateY(0) perspective( 600px ) rotateX( 0 ); 
+ 	-o-transform: translateY(0) perspective( 600px ) rotateX( 0 ); 
+ 	transform: translateY(0) perspective( 600px ) rotateX( 0 ); 
+ }
+
+ /* animate out */
+ .my-mfp-slide-bottom.mfp-removing .zoom-anim-dialog {
+ 	opacity: 0;
+
+ 	-webkit-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg ); 
+ 	-moz-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg ); 
+ 	-ms-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg ); 
+ 	-o-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg ); 
+ 	transform: translateY(-10px) perspective( 600px ) rotateX( 10deg ); 
+ }
+
+ /* Dark overlay, start state */
+ .my-mfp-slide-bottom.mfp-bg {
+ 	opacity: 0;
+
+ 	-webkit-transition: opacity 0.3s ease-out; 
+ 	-moz-transition: opacity 0.3s ease-out; 
+ 	-o-transition: opacity 0.3s ease-out; 
+ 	transition: opacity 0.3s ease-out;
+ }
+ /* animate in */
+ .my-mfp-slide-bottom.mfp-ready.mfp-bg {
+ 	opacity: 0.8;
+ }
+ /* animate out */
+ .my-mfp-slide-bottom.mfp-removing.mfp-bg {
+ 	opacity: 0;
+ }
