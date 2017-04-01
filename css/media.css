@@ -42,7 +42,7 @@
 		margin-right: 60px;
 	}
 	.progress_line {
-		width: 23%;
+		width: 36%;
 	}
 }
 
@@ -52,6 +52,21 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 980px) {
+	.item_bottom_five {
+		left: 865px;
+	}
+	.item_bottom_one {
+		left: 170px;
+	}
+	.item_bottom_three {
+		left: 470px;
+	}
+	.item_bottom_four {
+		left: 650px;
+	}
+	.progress_line {
+		width: 37%;
+	}
 	.wrap_foudners {
 		margin-right: 45px;
 	}
@@ -98,6 +113,18 @@
 }
 
 @media only screen and (max-width : 940px){
+	.progress_line {
+		width: 22%;
+	}
+	.item_bottom_one {
+		left: 35px;
+	}
+	.item_top.item_top_one2 {
+		left: 85px;
+	}
+	.item_top_one {
+		left: 255px;
+	}
 	.item_bottom_one {
 		left: 50px;
 	}
@@ -125,6 +152,15 @@
 }
 
 @media only screen and (max-width : 900px){
+	.progress_line {
+		width: 30%;
+	}
+	.item_top_two {
+		left: 525px;
+	}
+	.item_top_one {
+		left: 265px;
+	}
 	.contant_header {
 		padding-left: 75px;
 	}
@@ -165,19 +201,19 @@
 		left: 35px;
 	}
 	.item_top_one {
-		left: 150px;
+		left: 245px;
 	}
 	.item_bottom_three {
 		left: 310px;
 	}
 	.item_top_two {
-		left: 415px;
+		left: 465px;
 	}
 	.progress_line {
-		width: 18%;
+		width: 30%;
 	}
 	.item_bottom_four {
-		left: 485px;
+		left: 515px;
 	}
 	.item_top_theree {
 		left: 580px;
@@ -196,6 +232,9 @@
 	}
 	.founders {
 		padding: 0;
+	}
+	.item_bottom_four {
+		left: 500px;
 	}
 }
 
@@ -226,7 +265,7 @@
 	.opened_top_menu {
 		background-color: transparent;
 		border: 0;
-		display: block;
+		//display: block;
 		position: absolute;
 		right: 30px;
 		top: -25px;
@@ -293,6 +332,18 @@
 }
 
 @media only screen and (max-width : 640px){
+	.photo_popup {
+		max-width: 280px;
+		width: 45%;
+		float: left;
+	}
+	.text_popup {
+		width: 55%;
+		max-width: 480px;
+		padding-top: 43px;
+		padding-left: 20px;
+		float: left;
+	}
 	.pre-sale .col_6 {
 		width: 100%;
 		text-align: center;
@@ -369,6 +420,13 @@
 }
 
 @media only screen and (max-width : 540px){
+	.photo_popup {
+		display: none;
+	}
+	.text_popup {
+		width: 100%;
+		padding-right: 15px;
+	}
 	.wrap_foudners {
 		margin: 0 32px;
 	}

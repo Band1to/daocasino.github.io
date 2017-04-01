@@ -758,32 +758,35 @@ span.enable{
 	height: 32px;
 	border-left: 2px dashed #333;
 }
+.item_top.item_top_one2 {
+	left: 107px;
+}
 .item_top_one {
-	left: 229px;
+	left: 358px;
 }
 .item_top_two {
-	left: 522px;
+	left: 614px;
 }
 .item_top_theree{
-	left: 774px;
+	left: 796px;
 }
 .item_top_four{
 	left: 835px;
 }
 .item_bottom_one{
-	left: 60px;
+	left: 232px;
 }
 .item_bottom_two{
 	left: 320px;
 }
 .item_bottom_three{
-	left: 378px;
+	left: 532px;
 }
 .item_bottom_four{
-	left: 649px;
+	left: 682px;
 }
 .item_bottom_five{
-	left: 889px;
+	left: 920px;
 }
 /* OUR TEAM ===================
 ======================================*/
