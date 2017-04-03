@@ -1,5 +1,6 @@
 html {
 	background: #202020;
+	height: 100%;
 }
 body {
 	font-family: "BasisGrotesquePro-Regular", sans-serif;
@@ -9,6 +10,7 @@ body {
 	position: relative;
 	overflow-x: hidden;
 	visibility: hidden;
+	min-height: 100%;
 }
 button {
 	font-size: 16px;
@@ -149,7 +151,7 @@ ul.top_menu li a:hover{
 .button:hover {
 	border: solid 2px #f3951a;
 }
-.contant_header h1{
+.contant_header h1 a{
 	font-family: "BasisGrotesquePro-Regular";
 	font-weight: normal;
 	line-height: 64px;
@@ -157,7 +159,7 @@ ul.top_menu li a:hover{
 	color: #fff;
 	margin-bottom: 7px;
 }
-.contant_header h1 span {
+.contant_header h1 a span {
 	color: #ed9726;
 }
 .contant_header h2{
@@ -359,6 +361,7 @@ ul.top_menu li a:hover{
 ==============================================*/
 main {
 	background: #202020;
+	padding-bottom: 250px;
 }
 .founders_slog{
 	font-size: 26px;
@@ -933,9 +936,13 @@ span.enable{
 }
 /* FOTTER ===================
 ======================================*/
-footer{
+footer {
 	background: #272727;
 	padding: 100px 0 100px;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
 }
 ul.social {
 	float: right;
@@ -1435,3 +1442,85 @@ Fade-move animation for second dialog
 	color: #ed9726 !important;
 }
 
+.hamburger {
+	cursor: pointer;
+	width: 48px;
+	height: 48px;
+	transition: all 0.25s;
+}
+
+.hamburger__top-bun,
+.hamburger__bottom-bun {
+	content: '';
+	width: 25px;
+	height: 2px;
+	border-radius: 2px;
+	background-color: #ffffff;
+	display: block;
+	position: absolute;
+	left: 15px;
+	-webkit-transform: rotate(0);
+	-ms-transform: rotate(0);
+	-o-transform: rotate(0);
+	transform: rotate(0);
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.hamburger:hover [class*="-bun"] {
+	background: #fff;
+}
+
+.hamburger__top-bun {
+	top: 23px;
+	transform: translateY(-5px);
+}
+
+.hamburger__bottom-bun {
+	bottom: 23px;
+	transform: translateY(5px);
+}
+
+.open {
+	transform: rotate(90deg);
+}
+
+.open .hamburger__top-bun {
+	transform: 
+	rotate(45deg) 
+	translateY(0px);
+}
+
+.open .hamburger__bottom-bun {
+	transform: 
+	rotate(-45deg) 
+	translateY(0px);
+}
+
+.top_mnu {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.85);
+	z-index: 1001;
+	right: 0;
+	top: 0;
+	margin: 0;
+	display: none;
+}
+
+.top_mnu li {
+	display: block;
+	text-align: center;
+}
+
+.top_mnu li a {
+	font-size: 24px;
+	font-family: "BasisGrotesquePro-Regular";
+	color: #fff;
+}
+
+.ovh {
+	overflow: hidden;
+}
