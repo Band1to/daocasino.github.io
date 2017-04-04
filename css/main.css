@@ -102,7 +102,8 @@ ul.top_menu li a:hover{
 	color: #fff;
 }
 .button{
-	font-family: "BasisGrotesquePro-Regular";
+	font-family: "BasisGrotesquePro-Regular" !important;
+	font-size: 16px;
 	color: #f3951a;
 	background-color: transparent;
 	padding: 16px 26px;
@@ -140,6 +141,9 @@ ul.top_menu li a:hover{
 }
 .open_info_block p {
 	line-height: 25px;
+}
+.open_info_block p a {
+	color: #fff;
 }
 .info_text{
 	padding: 30px;
@@ -1523,4 +1527,21 @@ Fade-move animation for second dialog
 
 .ovh {
 	overflow: hidden;
+}
+
+.soc .social {
+	position: relative;
+	top: 0;
+	margin-top: 0 !important;
+	max-width: 300px;
+	float: none;
+	margin: 0 auto;
+}
+
+.soc .social li:last-child {
+	margin-right: 0px;
+}
+
+.soc .social li {
+	margin-right: 16px;
 }

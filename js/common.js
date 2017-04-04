@@ -16,7 +16,8 @@ $(document).ready(function() {
 		$(".hamburger").toggleClass("open");
 		$('body').toggleClass('ovh');
 		$(".top_text").css("opacity", "1");
-	}).append("<span>");
+	});
+	//.append("<span>");
 
 	$(".hamburger").click(function() {
 		if ($(".top_mnu").is(":visible")) {
