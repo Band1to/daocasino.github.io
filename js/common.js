@@ -1,10 +1,5 @@
 $(document).ready(function() {
 
-	$('.hamburger').click (function(){
-		$(this).toggleClass('open');
-		$('body').toggleClass('ovh');
-	});
-
 	$(".top_mnu ul a").click(function() {
 		$(".top_mnu").fadeOut(600);
 		$(".hamburger").toggleClass("open");
