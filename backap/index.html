@@ -22,102 +22,169 @@
 
 	<link rel="stylesheet" href="css/main.css" />
 	<link rel="stylesheet" href="css/fonts.css" />
+	<link rel="stylesheet" href="css/font-awesome.min.css" />
 	<link rel="stylesheet" href="css/grid_css.css" />
 	<link href="libs/owl-carousel/owl.carousel.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="css/media.css" />
 	<link rel="stylesheet" href="libs/magnific-popup/magnific-popup.css" />
 </head>
 <body>
+	<div class="device_menu clearfix">
+		<button class="opened_top_menu">
+			<div class="hamburger">
+				<span class="hamburger__top-bun"></span>
+				<span class="hamburger__bottom-bun"></span>
+			</div>
+		</button>
+		<nav class="top_mnu">
+			<ul>
+				<li>
+					<a href="#go_team">Team</a>
+				</li>
+				<li>
+					<a href="https://medium.com/@dao.casino">Blog</a>
+				</li>
+				<li>
+					<a href="https://github.com/daocasino">GitHub</a>
+				</li>
+				<div class="soc clearfix">
+					<ul class="social clearfix">
+						<li> 
+							<div class="tbl">
+								<a href="https://www.facebook.com/Dao.casino/">
+									<i class="fa fa-facebook" aria-hidden="true"></i>
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="tbl">
+								<a href="https://twitter.com/daocasino">
+									<i class="fa fa-twitter" aria-hidden="true"></i>
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="tbl">
+								<a href="https://github.com/daocasino">
+									<i class="fa fa-github-alt" aria-hidden="true"></i>
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="tbl">
+								<a href="https://dao.casino/slack-invite.html">
+									<i class="fa fa-slack" aria-hidden="true"></i>
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="tbl">
+								<a href="#">
+									<img src="img/telegram.png" alt="">
+								</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</ul>
+			
+		</nav>
+	</div>
 	<!-- HEADER -->
 	<header class="header">
-		<div class="fixed_top_line">
-			<div class="container_header">
-				<div class="top_line clearfix">
-					<div class="col_2 block_logo">
-						<a href="#" class="logo">
-							<img src="img/logo.png" alt="">
-						</a>
-					</div>
-					<div class="col_10 block_menu text_right">
-						<ul class="top_menu">
-						<!--	<li><a href="#open_thank_mail" class="popup-with-zoom-anim">Open mail</a></li> -->
-						<!-- <li><a href="#">White Paper</a></li> -->
-						<!--	<li><a href="#">Team</a></li> -->
-							<li><a href="https://medium.com/@dao.casino">Blog</a></li>
-							<li><a href="https://github.com/daocasino">GitHub</a></li>
-						<!-- <li><a href="#">Bounty</a></li> -->
-						</ul>
-						<div class="info_block">
-							<button class="button" id="openInfo">Contrbution</button>
-							<div class="open_info_block">
-								<div class="info_text">
-									<p>
-										DAO.Casino fundraiser will begin <br>
-										on <a href="#">April 30, 2017 6:00 AM PDT</a>.
-										Check back soon!
-									</p>
-								</div>
-								<div class="info_slack">
-									<p>Discuss on <img src="img/slack-mini.png" alt=""> Slack</p>
+		<div class="container_header bg_head">
+			<div class="fixed_top_line">
+				<div class="container_header">
+					<div class="top_line clearfix">
+						<div class="col_5 block_logo">
+							<a href="https://dao.casino/" class="logo">
+								<img src="img/logo.png" alt="">
+								<h3>DAO.<span>Casino</span></h3>
+							</a>
+						</div>
+						<div class="col_7 block_menu text_right">
+							<div class="wrap_top_menu">
+								<ul class="top_menu">
+									<!--	<li><a href="#open_thank_mail" class="popup-with-zoom-anim">Open mail</a></li> -->
+									<!-- <li><a href="#">White Paper</a></li> -->
+									<li><a href="#go_team">Team</a></li>
+									<li><a href="https://medium.com/@dao.casino">Blog</a></li>
+									<li><a href="https://github.com/daocasino">GitHub</a></li>
+									<!-- <li><a href="#">Bounty</a></li> -->
+								</ul>
+								<div class="info_block">
+									<button class="button" id="openInfo">Contrbution</button>
+									<div class="open_info_block">
+										<div class="info_text">
+											<p>
+												DAO.Casino fundraiser will begin <br>
+												on <a href="#">May 2017 6:00 AM PDT</a>.
+												Check back soon!
+											</p>
+										</div>
+										<div class="info_slack">
+											<p>Discuss on <a href="https://dao.casino/slack-invite.html"><i class="fa fa-slack" aria-hidden="true"></i> Slack</a></p>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="container_logos b-pic img_escrow lazy b-parallax" data-type="background" data-speed="8" data-src="img/fichka_bg.png">
-			<div class="base64private"></div>
-			<div class="contant_header">
-				<h1>DAO.<span>Casino</span></h1>
-				<h2>
-					Blockchain protocol <br>
-					for gambling
-				</h2>
-				<p class="email_form">Leave your email and get latest news about pre-sale</p>
-				<form action="//casino.us1.list-manage.com/subscribe/post?u=a3e08ccb6588d9d43141f24a3&amp;id=b44ac556ad" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="form_style validate" target="_blank" novalidate="">
-					<input class="emal_stl" type="email" value="" name="EMAIL" placeholder="Enter your email address" id="mce-EMAIL">
-					<input type="submit" id="mc-embedded-subscribe" class="but_style subscribe-btn">
-				</form>
-				
-			</div>
-			
-			<div  class="founders">
-			<p class="rounders" style='margin-top:-20px;color:#999999'>Created by founders of</p>
-				<div class="container">
-					<div class="wrap_foudners">
-						<div class="item_foudners">
-							<a href="#">
-								<img src="img/fund.png" alt="">
-							</a>
+			<div class="container_logos b-pic img_escrow lazy b-parallax" data-type="background" data-speed="8" data-src="">
+				<div class="base64private"></div>
+				<div class="contant_header">
+					<h1><a href="https://dao.casino/">DAO.<span>Casino</span></a></h1>
+					<h2>
+						Blockchain protocol <br>
+						for gambling
+					</h2>
+					<p class="email_form">Leave your email and get latest news about pre-sale</p>
+					<form action="//casino.us1.list-manage.com/subscribe/post?u=a3e08ccb6588d9d43141f24a3&amp;id=b44ac556ad" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="form_style validate" target="_blank" novalidate="" onSubmit="ga('send', {hitType: 'event',eventCategory:'Form',eventAction: 'email', eventLabel: 'top'});">
+						<input class="emal_stl" type="email" value="" name="EMAIL" placeholder="Enter your email address" id="mce-EMAIL" required>
+						<input type="submit" id="mc-embedded-subscribe" class="but_style subscribe-btn">
+					</form>
+
+				</div>
+
+				<div  class="founders">
+					<p class="rounders">Created by founders of</p>
+					<div class="container">
+						<div class="wrap_foudners">
+							<div class="item_foudners">
+								<a href="https://satoshi.fund/">
+									<span class="fund"></span>
+								</a>
+							</div>
 						</div>
-					</div>
-					<div class="wrap_foudners">
-						<div class="item_foudners">
-							<a href="#">
-								<img src="img/golos.png" alt="">
-							</a>
+						<div class="wrap_foudners">
+							<div class="item_foudners">
+								<a href="https://golos.io">
+									<span class="golos"></span>
+								</a>
+							</div>
 						</div>
-					</div>
-					<div class="wrap_foudners">
-						<div class="item_foudners">
-							<a href="#">
-								<img src="img/cyber.png" alt="">
-							</a>
+						<div class="wrap_foudners">
+							<div class="item_foudners">
+								<a href="https://cyber.fund/">
+									<span class="cyber"></span>
+								</a>
+							</div>
 						</div>
-					</div>
-					<div class="wrap_foudners">
-						<div class="item_foudners">
-							<a href="#">
-								<img src="img/aira.png" alt="">
-							</a>
+						<div class="wrap_foudners">
+							<div class="item_foudners">
+								<a href="https://aira.life/">
+									<span class="aira"></span>
+								</a>
+							</div>
 						</div>
-					</div>
-					<div class="wrap_foudners">
-						<div class="item_foudners">
-							<a href="#">
-								<img src="img/drone.png" alt="">
-							</a>
+						<div class="wrap_foudners">
+							<div class="item_foudners">
+								<a href="https://drone-employee.com/">
+									<span class="drone"></span>
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -157,7 +224,7 @@
 								P2P marketplace
 							</h3>
 							<p>
-								Hot chicken prism mixtape, activated charcoal keffiyeh skateboard lo-fi tote bag. Jianbing raw denim distillery, chillwave prism mustache mixtape polaroid vegan.  
+								Game developers deliver the games directly to the players, raise funds for the bankroll from the community and use automated reward mechanism to remunerate players who invite other players. Authors IP stays with the authors. Game devs don’t need a casino anyone can just be their own casino.  
 							</p>
 						</div>
 					</div>
@@ -187,10 +254,7 @@
 								Highest payout
 							</h3>
 							<p>
-								Cliche listicle kinfolk wolf forage tofu, fap actually <br>
-								biodiesel salvia. Taxidermy four dollar toast fanny pack <br>
-								neutra, pok pok jean shorts sustainable shoreditch banjo <br>
-								intelligentsia hell of flexitarian.
+								By design a decentralised system doesn’t encourage rent-seeking behaviour. So no one can take a cut for nothing which allows higher pay outs than in a traditional online casino. Random numbers that determine who wins any given games are provably unpredictable, which means no one can win just by knowing the outcome
 							</p>
 						</div>
 					</div>
@@ -257,8 +321,8 @@
 					</div>
 					<div class="col_6">
 						<div class="pre-sale_wrap-form">
-							<form action="//casino.us1.list-manage.com/subscribe/post?u=a3e08ccb6588d9d43141f24a3&amp;id=b44ac556ad" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="form_style validate" target="_blank" novalidate="">
-								<input class="emal_stl" type="email" value="" name="EMAIL" placeholder="Enter your email address" id="mce-EMAIL">
+							<form action="//casino.us1.list-manage.com/subscribe/post?u=a3e08ccb6588d9d43141f24a3&amp;id=b44ac556ad" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="form_style validate" target="_blank" novalidate="" onSubmit="ga('send', {hitType: 'event', eventCategory: 'Form', eventAction: 'email', eventLabel: 'center'});">
+								<input class="emal_stl" type="email" value="" name="EMAIL" placeholder="Enter your email address" id="mce-EMAIL" required>
 								<input type="submit" id="mc-embedded-subscribe" class="but_style subscribe-btn">
 							</form>
 						</div>
@@ -279,7 +343,7 @@
 									</div>
 								</div>
 								<div class="news-text">
-									<a href="http://www.coindesk.com/scam-free-gambling-ethereum-regulators-might-not-ready/">
+									<a href="https://www.coindesk.com/scam-free-gambling-ethereum-regulators-might-not-ready/">
 										'Scam Free' Gambling on Ethereum? Regulators Might Not Be Ready
 									</a>
 								</div>
@@ -303,7 +367,7 @@
 									</div>
 								</div>
 								<div class="news-text">
-									<a href="http://bitcoinist.com/dao-casino-gambling-blockchain/">
+									<a href="https://bitcoinist.com/dao-casino-gambling-blockchain/">
 										DAO.Casino to  revolutionize <br>
 										the gambling industrie with blockchain platform
 									</a>
@@ -314,7 +378,10 @@
 					</div>
 					<div class="col_6 clearfix">
 						<div class="float_right">
-							<a class="twitter-timeline" data-width="530" data-height="500" data-theme="dark" data-link-color="#FAB81E" href="https://twitter.com/daocasino">Tweets by daocasino</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+							<div class="my_twitter">
+								<a class="twitter-timeline" data-width="530" data-height="500" data-theme="dark" data-chrome="noheader nofooter noborders noscrollbar transparent" data-link-color="#FAB81E" href="https://twitter.com/daocasino">Tweets by daocasino</a>
+								<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -325,6 +392,15 @@
 				<h3 class="name_block">Roadmap</h3>
 				<div class="roadmap_container">
 					<div class="roadmap-wrap_top">
+						<div class="item_top item_top_one2">
+							<h6>2016</h6>
+							<p>
+								Market Research, <br>
+								technical feasibility <br>
+								assessment, WP
+							</p>
+							<span class="enable"></span>
+						</div>
 						<div class="item_top item_top_one">
 							<h6>Q2-1 2017</h6>
 							<p>
@@ -388,13 +464,13 @@
 				</div>
 			</div>
 		</div>
-		<div class="our_team">
+		<div class="our_team" id="go_team">
 			<div class="container">
 				<h3 class="name_block">Our Team</h3>
 				<div class="block_collaborator">
 					<div class="row">
 						<div class="col_4">
-							<a href="#small-dialog_tarutov">
+							<a href="#small-dialog_tarutov" class="popup-with-zoom-anim">
 								<div class="photo_collaborator">
 									<img src="img/ilya.png" alt="">
 								</div>
@@ -410,7 +486,7 @@
 							</a>
 						</div>
 						<div class="col_4">
-							<a href="#small-dialog_lomashuk">
+							<a href="#small-dialog_lomashuk" class="popup-with-zoom-anim">
 								<div class="photo_collaborator">
 									<img src="img/konstantin.png" alt="">
 								</div>
@@ -424,7 +500,7 @@
 							</a>
 						</div>
 						<div class="col_4">
-							<a href="#small-dialog_noxon">
+							<a href="#small-dialog_noxon" class="popup-with-zoom-anim">
 								<div class="photo_collaborator">
 									<img src="img/noxon.png" alt="">
 								</div>
@@ -441,9 +517,9 @@
 							</a>
 						</div>
 						<div class="col_4">
-							<a href="#small-dialog_bellman">
+							<a href="" onclick='return:false' class="popup-with-zoom-anim">
 								<div class="photo_collaborator">
-									<img src="http://placehold.it/140x140/edc758" alt="">
+									<img src="https://placehold.it/140x140/edc758" alt="">
 								</div>
 								<div class="text_collaborator">
 									<h4>
@@ -458,7 +534,7 @@
 							</a>
 						</div>
 						<div class="col_4">
-							<a href="#small-dialog_fetisova" >
+							<a href="#small-dialog_fetisova" class="popup-with-zoom-anim">
 								<div class="photo_collaborator">
 									<img src="img/alexandra.png" alt="">
 								</div>
@@ -475,7 +551,7 @@
 							</a>
 						</div>
 						<div class="col_4">
-							<a href="#small-dialog_pomorin">
+							<a href="#small-dialog_pomorin" class="popup-with-zoom-anim">
 								<div class="photo_collaborator">
 									<img src="img/sergey.png" alt="">
 								</div>
@@ -492,7 +568,7 @@
 							</a>
 						</div>
 						<div class="col_4">
-							<a href="#small-dialog_lonshakov" >
+							<a href="#small-dialog_lonshakov" class="popup-with-zoom-anim">
 								<div class="photo_collaborator">
 									<img src="img/sergey-l.png" alt="">
 								</div>
@@ -509,7 +585,7 @@
 							</a>
 						</div>
 						<div class="col_4">
-							<a href="#small-dialog_krupenkin" >
+							<a href="#small-dialog_krupenkin" class="popup-with-zoom-anim">
 								<div class="photo_collaborator">
 									<img src="img/alexander-kr.png" alt="">
 								</div>
@@ -526,7 +602,7 @@
 							</a>
 						</div>
 						<div class="col_4">
-							<a href="#small-dialog_radchenko">
+							<a href="" onclick='return:false' class="popup-with-zoom-anim">
 								<div class="photo_collaborator">
 									<img src="img/evgenera.png" alt="">
 								</div>
@@ -543,7 +619,7 @@
 							</a>
 						</div>
 						<div class="col_4">
-							<a href="#small-dialog_davidov">
+							<a href="#small-dialog_davidov" class="popup-with-zoom-anim">
 								<div class="photo_collaborator">
 									<img src="img/alexander.png" alt="">
 								</div>
@@ -553,8 +629,7 @@
 										Davydov
 									</h4>
 									<span>
-										Project <br>
-										Architect
+										Developer
 									</span>
 								</div>
 							</a>
@@ -567,8 +642,8 @@
 			<div class="container">
 				<h3>Interested in our technology?</h3>
 				<span>Leave your e-mail to be the first one to know about our pre-sale</span>
-				<form action="//casino.us1.list-manage.com/subscribe/post?u=a3e08ccb6588d9d43141f24a3&amp;id=b44ac556ad" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="form_style validate" target="_blank" novalidate="">
-					<input class="emal_stl" type="email" value="" name="EMAIL" placeholder="Enter your email address" id="mce-EMAIL">
+				<form action="//casino.us1.list-manage.com/subscribe/post?u=a3e08ccb6588d9d43141f24a3&amp;id=b44ac556ad" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="form_style validate" target="_blank" novalidate="" onSubmit="ga('send', {hitType: 'event', eventCategory: 'Form', eventAction: 'email', eventLabel: 'bottom'}); ">
+					<input class="emal_stl" type="email" value="" name="EMAIL" placeholder="Enter your email address" id="mce-EMAIL" required>
 					<input type="submit" id="mc-embedded-subscribe" class="but_style subscribe-btn">
 				</form>
 				<p class="question">
@@ -583,40 +658,47 @@
 	<!-- FOOTER -->
 	<footer >
 		<div class="container">
-			<div class="row">
-				<div class="col_6">
+			<div class="row flex_class">
+				<div class="col_6 footer_copiright">
 					<p class="copiright">
 						© 2017 DAO.Casino. All Rights Reserved <br>
-						<a href="mailto:info@dao.casino">info@dao.casino</a>
+						<a href="mailto:team@dao.casino">team@dao.casino</a>
 					</p>
 				</div>
-				<div class="col_6">
-					<ul class="social">
+				<div class="col_6 footer_social">
+					<ul class="social clearfix">
 						<li> 
 							<div class="tbl">
-								<a href="#">
-									<img src="img/facebook.png" alt="">
+								<a href="https://www.facebook.com/Dao.casino/">
+									<i class="fa fa-facebook" aria-hidden="true"></i>
 								</a>
 							</div>
 						</li>
 						<li>
 							<div class="tbl">
 								<a href="https://twitter.com/daocasino">
-									<img src="img/twitter.png" alt="">
+									<i class="fa fa-twitter" aria-hidden="true"></i>
 								</a>
 							</div>
 						</li>
 						<li>
 							<div class="tbl">
 								<a href="https://github.com/daocasino">
-									<img src="img/github.png" alt="">
+									<i class="fa fa-github-alt" aria-hidden="true"></i>
 								</a>
 							</div>
 						</li>
 						<li>
 							<div class="tbl">
 								<a href="https://dao.casino/slack-invite.html">
-									<img src="img/slack.png" alt="">
+									<i class="fa fa-slack" aria-hidden="true"></i>
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="tbl">
+								<a href="#">
+									<img src="img/telegram.png" alt="">
 								</a>
 							</div>
 						</li>
@@ -636,7 +718,7 @@
 					<h1>Ilya Tarutov</h1>
 					<span>CEO</span>
 					<p>
-						Ilya is a serial entrepreneur with experience in finance, operations and marketing. He sold his trading company in 2014 and became a believer in decentralised technology. GFM MBA of IBSI business school. Blockchain assets investor.
+						Ilya is a serial entrepreneur with experience in finance, operations and marketing. He sold his trading company in 2014 and became a believer in decentralised technology. GFKM MBA, IBSI business school. Blockchain assets investor.
 					</p>
 					<p>
 						<b>Experience:</b> Entrepreneurship, Management, Gambling, Blockchain investment, Marketing
@@ -645,21 +727,21 @@
 						<li>
 							<div class="tbl">
 								<a href="https://www.facebook.com/profile.php?id=100011789993008">
-									<img src="img/facebook.png" alt="">
+									<i class="fa fa-facebook" aria-hidden="true"></i>
 								</a>
 							</div>
 						</li>
 						<li>
 							<div class="tbl">
 								<a href="https://www.linkedin.com/in/ilya-tarutov-612639101">
-									<img src="http://placehold.it/22x22/ecc657?text=in" alt="">
+									<i class="fa fa-linkedin" aria-hidden="true"></i>
 								</a>
 							</div>
 						</li>
 						<li>
 							<div class="tbl">
 								<a href="https://github.com/IlyaTarutov">
-									<img src="img/github.png" alt="">
+									<i class="fa fa-github-alt" aria-hidden="true"></i>
 								</a>
 							</div>
 						</li>
@@ -689,28 +771,28 @@
 						<li>
 							<div class="tbl">
 								<a href="https://www.facebook.com/k.lomashuk">
-									<img src="img/facebook.png" alt="">
+									<i class="fa fa-facebook" aria-hidden="true"></i>
 								</a>
 							</div>
 						</li>
 						<li>
 							<div class="tbl">
-								<a href="http://twitter.com/lomashuk">
-									&nbsp;<img src="img/twitter.png" alt="">
+								<a href="https://twitter.com/lomashuk">
+									<i class="fa fa-twitter" aria-hidden="true"></i>
 								</a>
 							</div>
 						</li>
 						<li>
 							<div class="tbl">
 								<a href="https://www.linkedin.com/in/ilya-tarutov-612639101">
-									<img src="http://placehold.it/22x22/ecc657?text=in" alt="">
+									<i class="fa fa-linkedin" aria-hidden="true"></i>
 								</a>
 							</div>
 						</li>
 						<li>
 							<div class="tbl">
 								<a href="https://github.com/lomashuk">
-									<img src="img/github.png" alt="">
+									<i class="fa fa-github-alt" aria-hidden="true"></i>
 								</a>
 							</div>
 						</li>
@@ -736,21 +818,21 @@
 						<li>
 							<div class="tbl">
 								<a href="https://facebook.com/sashanoxon">
-									<img src="img/facebook.png" alt="">
+									<i class="fa fa-facebook" aria-hidden="true"></i>
 								</a>
 							</div>
 						</li>
 						<li>
 							<div class="tbl">
 								<a href="https://twitter.com/noxonsu">
-									&nbsp;<img src="img/twitter.png" alt="">
+									<i class="fa fa-twitter" aria-hidden="true"></i>
 								</a>
 							</div>
 						</li>
 						<li>
 							<div class="tbl">
 								<a href="https://github.com/noxonsu">
-									<img src="img/github.png" alt="">
+									<i class="fa fa-github-alt" aria-hidden="true"></i>
 								</a>
 							</div>
 						</li>
@@ -761,7 +843,7 @@
 
 		<div id="small-dialog_bellman" class="zoom-anim-dialog mfp-hide popup-dialog">
 			<div class="container clearfix">
-				<div class="photo_popup"><img src="http://placehold.it/280x492/ecc657?text=Ilya+Tarutov" alt=""></div>
+				<div class="photo_popup"><img src="https://placehold.it/280x492/ecc657?text=Ilya+Tarutov" alt=""></div>
 				<div class="text_popup">
 					<h1>
 						Kssenya Bellman
@@ -776,14 +858,14 @@
 						<li>
 							<div class="tbl">
 								<a href="https://twitter.com/j32804">
-									&nbsp;<img src="img/twitter.png" alt="">
+									<i class="fa fa-twitter" aria-hidden="true"></i>
 								</a>
 							</div>
 						</li>
 						<li>
 							<div class="tbl">
 								<a href="https://github.com/KsenyaSerova">
-									<img src="img/github.png" alt="">
+									<i class="fa fa-github-alt" aria-hidden="true"></i>
 								</a>
 							</div>
 						</li>
@@ -805,14 +887,14 @@
 						<li>
 							<div class="tbl">
 								<a href="https://www.facebook.com/fetisova.aleksandra">
-									<img src="img/facebook.png" alt="">
+									<i class="fa fa-facebook" aria-hidden="true"></i>
 								</a>
 							</div>
 						</li>
 						<li>
 							<div class="tbl">
 								<a href="https://github.com/fetisovasasha">
-									<img src="img/github.png" alt="">
+									<i class="fa fa-github-alt" aria-hidden="true"></i>
 								</a>
 							</div>
 						</li>
@@ -835,14 +917,14 @@
 						<li>
 							<div class="tbl">
 								<a href="https://www.facebook.com/sergey.pomorin">
-									<img src="img/facebook.png" alt="">
+									<i class="fa fa-facebook" aria-hidden="true"></i>
 								</a>
 							</div>
 						</li>
 						<li>
 							<div class="tbl">
 								<a href="https://github.com/J0xFlash">
-									<img src="img/github.png" alt="">
+									<i class="fa fa-github-alt" aria-hidden="true"></i>
 								</a>
 							</div>
 						</li>
@@ -868,21 +950,21 @@
 						<li>
 							<div class="tbl">
 								<a href="https://www.facebook.com/EnsRationis2020">
-									<img src="img/facebook.png" alt="">
+									<i class="fa fa-facebook" aria-hidden="true"></i>
 								</a>
 							</div>
 						</li>
 						<li>
 							<div class="tbl">
 								<a href="https://twitter.com/EnsRationis">
-									&nbsp;<img src="img/twitter.png" alt="">
+									<i class="fa fa-twitter" aria-hidden="true"></i>
 								</a>
 							</div>
 						</li>
 						<li>
 							<div class="tbl">
 								<a href="https://github.com/ensrationis">
-									<img src="img/github.png" alt="">
+									<i class="fa fa-github-alt" aria-hidden="true"></i>
 								</a>
 							</div>
 						</li>
@@ -908,7 +990,7 @@
 						<li>
 							<div class="tbl">
 								<a href="https://github.com/akru">
-									<img src="img/github.png" alt="">
+									<i class="fa fa-github-alt" aria-hidden="true"></i>
 								</a>
 							</div>
 						</li>
@@ -919,7 +1001,7 @@
 
 		<div id="small-dialog_radchenko" class="zoom-anim-dialog mfp-hide popup-dialog">
 			<div class="container clearfix">
-				<div class="photo_popup"><img src="http://placehold.it/280x492/ecc657?text=Ilya+Tarutov" alt=""></div>
+				<div class="photo_popup"><img src="https://placehold.it/280x492/ecc657?text=Ilya+Tarutov" alt=""></div>
 				<div class="text_popup">
 					<h1>
 						Evgene Radchenko
@@ -934,7 +1016,7 @@
 						<li>
 							<div class="tbl">
 								<a href="https://github.com/EvgenRad81">
-									<img src="img/github.png" alt="">
+									<i class="fa fa-github-alt" aria-hidden="true"></i>
 								</a>
 							</div>
 						</li>
@@ -954,30 +1036,20 @@
 						Developer
 					</span>
 					<p>
-						Ilya is a serial entrepreneur with experience in finance, operations and marketing. He sold his trading company in 2014 and became a believer in decentralised technology. GFM MBA of IBSI business school. Blockchain assets investor.
-					</p>
-					<p>
-						<b>Experience:</b> Entrepreneurship, Management, Gambling, Blockchain investment, Marketing
+						One of (name) main interests is infosec and how app security practices would apply in the context of decentralised virtual machine. He completed his studies at Information Security faculty of Baltic Federal University and worked on web applications. In 2015 he became interested in decentralised applications, obsessed with Ethereum and started learning it’s ecosystem. He programs in Python, JS and Solidity.
 					</p>
 					<ul class="social clearfix">
 						<li>
 							<div class="tbl">
-								<a href="#">
-									<img src="img/facebook.png" alt="">
+								<a href="https://www.facebook.com/profile.php?id=100014804447876">
+									<i class="fa fa-facebook" aria-hidden="true"></i>
 								</a>
 							</div>
 						</li>
 						<li>
 							<div class="tbl">
-								<a href="#">
-									&nbsp;<img src="img/twitter.png" alt="">
-								</a>
-							</div>
-						</li>
-						<li>
-							<div class="tbl">
-								<a href="#">
-									<img src="img/github.png" alt="">
+								<a href="https://github.com/davy42">
+									<i class="fa fa-github-alt" aria-hidden="true"></i>
 								</a>
 							</div>
 						</li>
@@ -988,7 +1060,7 @@
 
 		<div id="open_thank_mail" class="zoom-anim-dialog mfp-hide popup-dialog">
 			<div class="container clearfix">
-				<div class="photo_popup"><img src="http://placehold.it/280x492/ecc657?text=Ilya+Tarutov" alt=""></div>
+				<div class="photo_popup"><img src="https://placehold.it/280x492/ecc657?text=Ilya+Tarutov" alt=""></div>
 				<div class="text_popup">
 					<h1>
 						Thank you!
@@ -1010,21 +1082,21 @@
 						<li>
 							<div class="tbl">
 								<a href="#">
-									<img src="img/facebook.png" alt="">
+									<i class="fa fa-facebook" aria-hidden="true"></i>
 								</a>
 							</div>
 						</li>
 						<li>
 							<div class="tbl">
 								<a href="#">
-									&nbsp;<img src="img/twitter.png" alt="">
+									<i class="fa fa-twitter" aria-hidden="true"></i>
 								</a>
 							</div>
 						</li>
 						<li>
 							<div class="tbl">
 								<a href="#">
-									<img src="img/github.png" alt="">
+									<i class="fa fa-github-alt" aria-hidden="true"></i>
 								</a>
 							</div>
 						</li>
@@ -1048,8 +1120,73 @@
 	<script src="libs/waypoints/waypoints.min.js"></script>
 	<script src="libs/animate/animate-css.js"></script>
 	<script src="libs/selectivizr/selectivizr-min.js"></script>
+	<script src="libs/PageScroll2id/PageScroll2id.min.js"></script>
 	<script src="libs/magnific-popup/jquery.magnific-popup.min.js"></script>
 	<script src="js/common.js"></script>
-	
+
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-92023514-1', 'auto');
+		ga('send', 'pageview');
+
+	</script>
+	<!-- Yandex.Metrika counter -->
+	<script type="text/javascript">
+		(function (d, w, c) {
+			(w[c] = w[c] || []).push(function() {
+				try {
+					w.yaCounter42783759 = new Ya.Metrika({
+						id:42783759,
+						clickmap:true,
+						trackLinks:true,
+						accurateTrackBounce:true,
+						webvisor:true,
+						trackHash:true
+					});
+				} catch(e) { }
+			});
+
+			var n = d.getElementsByTagName("script")[0],
+			s = d.createElement("script"),
+			f = function () { n.parentNode.insertBefore(s, n); };
+			s.type = "text/javascript";
+			s.async = true;
+			s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+			if (w.opera == "[object Opera]") {
+				d.addEventListener("DOMContentLoaded", f, false);
+			} else { f(); }
+		})(document, window, "yandex_metrika_callbacks");
+	</script>
+	<noscript style="display: none;"><div><img src="https://mc.yandex.ru/watch/42783759" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+	<!-- /Yandex.Metrika counter -->
+
+	<!-- Facebook Pixel Code -->
+	<script>
+		!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+			n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+			n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+			t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+				document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1030004810417034'); // Insert your pixel ID here.
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+	src="https://www.facebook.com/tr?id=1030004810417034&ev=PageView&noscript=1"
+	/></noscript>
+	<!-- DO NOT MODIFY -->
+	<!-- End Facebook Pixel Code -->
+
+	<script>
+		window.intercomSettings = {
+			app_id: "nyuypf85"
+		};
+	</script>
+	<script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/nyuypf85';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
+
 </body>
 </html>

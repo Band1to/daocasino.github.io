@@ -1,5 +1,11 @@
 $(document).ready(function() {
 
+<<<<<<< HEAD
+$('.hamburger').click (function(){
+	$(this).toggleClass('open');
+	$('body').toggleClass('ovh');
+});
+=======
 	//Скрытое меню
 
 	// $(".toggle_mnu").click(function() {
@@ -10,6 +16,7 @@ $(document).ready(function() {
 		$(this).toggleClass('open');
 		$('body').toggleClass('ovh');
 	});
+>>>>>>> origin/master
 
 	$(".top_mnu ul a").click(function() {
 		$(".top_mnu").fadeOut(600);
