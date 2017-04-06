@@ -483,9 +483,6 @@
 	.wrap_foudners {
 		margin: 0 32px;
 	}
-	.my_twitter {
-		display: none;
-	}
 }
 
 @media only screen and (max-width : 480px){

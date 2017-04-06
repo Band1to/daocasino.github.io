@@ -223,7 +223,6 @@ ul.top_menu li a:hover{
 	background-repeat-x: no-repeat;
 	-webkit-transition: background .3s ease-out;
 	-o-transition: background .3s ease-out;
-	-moz-transition: background .3s ease-out;
 	transition: background .3s ease-out;
 }
 .item_foudners a:hover span {
