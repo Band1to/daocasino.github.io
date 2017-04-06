@@ -6,17 +6,27 @@ $(document).ready(function() {
 	// 	$(".sandwich").toggleClass("active");
 	// });
 
-	$('.hamburger').click (function(){
-		$(this).toggleClass('open');
-		$('body').toggleClass('ovh');
-	});
+$(window).on('resize', function(e) {
+    if ($(window).width() > 767) {
+        $('.twitter-timeline').elem.getAttribute('data-tweet-limit');
+        //elem.setAttribute('data-tweet-limit="4"');
+    }
+});
 
-	$(".top_mnu ul a").click(function() {
-		$(".top_mnu").fadeOut(600);
-		$(".hamburger").toggleClass("open");
-		$('body').toggleClass('ovh');
-		$(".top_text").css("opacity", "1");
-	});
+}
+
+
+$('.hamburger').click (function(){
+	$(this).toggleClass('open');
+	$('body').toggleClass('ovh');
+});
+
+$(".top_mnu ul a").click(function() {
+	$(".top_mnu").fadeOut(600);
+	$(".hamburger").toggleClass("open");
+	$('body').toggleClass('ovh');
+	$(".top_text").css("opacity", "1");
+});
 	//.append("<span>");
 
 	$(".hamburger").click(function() {
