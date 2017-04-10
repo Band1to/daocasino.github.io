@@ -1,11 +1,16 @@
 $(document).ready(function() {
 
-	$(".top_mnu ul a").click(function() {
-		$(".top_mnu").fadeOut(600);
-		$(".hamburger").toggleClass("open");
-		$('body').toggleClass('ovh');
-		$(".top_text").css("opacity", "1");
-	});
+$('.hamburger').click (function(){
+	$(this).toggleClass('open');
+	$('body').toggleClass('ovh');
+});
+
+$(".top_mnu ul a").click(function() {
+	$(".top_mnu").fadeOut(600);
+	$(".hamburger").toggleClass("open");
+	$('body').toggleClass('ovh');
+	$(".top_text").css("opacity", "1");
+});
 	//.append("<span>");
 
 	$(".hamburger").click(function() {
