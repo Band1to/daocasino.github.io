@@ -278,14 +278,26 @@
 	.item_bottom_five {
 		left: 680px;
 	}
+	.item_foudners a img{
+		width: 100%;
+	}
+	.item_foudners {
+		width: 80%;
+		margin: 0 auto;
+	}
+	.wrap_foudners {
+		margin-right: 0;
+		margin-left: 0;
+	}
 }
 
 @media only screen and (max-width : 720px){
 	.opened_top_menu {
 		display: block;
 	}
-	.wrap_foudners:nth-child(5) {
-		display: none;
+	.item_foudners {
+		width: 85%;
+		margin: 0 auto;
 	}
 	.wrap_top_menu {
 		display: none;
@@ -297,7 +309,7 @@
 		position: absolute;
 		right: 30px;
 		top: 60px;
-		z-index: 1080;
+		z-index: 1005;
 		-webkit-transition: all .3s ease-out;
 		-o-transition: all .3s ease-out;
 		transition: all .3s ease-out;
@@ -353,7 +365,7 @@
 		//display: none;
 	}
 	.wrap_foudners {
-		margin: 0 16px;
+		margin: 0 15px;
 	}
 	.how-it-works-wrapper {
 		background-image: url(../img/scheme-mobile.png);
@@ -365,6 +377,9 @@
 		margin: 50px auto 0;
 		position: relative;
 	}
+	.wrap_foudners:last-child {
+		display: none;
+	}
 }
 
 @media only screen and (max-width : 667px){
@@ -373,6 +388,10 @@
 	}
 	.wrap_foudners {
 		margin: 0 5px;
+	}
+	.item_foudners {
+		width: 70%;
+		margin: 0 auto;
 	}
 }
 
@@ -411,10 +430,10 @@
 
 @media only screen and (max-width : 600px){
 	.wrap_foudners:first-child{
-		display: none;
+		//display: none;
 	}
 	.wrap_foudners {
-		margin: 0 40px;
+		margin: 0;
 	}
 	.features_two {
 		padding: 50px 30px 20px;
@@ -477,11 +496,14 @@
 }
 
 @media only screen and (max-width : 540px){
+	.wrap_foudners:last-child {
+		display: block;
+	}
 	.news-text {
 		width: 44%;
 	}
 	.wrap_foudners {
-		margin: 0 32px;
+		margin: 0 20px;
 	}
 	.my_twitter {
 		display: none;
@@ -493,7 +515,7 @@
 		width: 100%;
 	}
 	.wrap_foudners {
-		margin: 0 22px;
+		margin: 0 10px;
 	}
 	.contant_header {
 		padding-left: 30px;
@@ -516,8 +538,11 @@
 }
 
 @media only screen and (max-width : 414px) {
+	header {
+		min-height: 740px !important;
+	}
 	.wrap_foudners {
-		margin: 0 11px;
+		margin: 0;
 	}
 	a.logo h3 {
 		margin-left: 51px;
@@ -540,16 +565,22 @@
 }
 
 @media only screen and (max-width : 375px){
-	.founders {
+	.wrap_foudners:last-child {
 		display: none;
 	}
 	a.logo h3 {
 		margin-left: 31px;
 	}
+	.wrap_foudners {
+		margin: 0 15px;
+	}
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 360px) {
+	.wrap_foudners {
+		margin: 0 12px;
+	}
 	.how-it-works {
 		padding: 50px 10px 60px;
 	}
@@ -584,6 +615,9 @@
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px) {
+	.wrap_foudners {
+    margin: 0;
+}
 	.how-it-works-wrapper {
 		background-size: 100%;
 	}

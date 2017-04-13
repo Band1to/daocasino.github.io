@@ -289,12 +289,28 @@ ul.top_menu li a:hover{
 }
 .item_foudners{
 	display: table;
+	position: relative;
 	width: 100%;
 	height: 70px;
 }
 .item_foudners a{
 	display: table-cell;
 	vertical-align: middle;
+}
+.wrapp_icons {
+	position: relative;
+}
+.item_foudners a img.color {
+	position: absolute;
+	opacity: 0;
+	left: 0;
+	top: 0;
+	-webkit-transition: all .2s ease-out;
+	-o-transition: all .2s ease-out;
+	transition: all .2s ease-out;
+}
+.item_foudners:hover a img.color {
+	opacity: 1;
 }
 .container_logos{
 	//background-image: url(../img/fichka_bg.png);
@@ -439,7 +455,7 @@ main {
 	vertical-align: middle;
 }
 .features-img_customstyle{
-	margin-left: 22px;
+	//margin-left: 22px;
 }
 .features_wrap img{
 	//border-radius: 50%;
@@ -591,12 +607,16 @@ main {
 	background: #1c1c1c;
 	margin-right: 31px;
 }
+.news-text {
+	float: left;
+	width: 48%;
+}
 .news-icon{
 	display: table-cell;
 	vertical-align: middle;
 	text-align: center;
 }
-.news-text a{
+.news-text span {
 	font: 16px/26px "BasisGrotesquePro-Bold";
 	color: #fff;
 	display: block;
@@ -604,7 +624,7 @@ main {
 	-o-transition: all .2s ease-out;
 	transition: all .2s ease-out;
 }
-.news-text a:hover{
+.item_news:hover span{
 	color: #ed9726;
 }
 .wrapper_news .button{
