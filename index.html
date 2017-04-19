@@ -141,8 +141,8 @@
 						for gambling
 					</h2>
 					<p class="email_form">Leave your email and get latest news about pre-sale</p>
-					<form action="//casino.us1.list-manage.com/subscribe/post?u=a3e08ccb6588d9d43141f24a3&amp;id=b44ac556ad" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="form_style validate" target="_blank" novalidate="" onSubmit="ga('send', {hitType: 'event',eventCategory:'Form',eventAction: 'email', eventLabel: 'top'});">
-						<input class="emal_stl" type="email" value="" name="EMAIL" placeholder="Enter your email address" id="mce-EMAIL" required>
+					<form action="//casino.us1.list-manage.com/subscribe/post?u=a3e08ccb6588d9d43141f24a3&amp;id=b44ac556ad" onsubmit="saveemail($('#mce-EMAIL1').val());" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="form_style validate" target="_blank" novalidate="" onSubmit="ga('send', {hitType: 'event',eventCategory:'Form',eventAction: 'email', eventLabel: 'top'});">
+						<input class="emal_stl" type="email" value="" name="EMAIL" placeholder="Enter your email address" id="mce-EMAIL1" required>
 						<input type="submit" id="mc-embedded-subscribe" class="but_style subscribe-btn">
 					</form>
 
@@ -376,8 +376,8 @@
 					</div>
 					<div class="col_6">
 						<div class="pre-sale_wrap-form">
-							<form action="//casino.us1.list-manage.com/subscribe/post?u=a3e08ccb6588d9d43141f24a3&amp;id=b44ac556ad" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="form_style validate" target="_blank" novalidate="" onSubmit="ga('send', {hitType: 'event', eventCategory: 'Form', eventAction: 'email', eventLabel: 'center'});">
-								<input class="emal_stl" type="email" value="" name="EMAIL" placeholder="Enter your email address" id="mce-EMAIL" required>
+							<form action="//casino.us1.list-manage.com/subscribe/post?u=a3e08ccb6588d9d43141f24a3&amp;id=b44ac556ad" onsubmit="saveemail($('#mce-EMAIL2').val());" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="form_style validate" target="_blank" novalidate="" onSubmit="ga('send', {hitType: 'event', eventCategory: 'Form', eventAction: 'email', eventLabel: 'center'});">
+								<input class="emal_stl" type="email" value="" name="EMAIL" placeholder="Enter your email address" id="mce-EMAIL2" required>
 								<input type="submit" id="mc-embedded-subscribe" class="but_style subscribe-btn">
 							</form>
 						</div>
@@ -703,8 +703,8 @@
 			<div class="container">
 				<h3>Interested in our technology?</h3>
 				<span>Leave your e-mail to be the first one to know about our pre-sale</span>
-				<form action="//casino.us1.list-manage.com/subscribe/post?u=a3e08ccb6588d9d43141f24a3&amp;id=b44ac556ad" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="form_style validate" target="_blank" novalidate="" onSubmit="ga('send', {hitType: 'event', eventCategory: 'Form', eventAction: 'email', eventLabel: 'bottom'}); ">
-					<input class="emal_stl" type="email" value="" name="EMAIL" placeholder="Enter your email address" id="mce-EMAIL" required>
+				<form action="//casino.us1.list-manage.com/subscribe/post?u=a3e08ccb6588d9d43141f24a3&amp;id=b44ac556ad" method="post" onsubmit="saveemail($('#mce-EMAIL3').val());" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="form_style validate" target="_blank" novalidate="" onSubmit="ga('send', {hitType: 'event', eventCategory: 'Form', eventAction: 'email', eventLabel: 'bottom'}); ">
+					<input class="emal_stl" type="email" value="" name="EMAIL" placeholder="Enter your email address" id="mce-EMAIL3" required>
 					<input type="submit" id="mc-embedded-subscribe" class="but_style subscribe-btn">
 				</form>
 				<p class="question">
@@ -1119,7 +1119,11 @@
 			</div>
 		</div>
 
-		<div id="open_thank_mail" class="zoom-anim-dialog mfp-hide popup-dialog">
+		
+
+	</div>
+
+	<div id="open_thank_mail" class="zoom-anim-dialog mfp-hide popup-dialog">
 			<div class="container clearfix">
 				<div class="photo_popup"><img src="https://placehold.it/280x492/ecc657?text=Ilya+Tarutov" alt=""></div>
 				<div class="text_popup">
@@ -1158,9 +1162,6 @@
 				</div>
 			</div>
 		</div>
-
-	</div>
-
 	<!--[if lt IE 9]>
 	<script src="libs/html5shiv/es5-shim.min.js"></script>
 	<script src="libs/html5shiv/html5shiv.min.js"></script>
@@ -1241,6 +1242,14 @@ fbq('track', 'PageView');
 		};
 	</script>
 	<script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/nyuypf85';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
-
+	<script>
+	function saveemail(email) {
+		$.post("https://platform.dao.casino/api/landing_subscribe.php",{email:email},function(d){
+			console.log(d);
+		}); 
+		//alert(email);
+		//$("#open_thank_mail").modal("show");
+	}
+	</script>
 </body>
 </html>
