@@ -496,6 +496,12 @@
 }
 
 @media only screen and (max-width : 540px){
+	.ru_index .contant_header h2 {
+		font-size: 38px;
+	}
+	.ru_index .text_collaborator {
+		padding-left: 8px;
+	}
 	.wrap_foudners:last-child {
 		display: block;
 	}
@@ -547,8 +553,11 @@
 	a.logo h3 {
 		margin-left: 51px;
 	}
-	.contant_header h2 {
-		font-size: 38px;
+	.ru_index  .contant_header h2 {
+		font-size: 36px;
+	}
+	.ru_index .contant_header {
+		margin-top: -250px;
 	}
 	.email_form {
 		font-size: 14px;
@@ -565,6 +574,13 @@
 }
 
 @media only screen and (max-width : 375px){
+	.email_form br {
+		display: none;
+	}
+	.ru_index .contant_header h2 {
+		font-size: 28px;
+		line-height: 34px;
+	}
 	.wrap_foudners:last-child {
 		display: none;
 	}
@@ -616,8 +632,8 @@
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px) {
 	.wrap_foudners {
-    margin: 0;
-}
+		margin: 0;
+	}
 	.how-it-works-wrapper {
 		background-size: 100%;
 	}
