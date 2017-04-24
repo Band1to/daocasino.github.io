@@ -1247,7 +1247,8 @@ fbq('track', 'PageView');
 	<script>
 	function saveemail(email) {
 		$.post("https://platform.dao.casino/api/landing_subscribe.php",{email:email},function(d){
-			console.log(d);
+			yaCounter42783759.reachGoal('EMAIL'); 
+			ga('send', {hitType: 'event',eventCategory:'Form',eventAction: 'email', eventLabel: 'top'});
 		}); 
 		//alert(email);
 		//$("#open_thank_mail").modal("show");
@@ -1257,7 +1258,12 @@ fbq('track', 'PageView');
 		      type: 'inline'
 		  }
 		});
+		
+		
+		
 	}
+	
+
 	</script>
 </body>
 </html>
