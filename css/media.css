@@ -517,6 +517,9 @@
 }
 
 @media only screen and (max-width : 480px){
+	.japan_index .contant_header h2 {
+		font-size: 30px;
+	}
 	.news-text {
 		width: 100%;
 	}
@@ -544,8 +547,17 @@
 }
 
 @media only screen and (max-width : 414px) {
+	.japan_index .contant_header h2 {
+		font-size: 26px;
+	}
+	.contant_header h2 {
+		font-size: 34px;
+	}
 	header {
 		min-height: 740px !important;
+	}
+	p.email_form br {
+		display: none;
 	}
 	.wrap_foudners {
 		margin: 0;
