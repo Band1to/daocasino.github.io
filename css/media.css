@@ -541,9 +541,15 @@
 		margin-right: 0;
 		margin-bottom: 20px;
 	}
+	.japan_index .contant_header h2 {
+		font-size: 28px;
+	}
 }
 
 @media only screen and (max-width : 414px) {
+	.japan_index .contant_header h2 {
+		font-size: 26px;
+	}
 	header {
 		min-height: 740px !important;
 	}
@@ -571,12 +577,12 @@
 	.technology_form span {
 		font-size: 16px;
 	}
-}
-
-@media only screen and (max-width : 375px){
 	.email_form br {
 		display: none;
 	}
+}
+
+@media only screen and (max-width : 375px){
 	.ru_index .contant_header h2 {
 		font-size: 28px;
 		line-height: 34px;
