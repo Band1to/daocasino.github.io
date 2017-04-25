@@ -580,6 +580,9 @@
 	.email_form br {
 		display: none;
 	}
+	.contant_header h2 {
+		font-size: 34px;
+	}
 }
 
 @media only screen and (max-width : 375px){
