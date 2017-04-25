@@ -724,6 +724,16 @@ main {
 	margin-bottom: 13px;
 	line-height: 24px;
 }
+.japan_index .item_top p,
+.japan_index .item_bottom p {
+	font-size: 14px;
+}
+.japan_index .text_collaborator span{
+	font-size: 14px;
+}
+.japan_index .text_collaborator {
+	padding-left: 16px;
+}
 .item_top span,
 .item_bottom span{
 	font-size: 14px;
