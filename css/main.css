@@ -1481,7 +1481,10 @@ Fade-move animation for second dialog
 	cursor: pointer;
 	width: 48px;
 	height: 48px;
+	-webkit-transition: all 0.25s;
+	-o-transition: all 0.25s;
 	transition: all 0.25s;
+	display: block;
 }
 
 .hamburger__top-bun,
