@@ -59,6 +59,8 @@ header{
 	background-repeat: no-repeat;
 	background-position: right center;
 	height: 100%;
+	-webkit-background-size: 50%;
+	background-size: 50%;
 }
 a.logo {
 	display: inline-block;
@@ -82,7 +84,7 @@ a.logo h3 span {
 }
 ul.top_menu {
 	display: inline-block;
-	float: left;
+	//float: left;
 	margin-top: 18px;
 }
 ul.top_menu li {
@@ -353,7 +355,7 @@ ul.top_menu li a:hover{
 	padding-left: 112px;
 	position: absolute;
 	top: 50%;
-	margin-top: -210px;
+	margin-top: -160px;
 	left: 0;
 }
 .fixed_top_line {

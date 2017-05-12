@@ -120,7 +120,7 @@ function lazyLoadImages() {
 	});
 
 	$(window).scroll(function() {
-		if ($(this).scrollTop() > 190){  
+		if ($(this).scrollTop() > 280){  
 			$('.block_logo h3').addClass("animated bounceTop2");
 		}
 		else{
