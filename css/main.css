@@ -728,7 +728,7 @@ main {
 }
 .item_top p,
 .item_bottom p{
-	font-family: "BasisGrotesquePro-Bold";
+	//font-family: "BasisGrotesquePro-Bold";
 	font-size: 16px;
 	font-style: normal;
 	color: #fff;
