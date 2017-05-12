@@ -453,7 +453,7 @@ main {
 .features-img_table{
 	display: table;
 	width: 100%;
-	min-height: 140px;
+	height: 140px;
 	max-width: 130px;
 	margin: 0 auto 36px;
 }
