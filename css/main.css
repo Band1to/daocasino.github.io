@@ -82,6 +82,8 @@ a.logo h3 span {
 }
 ul.top_menu {
 	display: inline-block;
+	float: left;
+	margin-top: 18px;
 }
 ul.top_menu li {
 	list-style: none;
@@ -93,7 +95,7 @@ ul.top_menu li {
 ul.top_menu li a{
 	color: #d2d2d2;
 	text-decoration: none;
-	margin-right: 45px;
+	margin-right: 40px;
 	-webkit-transition: all .2s ease-out;
 	-o-transition: all .2s ease-out;
 	transition: all .2s ease-out;
@@ -143,7 +145,7 @@ ul.top_menu li a:hover{
 	line-height: 25px;
 }
 .open_info_block p a {
-	color: #fff;
+	color: #ed9726;
 }
 .info_text{
 	padding: 30px;
@@ -194,28 +196,32 @@ ul.top_menu li a:hover{
 .emal_stl{
 	font-family: "BasisGrotesquePro-Regular";
 	font-size: 16px;
-	color: #fff;
+	color: #333;
 	width: 100%;
 	max-width: 430px;
 	background-color: transparent;
-	line-height: 70px;
+	line-height: 66px;
 	padding-left: 24px;
 	padding-right: 20px;
 	border-radius: 6px;
-	border: solid 2px #4b4b4b;
+	background: #fff;
+	border: 0;
 }
 .but_style{
-	background-image: url(../img/buttonimg.png);
-	background-color: transparent;
-	width: 20px;
-	height: 16px;
+	//background-image: url(../img/buttonimg.png);
+	//background-color: transparent;
+	background: #0C6DDF;
+	width: 145px;
+	font-size: 16px;
+	border-radius: 0 5px 5px 0;
 	position: absolute;
 	display: block;
 	border: 0;
-	right: 22px;
-	top: 50%;
-	margin-top: -8px;
-	color: transparent;
+	right: 0;
+	top: 0;
+	line-height: 66px;
+	margin-top: 0px;
+	color: #fff;
 	cursor: pointer;
 }
 .item_foudners a span {
@@ -372,7 +378,7 @@ ul.top_menu li a:hover{
 }
 .rounders {
 	font-size: 14px;
-	color: #555;
+	color: #999;
 	text-transform: uppercase;
 	text-align: center;
 	position: relative;
@@ -571,14 +577,19 @@ main {
 	padding: 100px 0;
 }
 .sale_form{
-	font: 36px/46px "BasisGrotesquePro-Bold";
+	font: 48px/58px "BasisGrotesquePro-Bold";
 	color: #fff;
+	padding-top: 14px;
 }
 .sale_form span{
 	color: #f3951a;
 }
-.pre-sale_wrap-form .form_style{
-	margin: 10px auto 0;
+.pre-sale_wrap-form{
+	padding-left: 50px;
+}
+.pre-sale_miss {
+	font-size: 18px;
+	margin-bottom: 34px;
 }
 /* NEWS ===================
 ======================================*/
@@ -645,7 +656,7 @@ main {
 	border-bottom: 1px solid #313131;
 }
 .roadmap_container {
-	margin-top: 55px;
+	margin-top: 110px;
 }
 .roadmap-wrap_top{
 	min-height: 100px;
@@ -690,7 +701,7 @@ main {
 }
 .progress_line{
 	display: block;
-	width: 21%;
+	width: 33%;
 	height: 1px;
 	position: absolute;
 	left: 0;

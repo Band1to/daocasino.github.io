@@ -152,16 +152,3 @@ function lazyLoadImages() {
 	});
 
 });
-
-		/*
-function resize() {
-			var foot = document.getElementsByClassName('contant_header')[0];
-			var footHeight = foot.offsetHeight;
-				//alert(footHeight);
-			foot.style.marginTop = footHeight+"px";
-			var foot = document.getElementsByClassName('container_logos')[0];
-			foot.style.marginTop = -footHeight+"px";
-				//document.getElementsByClassName('container_logos').style.paddingTop = footHeight+"px";
-		}
-		
-		window.onload = resize;*/
