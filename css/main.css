@@ -52,7 +52,7 @@ h3 {
 header{
 	min-height: 475px;
 	background: #202020;
-	border-bottom: 1px solid #313131;
+	//border-bottom: 1px solid #313131;
 }
 .bg_head {
 	background-image: url(../img/fichka_bg.png);
@@ -281,10 +281,10 @@ ul.top_menu li a:hover{
 	background-position: -621px 0;
 }
 .founders{
-	position: absolute;
+	//position: absolute;
 	width: 100%;
-	bottom: 18px;
-	left: 0;
+	//bottom: 18px;
+	//left: 0;
 }
 .wrap_foudners{
 	float: left;
@@ -382,7 +382,8 @@ ul.top_menu li a:hover{
 	text-transform: uppercase;
 	text-align: center;
 	position: relative;
-	top: -50px;
+	//top: -50px;
+	margin-bottom: 58px;
 }
 /* MAIN STYLE =====================
 ==============================================*/
