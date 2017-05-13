@@ -265,6 +265,9 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
+	ul.top_menu li a {
+		margin-right: 14px;
+	}
 	.wrap_foudners {
 		margin-right: 50px;
 		margin-left: 65px;

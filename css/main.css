@@ -50,7 +50,7 @@ h3 {
 ==============================================*/
 
 header{
-	min-height: 475px;
+	min-height: 700px;
 	background: #202020;
 	//border-bottom: 1px solid #313131;
 }
@@ -59,8 +59,6 @@ header{
 	background-repeat: no-repeat;
 	background-position: right center;
 	height: 100%;
-	-webkit-background-size: 50%;
-	background-size: 50%;
 }
 a.logo {
 	display: inline-block;
@@ -90,6 +88,7 @@ ul.top_menu {
 ul.top_menu li {
 	list-style: none;
 	display: inline-block;
+	margin-right: 40px;
 }
 .text_right {
 	text-align: right;
@@ -97,12 +96,46 @@ ul.top_menu li {
 ul.top_menu li a{
 	color: #d2d2d2;
 	text-decoration: none;
-	margin-right: 40px;
 	-webkit-transition: all .2s ease-out;
 	-o-transition: all .2s ease-out;
 	transition: all .2s ease-out;
 }
 ul.top_menu li a:hover{
+	color: #fff;
+}
+.jcf-list-content ul {
+    z-index: 1000;
+    position: relative;
+    background: rgba(0, 0, 0, 0.9);
+    width: 158px;
+    border-radius: 6px;
+    padding: 34px 30px;
+    margin-top: 22px;
+    left: -30px;
+}
+.jcf-list-content ul li{
+	list-style: none;
+	cursor: pointer;
+	color: #d2d2d2;
+	margin-bottom: 26px;
+	-webkit-transition: all .2s ease-out;
+	-o-transition: all .2s ease-out;
+	transition: all .2s ease-out;
+}
+.jcf-list-content ul li:last-child{
+	margin-bottom: 0;
+}
+.jcf-list-content ul li:hover{
+	color: #fff;
+}
+.lang {
+	cursor: pointer;
+	color: #d2d2d2;
+	-webkit-transition: all .2s ease-out;
+	-o-transition: all .2s ease-out;
+	transition: all .2s ease-out;
+}
+.lang:hover {
 	color: #fff;
 }
 .button{
@@ -159,7 +192,8 @@ ul.top_menu li a:hover{
 .button:hover {
 	border: solid 2px #f3951a;
 }
-.contant_header h1 a{
+.contant_header h1 a,
+.dao-name {
 	font-family: "BasisGrotesquePro-Regular";
 	font-weight: normal;
 	line-height: 64px;
@@ -167,7 +201,9 @@ ul.top_menu li a:hover{
 	color: #fff;
 	margin-bottom: 7px;
 }
-.contant_header h1 a span {
+.contant_header h1 a span,
+.dao-name span {
+	font-size: 36px !important;
 	color: #ed9726;
 }
 .contant_header h2{
