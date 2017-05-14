@@ -245,7 +245,7 @@ ul.top_menu li a:hover{
 	background: #fff;
 	border: 0;
 }
-.but_style{
+input[type="submit"].but_style{
 	//background-image: url(../img/buttonimg.png);
 	//background-color: transparent;
 	background: #0C6DDF;
