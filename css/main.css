@@ -341,7 +341,7 @@ input[type="submit"].but_style{
 	margin-right: 68px;
 	display:inline-block;
 	margin-bottom:30px;
-	padding: 15px;
+	padding: 0px;
 }
 .wrap_foudners:last-child{
 	margin-right: 0;
