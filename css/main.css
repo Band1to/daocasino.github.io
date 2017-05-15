@@ -3,7 +3,7 @@ html, body {
 	text-rendering: optimizeSpeed;
 }
 *::-webkit-scrollbar { display: none;}
-html { overflow: -moz-scrollbars-none; }
+
 
 html {
 	background: #202020;
