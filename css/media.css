@@ -600,8 +600,7 @@
 	.wrap_foudners {
 		margin: 0 auto;
 		display: block;
-		float: none;
-		width: 100px;
+		
 		text-align: center;
 	}
 }
