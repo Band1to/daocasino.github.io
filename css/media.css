@@ -54,7 +54,7 @@
 
 @media only screen and (max-width : 1024px){
 	.wrap_foudners {
-		float: left;
+		/* float: left; */
 		margin-right: 60px;
 	}
 	.progress_line {
@@ -118,7 +118,7 @@
 	}
 	.block_collaborator .col_4 {
 		margin-bottom: 78px;
-		width: 50%;
+		width: 49%;
 	}
 
 	.block_collaborator .col_4 a {
@@ -319,7 +319,7 @@
 	}
 	.opened_top_menu.sticky_mnu {
 		position: fixed;
-		top: 24px;
+		top: 30px;
 	}
 	nav.top_mnu ul {
 		top: 50%;
@@ -372,6 +372,7 @@
 	}
 	.how-it-works-wrapper {
 		background-image: url(../img/scheme-mobile.png);
+		// background-size:315px 320px;
 		background-repeat: no-repeat;
 		background-position: center center;
 		max-width: 792px;
@@ -381,7 +382,7 @@
 		position: relative;
 	}
 	.wrap_foudners:last-child {
-		display: none;
+		/* display: none; */
 	}
 }
 
@@ -505,9 +506,8 @@
 	.ru_index .text_collaborator {
 		padding-left: 8px;
 	}
-	.wrap_foudners:last-child {
-		display: block;
-	}
+	
+
 	.news-text {
 		width: 44%;
 	}
@@ -705,4 +705,26 @@
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
 
+}
+
+@media only screen and (max-width : 500px) {
+	.pre-sale_wrap-form {
+		padding-left:0;
+	}
+	.subscribe-form {
+		
+	} 
+	.subscribe-form input[type="email"], .subscribe-form input[type="submit"]{
+		display:block;
+		float:none;
+		width:90%; margin:0 auto;
+		position:inherit;
+	} 
+
+	.subscribe-form input[type="email"]{
+		border-radius:6px 6px 0px 0px;
+	} 
+	.subscribe-form input[type="submit"]{
+		border-radius:0px 0px 6px 6px;
+	} 
 }
