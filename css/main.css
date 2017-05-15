@@ -261,6 +261,7 @@ input[type="submit"].but_style{
 	margin-top: 0px;
 	color: #fff;
 	cursor: pointer;
+	-webkit-appearance: none;
 }
 .item_foudners a span {
 	background-image: url(../img/sprite_logo.png);
