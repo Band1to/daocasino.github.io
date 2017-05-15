@@ -353,6 +353,14 @@
 
 
 @media only screen and (max-width : 720px){
+	
+	
+	span.enable:before, span.disable:before, span.active:before {
+	
+	
+	
+	display: none
+	}
 
 
 
