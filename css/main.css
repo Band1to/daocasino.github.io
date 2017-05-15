@@ -1,3 +1,10 @@
+html, body { 
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeSpeed;
+}
+*::-webkit-scrollbar { display: none;}
+html { overflow: -moz-scrollbars-none; }
+
 html {
 	background: #202020;
 	height: 100%;
@@ -81,8 +88,10 @@ a.logo h3 span {
 	color: #ed9726;
 }
 ul.top_menu {
+	/* white-space: nowrap; */
 	display: inline-block;
-	//float: left;
+	//
+	float: left;
 	margin-top: 18px;
 }
 ul.top_menu li {
@@ -323,10 +332,14 @@ input[type="submit"].but_style{
 	width: 100%;
 	//bottom: 18px;
 	//left: 0;
+	text-align:center;
 }
 .wrap_foudners{
-	float: left;
+	text-align: center;
 	margin-right: 68px;
+	display:inline-block;
+	margin-bottom:30px;
+	padding: 15px;
 }
 .wrap_foudners:last-child{
 	margin-right: 0;
@@ -890,10 +903,12 @@ span.enable{
 	float: left;
 }
 .block_collaborator{
+	text-align: center;
 	font-family: "BasisGrotesquePro-Regular";
 	padding-top: 120px;
 }
 .text_collaborator {
+	width: 100px;
 	float: left;
 	padding-left: 32px;
 }
@@ -910,7 +925,15 @@ span.enable{
 	margin-top: 17px;
 }
 .block_collaborator .col_4{
+	text-align: left;
+	max-width: 330px;
 	margin-bottom: 78px;
+	display: inline-block;
+	float: none;
+	/* overflow: hidden; */
+	min-width: 300px;
+	margin-left: 30px;
+	margin-right: 20px;
 }
 /* OUR TEAM POPUP ===================
 ======================================*/
@@ -1536,7 +1559,7 @@ Fade-move animation for second dialog
 	transition: all 0.25s;
 	display: block;
 }
-
+.hamburger:after,
 .hamburger__top-bun,
 .hamburger__bottom-bun {
 	content: '';
@@ -1555,10 +1578,13 @@ Fade-move animation for second dialog
 	-o-transition: all 0.3s;
 	transition: all 0.3s;
 }
-
+.hamburger:after { 
+	top:9px;
+}
 .hamburger:hover [class*="-bun"] {
 	background: #fff;
 }
+
 
 .hamburger__top-bun {
 	top: 23px;
@@ -1569,6 +1595,7 @@ Fade-move animation for second dialog
 	bottom: 23px;
 	transform: translateY(5px);
 }
+
 
 .open {
 	transform: rotate(90deg);
@@ -1584,6 +1611,11 @@ Fade-move animation for second dialog
 	transform: 
 	rotate(-45deg) 
 	translateY(0px);
+}
+.hamburger.open:after { 
+	top:17px; left:22px;
+	transform: rotate(45deg) translateY(9px);
+	opacity:0;
 }
 
 .top_mnu {

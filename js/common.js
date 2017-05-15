@@ -1,10 +1,14 @@
 $(document).ready(function() {
 
-	// JCF Plugin
-
-	$(function() {
+	if (typeof jcf !=='undefined') {
 		jcf.replaceAll();
-	});
+	}
+
+
+	$('select.slct_home').on('change',function(){
+		window.location = $(this).val()
+	})
+
 
 	$('.hamburger').click (function(){
 		$(this).toggleClass('open');
@@ -155,6 +159,16 @@ function lazyLoadImages() {
 	heightDetect();
 	$(window).resize(function() {
 		heightDetect();
+	});
+
+
+
+	$('#mc-embedded-subscribe-form').on('submit', function(){
+		var url   = $(this).attr('action');
+		var email = $(this).find('input[name="email"]').val();
+		$.post(url,{email:email}, function(){
+			window.location = 'https://dao.casino/';
+		})
 	});
 
 });
