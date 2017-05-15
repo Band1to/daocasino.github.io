@@ -598,9 +598,10 @@
 		margin-left: 31px;
 	}
 	.wrap_foudners {
-		margin: 0 15px;
+		margin: 0 auto;
 		display: block;
 		float: none;
+		width: 60px;
 		text-align: center;
 	}
 }
