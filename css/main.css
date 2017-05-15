@@ -8,6 +8,7 @@ html { overflow: -moz-scrollbars-none; }
 html {
 	background: #202020;
 	height: 100%;
+	overflow-x: hidden;
 }
 body {
 	font-family: "BasisGrotesquePro-Regular", sans-serif;
@@ -442,6 +443,7 @@ input[type="submit"].but_style{
 main {
 	background: #202020;
 	padding-bottom: 250px;
+	width:100vw; overflow:hidden;
 }
 .founders_slog{
 	font-size: 26px;
