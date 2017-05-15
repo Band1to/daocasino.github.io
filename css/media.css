@@ -356,9 +356,17 @@
 
 
 
-.enable, .item_top span.active, .disable, .roadmap-progress {
+.enable, .disable, .roadmap-progress {
 
 display: none !important;
+
+}
+
+.item_top span.active {
+
+
+left: -33px;
+top: 0;
 
 }
 
