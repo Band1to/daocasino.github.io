@@ -295,6 +295,68 @@
 }
 
 @media only screen and (max-width : 720px){
+
+
+
+.enable, .item_top span.active, .disable, .roadmap-progress {
+
+display: none !important;
+
+}
+
+
+.item_top.item_top_one2 {
+
+left: 120px;
+		top: 45px;
+
+}
+
+.item_bottom_one {
+		left: 120px;
+		top: -5px;
+	}
+	.item_top_one {
+		left: 120px;
+		top: 280px;
+		display: block;
+	}
+	.item_bottom_three {
+		left: 120px;
+		top: 285px;
+		display: block;
+	}
+	.item_top_two {
+		left: 120px;
+		top: 568px;
+		display: block;
+	}
+
+	.item_bottom_four {
+		left: 120px;
+		top: 500px;
+		display: block;
+	}
+	.item_top_theree {
+		left: 120px;
+		top: 820px;
+	display: block;
+	}
+	.item_bottom_five {
+		left: 120px;
+		top: 780px;
+		display: block;
+	}
+
+
+	.progress_line {
+		width: 30%;
+		display: none;
+	}
+
+
+
+
 	.opened_top_menu {
 		display: block;
 	}
@@ -312,6 +374,7 @@
 		position: absolute;
 		right: 30px;
 		top: 60px;
+		
 		z-index: 1005;
 		-webkit-transition: all .3s ease-out;
 		-o-transition: all .3s ease-out;
@@ -345,7 +408,7 @@
 	.roadmap-wrap_top,
 	.roadmap-progress,
 	.roadmap-wrap_bottom {
-		display: none;
+		display: block;
 	}
 	.roadmap_container {
 		background-image: url(../img/roadmap.png);
