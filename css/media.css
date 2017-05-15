@@ -319,7 +319,7 @@
 	}
 	.opened_top_menu.sticky_mnu {
 		position: fixed;
-		top: 24px;
+		top: 30px;
 	}
 	nav.top_mnu ul {
 		top: 50%;

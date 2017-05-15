@@ -1599,7 +1599,7 @@ Fade-move animation for second dialog
 
 
 .open {
-	transform: rotate(90deg);
+	transform: rotate(90deg) translateX(-10px);
 }
 
 .open .hamburger__top-bun {
