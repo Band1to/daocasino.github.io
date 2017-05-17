@@ -89,7 +89,7 @@ a.logo h3 span {
 	color: #ed9726;
 }
 ul.top_menu {
-	/* white-space: nowrap; */
+	 white-space: nowrap; 
 	display: inline-block;
 	//
 	float: left;

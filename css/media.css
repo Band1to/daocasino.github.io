@@ -1,6 +1,24 @@
 /*==========  Desktop First Method  ==========*/
 
 /* Large Devices, Wide Screens */
+@media only screen and (max-width : 1150px) {
+	ul.top_menu li {
+		margin-right: 14px;
+	}	
+}
+@media only screen and (max-width : 930px) {
+	.block_menu  { white-space:nowrap; text-align:right; float:right; }
+	.wrap_top_menu .info_block { white-space:normal; }
+	.wrap_top_menu .info_block button {
+		padding:5px 10px;
+	}
+	.block_logo {
+		width:30%;		
+	}
+	.block_logo a h3 {
+		font-size:28px;
+	}
+}
 
 @media only screen and (max-width : 1080px) {
 	.row {
@@ -39,6 +57,7 @@
 		width: 22%;
 	}
 }
+
 
 @media only screen and (max-width : 1040px) {
 	.news-text {
