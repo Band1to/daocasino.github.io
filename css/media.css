@@ -480,12 +480,12 @@ left: 120px;
 		margin: 0 15px;
 	}
 	.how-it-works-wrapper {
-		background-image: url(../img/scheme-mobile.png);
-		// background-size:315px 320px;
+		background-image: url(../img/scheme-mobile-big.png);
+		background-size:100% auto;
 		background-repeat: no-repeat;
 		background-position: center center;
 		max-width: 792px;
-		min-height: 330px;
+		min-height: 650px;
 		width: 100%;
 		margin: 50px auto 0;
 		position: relative;

@@ -2,7 +2,7 @@ html, body {
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeSpeed;
 }
-*::-webkit-scrollbar { display: none;}
+// *::-webkit-scrollbar { display: none;}
 
 
 html {
