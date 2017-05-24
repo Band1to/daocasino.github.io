@@ -932,6 +932,7 @@ span.enable{
 	max-width: 330px;
 	margin-bottom: 78px;
 	display: inline-block;
+	vertical-align: top;
 	float: none;
 	/* overflow: hidden; */
 	min-width: 300px;
