@@ -911,7 +911,7 @@ span.enable{
 	padding-top: 120px;
 }
 .text_collaborator {
-	width: 100px;
+	width: 150px;
 	float: left;
 	padding-left: 32px;
 }
@@ -1666,16 +1666,8 @@ Fade-move animation for second dialog
 	margin-right: 16px;
 }
 
-
 @media screen and (max-width: 500px) {
-
-.text_collaborator {
-
-width: 60px;
-
+	.text_collaborator {
+		width: 60px;
+	}
 }
-	
-
-
-}
-	
