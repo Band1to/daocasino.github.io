@@ -609,14 +609,9 @@ left: 120px;
 }
 
 @media only screen and (max-width : 540px){
-	.ru_index .contant_header h2 {
-		font-size: 38px;
-	}
 	.ru_index .text_collaborator {
 		padding-left: 8px;
 	}
-	
-
 	.news-text {
 		width: 44%;
 	}
@@ -653,15 +648,9 @@ left: 120px;
 		margin-right: 0;
 		margin-bottom: 20px;
 	}
-	.japan_index .contant_header h2 {
-		font-size: 28px;
-	}
 }
 
 @media only screen and (max-width : 414px) {
-	.japan_index .contant_header h2 {
-		font-size: 26px;
-	}
 	header {
 		min-height: 740px !important;
 	}
@@ -670,9 +659,6 @@ left: 120px;
 	}
 	a.logo h3 {
 		margin-left: 51px;
-	}
-	.ru_index  .contant_header h2 {
-		font-size: 36px;
 	}
 	.ru_index .contant_header {
 		margin-top: -250px;
@@ -697,11 +683,6 @@ left: 120px;
 }
 
 @media only screen and (max-width : 375px){
-	.ru_index .contant_header h2 {
-		font-size: 28px;
-		line-height: 34px;
-	}
-	
 	a.logo h3 {
 		margin-left: 31px;
 	}
@@ -763,6 +744,76 @@ left: 120px;
 	}
 }
 
+/*========== Flexible Header Font Size  ==========*/
+@media (max-width: 600px), (min-width: 1300px) {
+	.contant_header p br {
+		display: none;
+	}
+}
+@media (min-width: 1200px) {
+	.japan_index .contant_header h2 {
+		font-size: 46px;
+	}
+}
+@media (max-width: 1199px) {
+	.ru_index .contant_header h2 {
+		font-size: 44px;
+	}
+	.cor_index .contant_header h2 {
+		font-size: 42px;
+	}
+	.sp_index .contant_header h2 {
+		font-size: 38px;
+	}
+	.japan_index .contant_header h2 {
+		font-size: 36px;
+	}
+}
+@media (max-width: 991px) {
+	.ru_index .contant_header h2,
+	.cor_index .contant_header h2 {
+		font-size: 38px;
+	}
+	.sp_index .contant_header h2 {
+		font-size: 36px;
+	}
+	.japan_index .contant_header h2 {
+		font-size: 32px;
+	}
+	.cor_index .email_form {
+		font-size: 16px !important;
+	}
+}
+@media (max-width: 767px) {
+	.ru_index .contant_header h2,
+	.cor_index .contant_header h2,
+	.sp_index .contant_header h2 {
+		font-size: 36px;
+	}
+	.japan_index .contant_header h2 {
+		font-size: 30px;
+	}
+}
+@media (max-width: 480px) {
+	.ru_index .contant_header h2,
+	.cor_index .contant_header h2,
+	.sp_index .contant_header h2 {
+		font-size: 34px;
+	}
+	.japan_index .contant_header h2 {
+		font-size: 26px;
+	}
+}
+@media (max-width: 330px) {
+	.ru_index .contant_header h2,
+	.cor_index .contant_header h2,
+	.sp_index .contant_header h2 {
+		font-size: 28px;
+	}
+	.japan_index .contant_header h2 {
+		font-size: 22px;
+	}
+}
 
 /*==========  Mobile First Method  ==========*/
 
