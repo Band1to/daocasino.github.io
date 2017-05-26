@@ -4,6 +4,7 @@ $(document).ready(function() {
 		jcf.replaceAll();
 	}
 
+	$(".header").css("height", $(window).height());
 
 	$('select.slct_home').on('change',function(){
 		window.location = $(this).val()
