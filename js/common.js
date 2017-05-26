@@ -4,7 +4,15 @@ $(document).ready(function() {
 		jcf.replaceAll();
 	}
 
-	$(".header").css("height", $(window).height());
+	 function heightDetect() {
+		$(".header").css("height", $(window).height()).removeClass('hidden');
+		$('.contant_header').removeClass('hidden');
+	};
+	heightDetect();
+
+	$(window).resize(function() {
+		heightDetect();
+	});
 
 	$('select.slct_home').on('change',function(){
 		window.location = $(this).val()
@@ -162,9 +170,7 @@ function lazyLoadImages() {
 		heightDetect();
 	});
 
-
-
-	$('#mc-embedded-subscribe-form').on('submit', function(){
+	$('.subscribe-form').on('submit', function(){
 		var url   = $(this).attr('action');
 		var email = $(this).find('input[name="email"]').val();
 		$.post(url,{email:email}, function(){
