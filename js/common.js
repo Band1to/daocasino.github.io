@@ -4,12 +4,11 @@ $(document).ready(function() {
 		jcf.replaceAll();
 	}
 
-	 function heightDetect() {
+	function heightDetect() {
 		$(".header").css("height", $(window).height()).removeClass('hidden');
 		$('.contant_header').removeClass('hidden');
 	};
 	heightDetect();
-
 	$(window).resize(function() {
 		heightDetect();
 	});
@@ -161,14 +160,6 @@ function lazyLoadImages() {
 		$(".our-team-wrapper .tab").removeClass("activ").eq($(this).index()).addClass("activ");
 		$(".tab_item").hide().eq($(this).index()).fadeIn()
 	}).eq(0).addClass("activ");
-
-	function heightDetect() {
-		$(".header").css("height", $(window).height());
-	};
-	heightDetect();
-	$(window).resize(function() {
-		heightDetect();
-	});
 
 	$('.subscribe-form').on('submit', function(){
 		var url   = $(this).attr('action');
