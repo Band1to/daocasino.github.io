@@ -372,20 +372,17 @@
 
 
 @media only screen and (max-width : 720px){
-	
-	
-	span.enable:before, span.disable:before, span.active:before {
-	
-	
-	
-	display: none
+
+	span.enable:before,
+	span.disable:before,
+	span.active:before,
+	.hidden-xs {
+		display: none
 	}
-
-
-
-.enable, .disable, .roadmap-progress {
-
-display: none !important;
+	.enable,
+	.disable,
+	.roadmap-progress {
+		display: none !important;
 
 }
 
