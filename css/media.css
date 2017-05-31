@@ -146,11 +146,13 @@
 	.wrap_foudners {
 		margin-right: 40px;
 	}
+	.block_collaborator .col_3,
 	.block_collaborator .col_4 {
 		margin-bottom: 78px;
 		width: 49%;
 	}
 
+	.block_collaborator .col_3 a,
 	.block_collaborator .col_4 a {
 		display: block;
 		max-width: 300px;
@@ -536,6 +538,7 @@ left: 120px;
 	.sale_form {
 		margin-bottom: 20px;
 	}
+	.block_collaborator .col_3,
 	.block_collaborator .col_4 {
 		margin-bottom: 50px;
 		width: 100%;

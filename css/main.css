@@ -511,6 +511,9 @@ main {
 .features_wrapper_two{
 	margin-top: 62px;
 }
+.features_wrapper_two > .col_6:nth-child(2n+3) {
+	clear: left;
+}
 .features_wrap{
 	text-align: center;
 	min-height: 340px;
