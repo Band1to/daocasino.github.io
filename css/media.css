@@ -84,6 +84,14 @@
 	}
 }
 
+@media (min-width: 981px) {
+	.japan_index .item_bottom_three {
+		left: 480px;
+	}
+	.japan_index .item_bottom_four{
+		left: 665px;
+	}
+}
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 980px) {
