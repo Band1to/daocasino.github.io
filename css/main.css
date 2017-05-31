@@ -119,9 +119,12 @@ ul.top_menu li a{
 ul.top_menu li a:hover{
 	color: #fff;
 }
-.jcf-list-content ul {
+.jcf-select-drop {
+	position: relative;
+}
+.jcf-select-drop .jcf-list-content ul {
     z-index: 1000;
-    position: relative;
+    position: absolute;
     background: rgba(0, 0, 0, 0.9);
     width: 158px;
     border-radius: 6px;
@@ -131,6 +134,9 @@ ul.top_menu li a:hover{
 }
 .jcf-list-content ul li{
 	list-style: none;
+	display: block;
+	margin-right: 0;
+	text-align: left;
 	cursor: pointer;
 	color: #d2d2d2;
 	-webkit-transition: all .2s ease-out;

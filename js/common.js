@@ -13,6 +13,7 @@ $(document).ready(function() {
 		heightDetect();
 	});
 
+	// Language Switcher //
 	$('select.slct_home').on('change',function(){
 		window.location = $(this).val()
 	});

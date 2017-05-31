@@ -80,7 +80,12 @@
 									<li><a href="https://github.com/daocasino" target="_blank">GitHub</a></li>
 									<li>
 										<div class="lang">
-											<select class="slct_home" data-jcf='{"wrapNative": false, "wrapNativeOnMobile": false}'>
+											<select id="slct_home" class="slct_home" 
+												data-jcf='{
+													"wrapNative": false,
+													"wrapNativeOnMobile": false,
+													"fakeDropInBody": false
+												}'>
 												<option value="index.html">
 													English
 												</option>
@@ -90,7 +95,7 @@
 												<!-- <option value="index-ch.html">
 													中文
 												</option> -->
-												<option value="index-sp.html">
+												<option value="index-sp.html" selected="">
 													Español
 												</option>
 												<!-- <option value="index-japan.html">
@@ -132,7 +137,7 @@
 						para juegos de apuestas
 					</h2>
 					<p class="email_form">Deje su correo electrónico para recibir las últimas<br> noticias sobre la preventa</p>
-					<form action="//casino.us1.list-manage.com/subscribe/post?u=a3e08ccb6588d9d43141f24a3&amp;id=b44ac556ad" onsubmit="saveemail($('#mce-EMAIL1').val()); ga('send', {hitType: 'event',eventCategory:'Form',eventAction: 'email', eventLabel: 'top'}); return false;" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="subscribe-form form_style validate" target="_blank" novalidate="">
+					<form action="//casino.us1.list-manage.com/subscribe/post?u=a3e08ccb6588d9d43141f24a3&amp;id=b44ac556ad" onsubmit="saveemail($('#mce-EMAIL1').val()); ga('send', {hitType: 'event',eventCategory:'Form',eventAction: 'email', eventLabel: 'top'}); return false;" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="subscribe-form form_style validate" target="_blank" novalidate>
 						<input class="emal_stl" type="email" value="" name="EMAIL" placeholder="Introduzca su email" id="mce-EMAIL1" required>
 						<input type="submit" id="mc-embedded-subscribe" class="but_style subscribe-btn" value="Subscribir">
 					</form>
@@ -423,7 +428,7 @@
 						<div class="pre-sale_wrap-form">
 							<p class="pre-sale_miss">Suscríbase para estar el primero de saber de<br> 
 							la recaudación de fondos</p>
-							<form action="//casino.us1.list-manage.com/subscribe/post?u=a3e08ccb6588d9d43141f24a3&amp;id=b44ac556ad" onsubmit="saveemail($('#mce-EMAIL2').val()); ga('send', {hitType: 'event', eventCategory: 'Form', eventAction: 'email', eventLabel: 'center'}); return false;" method="post" name="mc-embedded-subscribe-form" class="subscribe-form form_style validate" target="_blank" novalidate="">
+							<form action="//casino.us1.list-manage.com/subscribe/post?u=a3e08ccb6588d9d43141f24a3&amp;id=b44ac556ad" onsubmit="saveemail($('#mce-EMAIL2').val()); ga('send', {hitType: 'event', eventCategory: 'Form', eventAction: 'email', eventLabel: 'center'}); return false;" method="post" name="mc-embedded-subscribe-form" class="subscribe-form form_style validate" target="_blank" novalidate>
 								<input class="emal_stl" type="email" value="" name="EMAIL" placeholder="Introduzca su email" id="mce-EMAIL2" required>
 								<input type="submit" class="but_style subscribe-btn" value="Subscribir">
 							</form>
@@ -794,7 +799,7 @@
 			<div class="container">
 				<h3>Tiene un interés en nuestra tecnología?</h3>
 				<span>Deje su correo electrónico para estar el primero de aprender de la preventa</span>
-				<form action="//casino.us1.list-manage.com/subscribe/post?u=a3e08ccb6588d9d43141f24a3&amp;id=b44ac556ad" method="post" onsubmit="saveemail($('#mce-EMAIL3').val()); ga('send', {hitType: 'event', eventCategory: 'Form', eventAction: 'email', eventLabel: 'bottom'}); return false;" name="mc-embedded-subscribe-form" class="subscribe-form form_style validate" target="_blank" novalidate="">
+				<form action="//casino.us1.list-manage.com/subscribe/post?u=a3e08ccb6588d9d43141f24a3&amp;id=b44ac556ad" method="post" onsubmit="saveemail($('#mce-EMAIL3').val()); ga('send', {hitType: 'event', eventCategory: 'Form', eventAction: 'email', eventLabel: 'bottom'}); return false;" name="mc-embedded-subscribe-form" class="subscribe-form form_style validate" target="_blank" novalidate>
 					<input class="emal_stl" type="email" value="" name="EMAIL" placeholder="Introduzca su email" id="mce-EMAIL3" required>
 					<input type="submit" class="but_style subscribe-btn" value="Subscribir">
 				</form>
