@@ -100,6 +100,12 @@ ul.top_menu li {
 	display: inline-block;
 	margin-right: 40px;
 }
+
+.ru_index ul.top_menu li,
+.sp_index ul.top_menu li {
+	margin-right: 35px;
+}
+
 .text_right {
 	text-align: right;
 }
@@ -127,16 +133,22 @@ ul.top_menu li a:hover{
 	list-style: none;
 	cursor: pointer;
 	color: #d2d2d2;
-	margin-bottom: 26px;
 	-webkit-transition: all .2s ease-out;
 	-o-transition: all .2s ease-out;
 	transition: all .2s ease-out;
 }
-.jcf-list-content ul li:last-child{
-	margin-bottom: 0;
-}
 .jcf-list-content ul li:hover{
 	color: #fff;
+}
+.jcf-list-content ul li .jcf-option {
+	display: block;
+	margin-bottom: 26px;
+}
+.jcf-list-content ul li:last-child .jcf-option{
+	margin-bottom: 0;
+}
+.jcf-select-slct_home .jcf-list-content ul li .jcf-selected {
+	display: none;
 }
 .lang {
 	cursor: pointer;

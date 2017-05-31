@@ -15,8 +15,7 @@ $(document).ready(function() {
 
 	$('select.slct_home').on('change',function(){
 		window.location = $(this).val()
-	})
-
+	});
 
 	$('.hamburger').click (function(){
 		$(this).toggleClass('open');
