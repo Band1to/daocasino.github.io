@@ -1,4 +1,4 @@
-$(document).ready(function() {
+( function($) {
 
 	if (typeof jcf !=='undefined') {
 		jcf.replaceAll();
@@ -70,26 +70,26 @@ $(document).ready(function() {
 		mainClass: 'my-mfp-zoom-in'
 	});
 
-// Info block Open/Closed
-
-$('#openInfo').click(function(){
-	$('.open_info_block').toggleClass("activ");
-});
-$(document).on('click', function(e) {
-	if (!$(e.target).closest(".info_block").length) {
-		$('.open_info_block').removeClass("activ");
-	}
-	e.stopPropagation();
-});
-
-//****************************** Lazy load ******************************//
-window.addEventListener("DOMContentLoaded", lazyLoadImages);
-window.addEventListener("load", lazyLoadImages);
-window.addEventListener("resize", lazyLoadImages);
-window.addEventListener("scroll", lazyLoadImages);
-
-function lazyLoadImages() {
-	var images = document.querySelectorAll(".lazy[data-src]"), item;
+	// Info block Open/Closed
+	
+	$('#openInfo').click(function(){
+		$('.open_info_block').toggleClass("activ");
+	});
+	$(document).on('click', function(e) {
+		if (!$(e.target).closest(".info_block").length) {
+			$('.open_info_block').removeClass("activ");
+		}
+		e.stopPropagation();
+	});
+	
+	//****************************** Lazy load ******************************//
+	window.addEventListener("DOMContentLoaded", lazyLoadImages);
+	window.addEventListener("load", lazyLoadImages);
+	window.addEventListener("resize", lazyLoadImages);
+	window.addEventListener("scroll", lazyLoadImages);
+	
+	function lazyLoadImages() {
+		var images = document.querySelectorAll(".lazy[data-src]"), item;
 		// load images that have entered the viewport
 
 		[].forEach.call(images, function (item) {
@@ -169,4 +169,4 @@ function lazyLoadImages() {
 		})
 	});
 
-});
+})(jQuery);

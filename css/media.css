@@ -1,6 +1,12 @@
 /*==========  Desktop First Method  ==========*/
 
 /* Large Devices, Wide Screens */
+@media (min-width: 1151px) {
+	.ru_index ul.top_menu li,
+	.sp_index ul.top_menu li {
+		margin-right: 35px;
+	}
+}
 @media only screen and (max-width : 1150px) {
 	ul.top_menu li {
 		margin-right: 14px;
@@ -11,9 +17,6 @@
 	.wrap_top_menu .info_block { white-space:normal; }
 	.wrap_top_menu .info_block button {
 		padding:5px 10px;
-	}
-	.block_logo {
-		width:30%;		
 	}
 	.block_logo a h3 {
 		font-size:28px;

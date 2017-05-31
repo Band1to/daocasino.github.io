@@ -71,6 +71,7 @@ header{
 a.logo {
 	display: inline-block;
 	margin-top: 6px;
+	white-space: nowrap;
 }
 a.logo img {
 	float: left;
@@ -100,12 +101,6 @@ ul.top_menu li {
 	display: inline-block;
 	margin-right: 40px;
 }
-
-.ru_index ul.top_menu li,
-.sp_index ul.top_menu li {
-	margin-right: 35px;
-}
-
 .text_right {
 	text-align: right;
 }
@@ -944,13 +939,15 @@ span.enable{
 	display: inline-block;
 	margin-top: 17px;
 }
-.block_collaborator .col_4{
+.block_collaborator .col_4,
+.block_collaborator .col_3 {
 	text-align: left;
 	max-width: 330px;
 	margin-bottom: 78px;
 	display: inline-block;
 	vertical-align: top;
 	float: none;
+	width: auto;
 	/* overflow: hidden; */
 	min-width: 300px;
 	margin-left: 30px;
