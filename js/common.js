@@ -59,6 +59,7 @@
 	$(".hamburger.open").click(function(){
 		$(".toggle_mnu").toggleClass("hid");
 		$('body').toggleClass('ovh');
+		$('.language-switcher > a + ul').toggleClass('lang-open');
 	});
 	
 	$('.language-switcher > a').on('click',function(e){
