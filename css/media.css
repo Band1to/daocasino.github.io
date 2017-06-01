@@ -448,14 +448,12 @@
 		position: fixed;
 		top: 30px;
 	}
-	/*
 	nav.top_mnu ul {
 		top: 50%;
 		position: absolute;
 		width: 100%;
 		margin-top: -80px;
 	}
-	*/
 	nav.top_mnu ul li {
 		margin: 20px 0;
 	}
