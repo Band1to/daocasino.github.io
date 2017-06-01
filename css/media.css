@@ -542,6 +542,8 @@ left: 120px;
 	.block_collaborator .col_4 {
 		margin-bottom: 50px;
 		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
 	}
 	.block_collaborator {
 		padding-top: 70px;
@@ -633,7 +635,10 @@ left: 120px;
 		display: none;
 	}
 }
-
+@media screen and (max-width: 500px) {
+	.text_collaborator {
+	}
+}
 @media only screen and (max-width : 480px){
 	.news-text {
 		width: 100%;
