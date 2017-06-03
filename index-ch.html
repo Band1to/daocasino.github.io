@@ -31,77 +31,59 @@
 	<link rel="stylesheet" href="libs/magnific-popup/magnific-popup.css?v=2" type="text/css"/>
 </head>
 <body>
-	<div class="device_menu clearfix">
-		<button class="opened_top_menu">
-			<span class="hamburger">
-				<span class="hamburger__top-bun"></span>
-				<span class="hamburger__bottom-bun"></span>
-			</span>
-		</button>
-		<nav class="top_mnu">
-			<ul>
-				<li>
-					<a href="https://platform.dao.casino/" target="_blank">首版</a>
-				</li>
-				<li>
-					<a href="https://github.com/DaoCasino/Whitepaper/blob/master/DAO.Casino%20WP.md" target="_blank">White Paper</a>
-				</li>
-				<li>
-					<a href="#go_team">团队</a>
-				</li>
-				<li>
-					<a href="https://medium.com/@dao.casino" target="_blank">博客</a>
-				</li>
-				<li>
-					<a href="https://github.com/daocasino" target="_blank">GitHub</a>
-				</li>
-			</ul>
-		</nav>
-	</div>
+
 	<!-- HEADER -->
 	<header class="header">
 		<div class="container_header bg_head">
 			<div class="fixed_top_line">
 				<div class="container_header">
 					<div class="top_line clearfix">
-						<div class="col_5 block_logo">
+						<div class="col_3 block_logo">
 							<a href="https://dao.casino/" class="logo">
 								<img src="img/logo.png" alt="">
 								<h3>DAO.<span>Casino</span></h3>
 							</a>
 						</div>
-						<div class="col_7 block_menu text_right">
-							<div class="wrap_top_menu">
+						<div class="col_9 block_menu text_right">
+							<div class="wrap_top_menu wrap_top_menu_mobile">
 								<ul class="top_menu">
-									<li><a href="https://platform.dao.casino/" target="_blank">首版</a></li>
+									<li class="active"><a href="https://platform.dao.casino/" target="_blank">首版</a></li>
 									<li><a href="https://github.com/DaoCasino/Whitepaper/blob/master/DAO.Casino%20WP.md" target="_blank">White Paper</a></li>
 									<li><a href="#go_team">团队</a></li>
 									<li><a href="https://medium.com/@dao.casino" target="_blank">博客</a></li>
 									<li><a href="https://github.com/daocasino" target="_blank">GitHub</a></li>
-									<!-- <li>
-										<div class="lang">
-											<select class="slct_home" data-jcf='{"wrapNative": false, "wrapNativeOnMobile": false}'>
-												<option value="index.html">
-													English
-												</option>
-												<option value="index-ru.html">
-													Русский
-												</option>
-												<option value="index-ch.html">
-													中文
-												</option>
-												<option value="index-sp.html">
-													Español
-												</option>
-												<option value="index-japan.html">
-													日本の
-												</option>
-												<option value="index-cor.html">
-													한국의
-												</option>
-											</select>
-										</div>
-									</li> -->
+									<li class="language-switcher">
+										<a href="#">
+											<img src="img/flag/cn.svg" alt="中文"> 中文
+										</a>
+										<ul>
+											<li>
+												<a href="index.html">
+													<img src="img/flag/en.svg" alt="English"> English
+												</a>
+											</li>
+											<li>
+												<a href="index-ru.html">
+													<img src="img/flag/ru.svg" alt="Русский"> Русский
+												</a>
+											</li>
+											<li>
+												<a href="index-sp.html">
+													<img src="img/flag/es.svg" alt="Español"> Español
+												</a>
+											</li>
+											<li>
+												<a href="index-japan.html">
+													<img src="img/flag/jp.svg" alt="日本の"> 日本の
+												</a>
+											</li>
+											<li>
+												<a href="index-cor.html">
+													<img src="img/flag/kr.svg" alt="한국의"> 한국의
+												</a>
+											</li>
+										</ul>
+									</li>
 								</ul>
 								<div class="info_block">
 									<button class="button" id="openInfo">缴费</button>
@@ -116,9 +98,15 @@
 								</div>
 							</div>
 						</div>
+						
+						<span class="btn-menu">
+							<span></span>
+						</span>
+						
 					</div>
 				</div>
 			</div>
+			
 			<div class="container_logos b-pic img_escrow lazy b-parallax" data-type="background" data-speed="8" data-src="">
 				<div class="base64private"></div>
 				<div class="contant_header hidden">
