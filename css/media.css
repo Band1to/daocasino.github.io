@@ -785,6 +785,9 @@
 	.japan_index .contant_header h2 {
 		font-size: 36px;
 	}
+	.visible-lg {
+		display: none !important;
+	}
 }
 @media (max-width: 991px) {
 	.ru_index .contant_header h2,

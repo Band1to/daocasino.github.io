@@ -104,6 +104,9 @@ ul.top_menu li {
 	display: inline-block;
 	margin-right: 40px;
 }
+.en_index ul.top_menu li {
+	margin-right: 15px;
+}
 .text_right {
 	text-align: right;
 }
