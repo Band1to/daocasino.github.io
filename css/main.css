@@ -1034,6 +1034,10 @@ span.enable{
 	padding: 125px 0 60px;
 	border-bottom: 1px solid #313131;
 }
+.our_team > .container {
+	padding-left: 0;
+	padding-right: 0;
+}
 .photo_collaborator img {
 	border-radius: 50%;
 }
