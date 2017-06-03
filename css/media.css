@@ -812,8 +812,8 @@
 	}
 }
 @media (min-width: 820px) and (max-width: 991px) {
-	.ru_index .language-switcher img,
-	.japan_index .language-switcher img {
+	.ru_index .language-switcher > a img,
+	.japan_index .language-switcher > a img {
 		display: none;
 	}	
 }
