@@ -31,33 +31,14 @@
 	<link rel="stylesheet" href="libs/magnific-popup/magnific-popup.css?v=2" type="text/css"/>
 </head>
 <body class="ru_index">
-	<div class="device_menu clearfix">
-		<button class="opened_top_menu">
-			<span class="hamburger">
-				<span class="hamburger__top-bun"></span>
-				<span class="hamburger__bottom-bun"></span>
-			</span>
-		</button>
-		<nav class="top_mnu">
-			<ul>
-				<li>
-					<a href="https://platform.dao.casino/" target="_blank">Прототип</a>
-				</li>
-				<li>
-					<a href="https://github.com/DaoCasino/Whitepaper/blob/master/DAO.Casino%20WP.md" target="_blank">Документация</a>
-				</li>
-				<li>
-					<a href="#go_team">Команда</a>
-				</li>
-				<li>
-					<a href="https://medium.com/@dao.casino" target="_blank">Блог</a>
-				</li>
-				<li>
-					<a href="https://github.com/daocasino" target="_blank">GitHub</a>
-				</li>
-			</ul>
-		</nav>
-	</div>
+	
+	<button class="opened_top_menu">
+		<span class="hamburger">
+			<span class="hamburger__top-bun"></span>
+			<span class="hamburger__bottom-bun"></span>
+		</span>
+	</button>
+		
 	<!-- HEADER -->
 	<header class="header">
 		<div class="container_header bg_head">
@@ -71,43 +52,45 @@
 							</a>
 						</div>
 						<div class="col_9 block_menu text_right">
-							<div class="wrap_top_menu">
+							<div class="wrap_top_menu wrap_top_menu_mobile">
 								<ul class="top_menu">
-									<li><a href="https://platform.dao.casino/" target="_blank">Прототип</a></li>
+									<li class="active"><a href="https://platform.dao.casino/" target="_blank">Прототип</a></li>
 									<li><a href="https://github.com/DaoCasino/Whitepaper/blob/master/DAO.Casino%20WP.md" target="_blank">Документация</a></li>
 									<li><a href="#go_team">Команда</a></li>
 									<li><a href="https://medium.com/@dao.casino" target="_blank">Блог</a></li>
 									<li><a href="https://github.com/daocasino" target="_blank">GitHub</a></li>
-									<!--<li>
-										
-										<div class="lang">
-											<select id="slct_home" class="slct_home" 
-												data-jcf='{
-													"wrapNative": false,
-													"wrapNativeOnMobile": false,
-													"fakeDropInBody": false
-												}'>
-												<option value="index.html">
-													English
-												</option>
-												<option value="index-ru.html" selected="">
-													Русский
-												</option>
-												<option value="index-ch.html">
-													中文
-												</option>
-												<option value="index-sp.html">
-													Español
-												</option>
-												<option value="index-japan.html">
-													日本の
-												</option>
-												<option value="index-cor.html">
-													한국의
-												</option>
-											</select>
-										</div>
-									</li> -->
+									<li class="language-switcher">
+										<a href="#">
+											<img src="img/flag/ru.svg" alt="Русский"> Русский
+										</a>
+										<ul>
+											<li>
+												<a href="index.html">
+													<img src="img/flag/en.svg" alt="English"> English
+												</a>
+											</li>
+											<li>
+												<a href="index-sp.html">
+													<img src="img/flag/es.svg" alt="Español"> Español
+												</a>
+											</li>
+											<li>
+												<a href="index-ch.html">
+													<img src="img/flag/cn.svg" alt="中文"> 中文
+												</a>
+											</li>
+											<li>
+												<a href="index-japan.html">
+													<img src="img/flag/jp.svg" alt="日本の"> 日本の
+												</a>
+											</li>
+											<li>
+												<a href="index-cor.html">
+													<img src="img/flag/kr.svg" alt="한국의"> 한국의
+												</a>
+											</li>
+										</ul>
+									</li>
 								</ul>
 								<div class="info_block">
 									<button class="button" id="openInfo">Взнос</button>
