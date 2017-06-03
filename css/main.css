@@ -220,6 +220,66 @@ ul.top_menu .active a {
 .lang:hover {
 	color: #fff;
 }
+.btn-menu {
+	display: block;
+	float: right;
+	width: 50px;
+	height: 50px;
+	position: relative;
+	z-index: 1001;
+	margin-right: 15px;
+	cursor: pointer;
+	-webkit-transition: all 0.3s ease-out;
+			transition: all 0.3s ease-out;
+}
+.btn-menu:before,
+.btn-menu:after,
+.btn-menu span {
+	display: block;
+	width: 24px;
+	height: 2px;
+	border-radius: 2px;
+	position: absolute;
+	left: 50%;
+	margin-left: -12px;
+	background-color: #fff;
+	-webkit-transition: all 0.3s;
+			transition: all 0.3s;
+}
+.btn-menu:before {
+	content: '';
+	top: 14px;
+}
+.btn-menu:after {
+	content: '';
+	top: 32px;
+}
+.btn-menu span {
+	top: 23px;
+}
+.btn-menu-close > span {
+	display: none;
+}
+.btn-menu-close:before,
+.btn-menu-close:after,
+.btn-menu-close span {
+	top: 23px;
+	width: 30px;
+	margin-left: -15px;
+}
+.btn-menu-close:before {
+	-webkit-transform: rotate(45deg);
+			transform: rotate(45deg);
+}
+.btn-menu-close:after {
+	-webkit-transform: rotate(-45deg);
+			transform: rotate(-45deg);
+}
+@media (min-width: 768px) {
+	.btn-menu {
+		display: none;
+	}
+}
 .button{
 	font-family: "BasisGrotesquePro-Regular" !important;
 	font-size: 16px;
