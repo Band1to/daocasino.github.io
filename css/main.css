@@ -275,7 +275,7 @@ ul.top_menu .active a {
 	-webkit-transform: rotate(-45deg);
 			transform: rotate(-45deg);
 }
-@media (min-width: 768px) {
+@media (min-width: 820px) {
 	.btn-menu {
 		display: none;
 	}

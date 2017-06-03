@@ -811,6 +811,11 @@
 		margin-right: 10px;
 	}
 }
+@media (min-width: 820px) and (max-width: 991px) {
+	.ru_index .language-switcher img {
+		display: none;
+	}	
+}
 @media (max-width: 767px) {
 	.ru_index .contant_header h2,
 	.cor_index .contant_header h2,
