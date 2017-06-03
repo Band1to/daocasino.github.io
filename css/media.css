@@ -785,6 +785,9 @@
 	.japan_index .contant_header h2 {
 		font-size: 36px;
 	}
+	.en_index ul.top_menu li {
+		margin-right: 15px;
+	}
 	.visible-lg {
 		display: none !important;
 	}
@@ -802,6 +805,9 @@
 	}
 	.cor_index .email_form {
 		font-size: 16px !important;
+	}
+	.en_index ul.top_menu li {
+		margin-right: 10px;
 	}
 }
 @media (max-width: 767px) {
