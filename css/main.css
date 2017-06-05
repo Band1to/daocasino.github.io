@@ -73,7 +73,7 @@ header{
 }
 a.logo {
 	display: inline-block;
-	margin-top: 6px;
+	margin-top: 4px;
 	white-space: nowrap;
 }
 a.logo img {
@@ -88,6 +88,14 @@ a.logo h3 {
 	display: inline-block;
 	margin-left: 52px;
 	opacity: 0;
+	position: relative;
+	top: 30px;
+	-webkit-transition: all 0.3s;
+			transition: all 0.3s;
+}
+a.logo h3.fadeopen {
+	opacity: 1;
+	top: 0;
 }
 a.logo h3 span {
 	color: #ed9726;
@@ -380,9 +388,11 @@ ul.top_menu .active a {
 	width: 100%;
 	max-width: 430px;
 	background-color: transparent;
-	line-height: 66px;
+	height: 66px;
 	padding-left: 24px;
 	padding-right: 20px;
+	padding-top: 15px;
+	padding-bottom: 15px;
 	border-radius: 6px;
 	background: #fff;
 	border: 0;
@@ -461,32 +471,30 @@ input[type="submit"].but_style{
 .item_foudners a:hover .drone {
 	background-position: -621px 0;
 }
-.founders{
-	//position: absolute;
+.founders {
 	width: 100%;
-	//bottom: 18px;
-	//left: 0;
 	text-align:center;
+	overflow: hidden;
+}
+.founders_row {
+	margin-left: -40px;
+	margin-right: -40px;
 }
 .wrap_foudners{
 	text-align: center;
-	margin-right: 68px;
 	display:inline-block;
-	margin-bottom:30px;
-	padding: 0px;
+	vertical-align: middle;
+	margin-bottom: 30px;
+	padding: 0 35px;
 }
 .wrap_foudners:last-child{
 	margin-right: 0;
 }
 .item_foudners{
-	display: table;
 	position: relative;
-	width: 100%;
-	height: 70px;
 }
 .item_foudners a{
-	display: table-cell;
-	vertical-align: middle;
+
 }
 .wrapp_icons {
 	position: relative;
@@ -574,9 +582,6 @@ input[type="submit"].but_style{
 ==============================================*/
 main {
 	background: #202020;
-	padding-bottom: 250px;
-	/*width:100vw;*/
-	/*overflow:hidden;*/
 }
 .founders_slog{
 	font-size: 26px;
@@ -591,14 +596,13 @@ main {
 }
 .name_block{
 	position: relative;
-	height: 72px;
 	letter-spacing: 2px;
 }
 .name_block:before{
 	content: "";
 	display: block;
 	position: absolute;
-	bottom: 0px;
+	bottom: -8px;
 	left: 0;
 	width: 79px;
 	height: 2px;
@@ -1034,10 +1038,6 @@ span.enable{
 	padding: 125px 0 60px;
 	border-bottom: 1px solid #313131;
 }
-.our_team > .container {
-	padding-left: 0;
-	padding-right: 0;
-}
 .photo_collaborator img {
 	border-radius: 50%;
 }
@@ -1088,6 +1088,9 @@ span.enable{
 	max-width: 800px;
 	margin: 40px auto;
 	position: relative;
+}
+.popup-dialog .container {
+	padding: 0;
 }
 .photo_popup{
 	max-width: 280px;
@@ -1194,10 +1197,6 @@ span.enable{
 footer {
 	background: #272727;
 	padding: 100px 0 100px;
-	width: 100%;
-	position: absolute;
-	bottom: 0;
-	left: 0;
 }
 ul.social {
 	float: right;

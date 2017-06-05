@@ -178,10 +178,10 @@
 
 	$(window).scroll(function() {
 		if ($(this).scrollTop() > 280){  
-			$('.block_logo h3').addClass("animated bounceTop2");
+			$('.block_logo h3').addClass("animated fadeopen");
 		}
 		else{
-			$('.block_logo h3').removeClass("animated bounceTop2");
+			$('.block_logo h3').removeClass("animated fadeopen");
 		}
 	});
 
