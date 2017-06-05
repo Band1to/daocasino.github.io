@@ -57,7 +57,7 @@
 		$(this).parents('.wrap_top_menu').toggleClass('menu-open');
 		$(".btn-menu").toggleClass("btn-menu-close");
 		$(".hamburger").toggleClass("open");
-		$('body').toggleClass('ovh');
+		//$('body').toggleClass('ovh');
 	});
 	//.append("<span>");
 
