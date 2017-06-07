@@ -1217,6 +1217,10 @@ ul.social {
 	border: 1px solid #3d3d3d;
 	text-align: center;
 }
+.social li:hover {
+	background-color: #f3951a;
+	border-color: #f3951a;
+}
 .social li:last-child{
 	margin-right: 0;
 }
@@ -1238,6 +1242,30 @@ ul.social {
 }
 p.copiright {
 	line-height: 25px;
+}
+[class^="icon-"] {
+	display: block;
+	width: 24px;
+	height: 24px;
+	margin: 0 auto;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.icon-facebook {
+	background-image: url(../img/social/facebook.svg);
+}
+.icon-twitter {
+	background-image: url(../img/social/twitter.svg);
+}
+.icon-github {
+	background-image: url(../img/social/github.svg);
+}
+.icon-slack {
+	background-image: url(../img/social/slack.svg);
+}
+.icon-telegram {
+	background-image: url(../img/social/telegram.svg);
 }
 /* ANIMATION ======================
 =========================================*/
