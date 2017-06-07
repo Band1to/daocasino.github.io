@@ -415,6 +415,11 @@ input[type="submit"].but_style{
 	cursor: pointer;
 	-webkit-appearance: none;
 }
+.input-novalid {
+	/*background-color: rgba(211, 47, 47, .2);*/
+	-webkit-box-shadow: inset 0 0 0px 2px #d32f2f;
+			box-shadow: inset 0 0 0px 2px #d32f2f;
+}
 .item_foudners a span {
 	background-image: url(../img/sprite_logo.png);
 	background-repeat-x: no-repeat;

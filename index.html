@@ -125,8 +125,8 @@
 						for gambling
 					</h2>
 					<p class="email_form">Subscribe and be first to know about fund-raising</p>
-					<form action="//casino.us1.list-manage.com/subscribe/post?u=a3e08ccb6588d9d43141f24a3&amp;id=b44ac556ad" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="subscribe-form form_style validate" target="_blank" novalidate onsubmit="saveemail($('#mce-EMAIL1').val()); ga('send', {hitType: 'event',eventCategory:'Form',eventAction: 'email', eventLabel: 'top'}); return false;">
-						<input class="emal_stl" type="email" value="" name="EMAIL" placeholder="Enter your email address" id="mce-EMAIL1" required>
+					<form action="//casino.us1.list-manage.com/subscribe/post?u=a3e08ccb6588d9d43141f24a3&amp;id=b44ac556ad" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="subscribe-form form_style validate" target="_blank" onsubmit="saveemail($('#mce-EMAIL1').val()); ga('send', {hitType: 'event',eventCategory:'Form',eventAction: 'email', eventLabel: 'top'}); return false;">
+						<input class="emal_stl" type="email" value="" name="EMAIL" placeholder="Enter your email address" id="mce-EMAIL1" required="">
 						<input type="submit" class="but_style subscribe-btn" value="Subscribe">
 					</form>
 				</div>
@@ -415,8 +415,8 @@
 					<div class="col_6">
 						<div class="pre-sale_wrap-form">
 							<p class="pre-sale_miss">Subscribe and be first to know about fund-raising</p>
-							<form action="//casino.us1.list-manage.com/subscribe/post?u=a3e08ccb6588d9d43141f24a3&amp;id=b44ac556ad" method="post" name="mc-embedded-subscribe-form" class="subscribe-form form_style validate" target="_blank" novalidate onsubmit="saveemail($('#mce-EMAIL2').val()); ga('send', {hitType: 'event', eventCategory: 'Form', eventAction: 'email', eventLabel: 'center'}); return false;">
-								<input class="emal_stl" type="email" value="" name="EMAIL" placeholder="Enter your email address" id="mce-EMAIL2" required>
+							<form action="//casino.us1.list-manage.com/subscribe/post?u=a3e08ccb6588d9d43141f24a3&amp;id=b44ac556ad" method="post" name="mc-embedded-subscribe-form" class="subscribe-form form_style validate" target="_blank" onsubmit="saveemail($('#mce-EMAIL2').val()); ga('send', {hitType: 'event', eventCategory: 'Form', eventAction: 'email', eventLabel: 'center'}); return false;">
+								<input class="emal_stl" type="email" value="" name="EMAIL" placeholder="Enter your email address" id="mce-EMAIL2" required="">
 								<input type="submit" class="but_style subscribe-btn" value="Subscribe">
 							</form>
 						</div>
@@ -787,8 +787,8 @@
 			<div class="container">
 				<h3>Interested in our technology?</h3>
 				<span>Subscribe and be first to know about fund-raising</span>
-				<form action="//casino.us1.list-manage.com/subscribe/post?u=a3e08ccb6588d9d43141f24a3&amp;id=b44ac556ad" method="post" name="mc-embedded-subscribe-form" class="subscribe-form form_style validate" target="_blank" novalidate onsubmit="saveemail($('#mce-EMAIL3').val()); ga('send', {hitType: 'event', eventCategory: 'Form', eventAction: 'email', eventLabel: 'bottom'}); return false;">
-					<input class="emal_stl" type="email" value="" name="EMAIL" placeholder="Enter your email address" id="mce-EMAIL3" required>
+				<form action="//casino.us1.list-manage.com/subscribe/post?u=a3e08ccb6588d9d43141f24a3&amp;id=b44ac556ad" method="post" name="mc-embedded-subscribe-form" class="subscribe-form form_style validate" target="_blank" onsubmit="saveemail($('#mce-EMAIL3').val()); ga('send', {hitType: 'event', eventCategory: 'Form', eventAction: 'email', eventLabel: 'bottom'}); return false;">
+					<input class="emal_stl" type="email" value="" name="EMAIL" placeholder="Enter your email address" id="mce-EMAIL3" required="">
 					<input type="submit" class="but_style subscribe-btn" value="Subscribe">
 				</form>
 				<p class="question">
@@ -1424,21 +1424,20 @@ fbq('track', 'PageView');
 <!-- Conversion Pixel - Investors - DO NOT MODIFY --> <script src="https://secure.adnxs.com/px?id=856412&t=1" type="text/javascript"></script> <!-- End of Conversion Pixel -->
 
 <script>
-	function saveemail(email) {
-		$.post("https://platform.dao.casino/api/landing_subscribe.php",{email:email},function(d){
-			yaCounter42783759.reachGoal('EMAIL'); 
-			ga('send', {hitType: 'event',eventCategory:'Form',eventAction: 'email', eventLabel: 'top'});
-		}); 
-		//alert(email);
-		//$("#open_thank_mail").modal("show");
-		$.magnificPopup.open({
-			items: {
-				src: '#open_thank_mail',
-				type: 'inline'
-			}
-		});
-
-	}
+function saveemail(email) {
+	$.post("https://platform.dao.casino/api/landing_subscribe.php",{email:email},function(d){
+		yaCounter42783759.reachGoal('EMAIL'); 
+		ga('send', {hitType: 'event',eventCategory:'Form',eventAction: 'email', eventLabel: 'top'});
+	}); 
+	//alert(email);
+	//$("#open_thank_mail").modal("show");
+	$.magnificPopup.open({
+		items: {
+			src: '#open_thank_mail',
+			type: 'inline'
+		}
+	});
+}
 </script>
 </body>
 </html>
