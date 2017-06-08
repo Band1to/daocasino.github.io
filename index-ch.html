@@ -118,6 +118,10 @@
 					<p class="email_form">为接收有关预售的新闻，请输入您电子邮箱</p>
 					<form action="//casino.us1.list-manage.com/subscribe/post?u=a3e08ccb6588d9d43141f24a3&amp;id=b44ac556ad" onsubmit="saveemail($('#mce-EMAIL1').val()); ga('send', {hitType: 'event',eventCategory:'Form',eventAction: 'email', eventLabel: 'top'}); return false;" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="subscribe-form form_style validate" target="_blank">
 						<input class="emal_stl" type="email" value="" name="EMAIL" placeholder="输入电子邮件地址" id="mce-EMAIL1" required="">
+						<input type="hidden" value="" name="CAMPAGIN">
+						<input type="hidden" value="" name="UTM_MEDIUM">
+						<input type="hidden" value="" name="UTM_SOURCE">
+						<input type="hidden" value="" name="GAID">
 						<input type="submit" id="mc-embedded-subscribe" class="but_style subscribe-btn" value="订阅">
 					</form>
 				</div>
@@ -401,6 +405,10 @@
 							<p class="pre-sale_miss">订阅并成为第一位了解群众募资开始的人</p>
 							<form action="//casino.us1.list-manage.com/subscribe/post?u=a3e08ccb6588d9d43141f24a3&amp;id=b44ac556ad" onsubmit="saveemail($('#mce-EMAIL2').val()); ga('send', {hitType: 'event', eventCategory: 'Form', eventAction: 'email', eventLabel: 'center'}); return false;" method="post" name="mc-embedded-subscribe-form" class="subscribe-form form_style validate" target="_blank">
 								<input class="emal_stl" type="email" value="" name="EMAIL" placeholder="输入电子邮件地址" id="mce-EMAIL2" required="">
+								<input type="hidden" value="" name="CAMPAGIN">
+								<input type="hidden" value="" name="UTM_MEDIUM">
+								<input type="hidden" value="" name="UTM_SOURCE">
+								<input type="hidden" value="" name="GAID">
 								<input type="submit" class="but_style subscribe-btn" value="订阅">
 							</form>
 						</div>
@@ -764,6 +772,10 @@
 				<span>请输入您电子邮箱，这样您就会加入最初知道开始预售的人之间。</span>
 				<form action="//casino.us1.list-manage.com/subscribe/post?u=a3e08ccb6588d9d43141f24a3&amp;id=b44ac556ad" method="post" onsubmit="saveemail($('#mce-EMAIL3').val()); ga('send', {hitType: 'event', eventCategory: 'Form', eventAction: 'email', eventLabel: 'bottom'}); return false;" name="mc-embedded-subscribe-form" class="subscribe-form form_style validate" target="_blank">
 					<input class="emal_stl" type="email" value="" name="EMAIL" placeholder="输入电子邮件地址" id="mce-EMAIL3" required="">
+					<input type="hidden" value="" name="CAMPAGIN">
+					<input type="hidden" value="" name="UTM_MEDIUM">
+					<input type="hidden" value="" name="UTM_SOURCE">
+					<input type="hidden" value="" name="GAID">
 					<input type="submit" class="but_style subscribe-btn" value="订阅">
 				</form>
 				<p class="question">
@@ -1322,8 +1334,32 @@
 
 		ga('create', 'UA-92023514-1', 'auto');
 		ga('send', 'pageview');
-
+		
+		var clientId;
+		ga(function(tracker) {
+			clientId = tracker.get('clientId');
+			$('[name="GAID"]').val(clientId);
+		});
 	</script>
+
+	<script>
+		function getQueryVariable(variable) {
+			var query = window.location.search.substring(1);
+			var vars = query.split("&");
+			for (var i=0;i<vars.length;i++) {
+				var pair = vars[i].split("=");
+				if(pair[0] == variable){return pair[1];}
+			}
+			return(false);
+		}
+		var campagin  = getQueryVariable('utm_campagin');
+		var utmMedium = getQueryVariable('utm_medium');
+		var utmSource = getQueryVariable('utm_source');
+		$('[name="CAMPAGIN"]').val(campagin);
+		$('[name="UTM_MEDIUM"]').val(utmMedium);
+		$('[name="UTM_SOURCE"]').val(utmSource);
+	</script>
+
 	<!-- Yandex.Metrika counter -->
 	<script type="text/javascript">
 		(function (d, w, c) {
@@ -1385,21 +1421,28 @@ fbq('track', 'PageView');
 <!-- Conversion Pixel - Investors - DO NOT MODIFY --> <script src="https://secure.adnxs.com/px?id=856412&t=1" type="text/javascript"></script> <!-- End of Conversion Pixel -->
 
 <script>
-	function saveemail(email) {
-		$.post("https://platform.dao.casino/api/landing_subscribe.php",{email:email},function(d){
+function saveemail(email) {
+	$.post(
+		"https://platform.dao.casino/api/landing_subscribe.php",
+		{
+			email: email,
+			UTM_MEDIUM: utmMedium,
+			UTM_SOURCE: utmSource,
+			CAMPAGIN: campagin,
+			GAID: clientId
+		},
+		function(d){
 			yaCounter42783759.reachGoal('EMAIL'); 
 			ga('send', {hitType: 'event',eventCategory:'Form',eventAction: 'email', eventLabel: 'top'});
-		}); 
-		//alert(email);
-		//$("#open_thank_mail").modal("show");
-		$.magnificPopup.open({
-			items: {
-				src: '#open_thank_mail',
-				type: 'inline'
-			}
-		});
-
-	}
+		}
+	);
+	$.magnificPopup.open({
+		items: {
+			src: '#open_thank_mail',
+			type: 'inline'
+		}
+	});
+}
 </script>
 </body>
 </html>
