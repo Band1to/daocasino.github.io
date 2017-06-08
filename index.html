@@ -126,6 +126,10 @@
 					<p class="email_form">Subscribe and be first to know about fund-raising</p>
 					<form action="//casino.us1.list-manage.com/subscribe/post?u=a3e08ccb6588d9d43141f24a3&amp;id=b44ac556ad" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="subscribe-form form_style validate" target="_blank" onsubmit="saveemail($('#mce-EMAIL1').val()); ga('send', {hitType: 'event',eventCategory:'Form',eventAction: 'email', eventLabel: 'top'}); return false;">
 						<input class="emal_stl" type="email" value="" name="EMAIL" placeholder="Enter your email address" id="mce-EMAIL1" required="">
+						<imput type='hidden' value='' name='CAMPAGIN'>
+						<imput type='hidden' value='' name='UTM_MEDIUM'>
+						<imput type='hidden' value='' name='UTM_SOURCE'>
+						<imput type='hidden' value='' name='GAID' class='gaid'>	
 						<input type="submit" class="but_style subscribe-btn" value="Subscribe">
 					</form>
 				</div>
@@ -1357,7 +1361,12 @@
 
 		ga('create', 'UA-92023514-1', 'auto');
 		ga('send', 'pageview');
-
+		
+		ga(function(tracker) {
+		  var clientId = tracker.get('clientId');
+		  console.log(clientId); //этот код добавляет в форм ы подписки скрытое пле по котоому мы ожем найти клиента
+		  $(".gaid").val(clientId);
+		});
 	</script>
 
 
