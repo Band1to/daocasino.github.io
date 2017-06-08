@@ -127,9 +127,9 @@
 					<form action="//casino.us1.list-manage.com/subscribe/post?u=a3e08ccb6588d9d43141f24a3&amp;id=b44ac556ad" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="subscribe-form form_style validate" target="_blank" onsubmit="saveemail($('#mce-EMAIL1').val()); ga('send', {hitType: 'event',eventCategory:'Form',eventAction: 'email', eventLabel: 'top'}); return false;">
 						<input class="emal_stl" type="email" value="" name="EMAIL" placeholder="Enter your email address" id="mce-EMAIL1" required="">
 						<input type="hidden" value="" name="CAMPAGIN">
-						<input type="hidden" value='' name="UTM_MEDIUM">
+						<input type="hidden" value="" name="UTM_MEDIUM">
 						<input type="hidden" value="" name="UTM_SOURCE">
-						<input type="hidden" value="" name="GAID" class="gaid">	
+						<input type="hidden" value="" name="GAID">
 						<input type="submit" class="but_style subscribe-btn" value="Subscribe">
 					</form>
 				</div>
@@ -420,6 +420,10 @@
 							<p class="pre-sale_miss">Subscribe and be first to know about fund-raising</p>
 							<form action="//casino.us1.list-manage.com/subscribe/post?u=a3e08ccb6588d9d43141f24a3&amp;id=b44ac556ad" method="post" name="mc-embedded-subscribe-form" class="subscribe-form form_style validate" target="_blank" onsubmit="saveemail($('#mce-EMAIL2').val()); ga('send', {hitType: 'event', eventCategory: 'Form', eventAction: 'email', eventLabel: 'center'}); return false;">
 								<input class="emal_stl" type="email" value="" name="EMAIL" placeholder="Enter your email address" id="mce-EMAIL2" required="">
+								<input type="hidden" value="" name="CAMPAGIN">
+								<input type="hidden" value="" name="UTM_MEDIUM">
+								<input type="hidden" value="" name="UTM_SOURCE">
+								<input type="hidden" value="" name="GAID">
 								<input type="submit" class="but_style subscribe-btn" value="Subscribe">
 							</form>
 						</div>
@@ -792,6 +796,10 @@
 				<span>Subscribe and be first to know about fund-raising</span>
 				<form action="//casino.us1.list-manage.com/subscribe/post?u=a3e08ccb6588d9d43141f24a3&amp;id=b44ac556ad" method="post" name="mc-embedded-subscribe-form" class="subscribe-form form_style validate" target="_blank" onsubmit="saveemail($('#mce-EMAIL3').val()); ga('send', {hitType: 'event', eventCategory: 'Form', eventAction: 'email', eventLabel: 'bottom'}); return false;">
 					<input class="emal_stl" type="email" value="" name="EMAIL" placeholder="Enter your email address" id="mce-EMAIL3" required="">
+					<input type="hidden" value="" name="CAMPAGIN">
+					<input type="hidden" value="" name="UTM_MEDIUM">
+					<input type="hidden" value="" name="UTM_SOURCE">
+					<input type="hidden" value="" name="GAID">
 					<input type="submit" class="but_style subscribe-btn" value="Subscribe">
 				</form>
 				<p class="question">
@@ -1348,7 +1356,6 @@
 	<script src="libs/owl-carousel/owl.carousel.min.js"></script>
 	<script src="libs/waypoints/waypoints.min.js"></script>
 	<script src="libs/animate/animate-css.js"></script>
-	<!-- <script src="libs/selectivizr/selectivizr-min.js"></script> -->
 	<script src="libs/PageScroll2id/PageScroll2id.min.js"></script>
 	<script src="libs/magnific-popup/jquery.magnific-popup.min.js"></script>
 	<script src="js/common.js?v=2"></script>
@@ -1362,13 +1369,30 @@
 		ga('create', 'UA-92023514-1', 'auto');
 		ga('send', 'pageview');
 		
+		var clientId;
 		ga(function(tracker) {
-			var clientId = tracker.get('clientId');
-			console.log(clientId); //этот код добавляет в форм ы подписки скрытое пле по котоому мы ожем найти клиента
-			$(".gaid").val(clientId);
+			clientId = tracker.get('clientId');
+			$('[name="GAID"]').val(clientId);
 		});
 	</script>
 
+	<script>
+		function getQueryVariable(variable) {
+			var query = window.location.search.substring(1);
+			var vars = query.split("&");
+			for (var i=0;i<vars.length;i++) {
+				var pair = vars[i].split("=");
+				if(pair[0] == variable){return pair[1];}
+			}
+			return(false);
+		}
+		var campagin  = getQueryVariable('utm_campagin');
+		var utmMedium = getQueryVariable('utm_medium');
+		var utmSource = getQueryVariable('utm_source');
+		$('[name="CAMPAGIN"]').val(campagin);
+		$('[name="UTM_MEDIUM"]').val(utmMedium);
+		$('[name="UTM_SOURCE"]').val(utmSource);
+	</script>
 
 	<!-- Yandex.Metrika counter -->
 	<script type="text/javascript">
@@ -1433,12 +1457,20 @@ fbq('track', 'PageView');
 
 <script>
 function saveemail(email) {
-	$.post("https://platform.dao.casino/api/landing_subscribe.php",{email:email},function(d){
-		yaCounter42783759.reachGoal('EMAIL'); 
-		ga('send', {hitType: 'event',eventCategory:'Form',eventAction: 'email', eventLabel: 'top'});
-	}); 
-	//alert(email);
-	//$("#open_thank_mail").modal("show");
+	$.post(
+		"https://platform.dao.casino/api/landing_subscribe.php",
+		{
+			email: email,
+			UTM_MEDIUM: utmMedium,
+			UTM_SOURCE: utmSource,
+			CAMPAGIN: campagin,
+			GAID: clientId
+		},
+		function(d){
+			yaCounter42783759.reachGoal('EMAIL'); 
+			ga('send', {hitType: 'event',eventCategory:'Form',eventAction: 'email', eventLabel: 'top'});
+		}
+	);
 	$.magnificPopup.open({
 		items: {
 			src: '#open_thank_mail',
