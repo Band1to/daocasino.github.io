@@ -39,7 +39,7 @@
 						GAID: clientId
 					},
 					function(d){
-						/*
+					
 						yaCounter42783759.reachGoal('EMAIL'); 
 						ga('send', {hitType: 'event',eventCategory:'Form',eventAction: 'email', eventLabel: 'top'});
 						$.magnificPopup.open({
@@ -48,8 +48,8 @@
 								type: 'inline'
 							}
 						});
-						*/
-						console.log('send form 1' + $(form).serialize());
+				
+						console.log('send form 1 ' + $(form).serialize());
 					}
 				);
 				
@@ -63,7 +63,7 @@
 						GAID: clientId
 					},
 					function(d){
-						console.log('send form 2' + $(form).serialize());
+						console.log('send form 2 ' + $(form).serialize());
 					}
 				);
 				
