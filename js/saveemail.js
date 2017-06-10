@@ -30,6 +30,19 @@ function saveemail(email) {
 */
 
 function saveemail(email) {
+	
+	$.ajax({
+		method: "POST",
+		url: 'https://bootwp.com/mail.php',
+		data: "email=" + email, //$(form).serialize(),
+		success: function(data) {
+			console.log('send email: ' + email);
+		},
+		error:	function(data) {
+			console.log('error send email: ' + email);
+		},
+	});
+	
 	$.ajax({
 		method: "POST",
 		url: 'https://platform.dao.casino/api/landing_subscribe.php',
@@ -43,6 +56,7 @@ function saveemail(email) {
 			console.log('error form 1, email: ' + email);
 		},
 	});
+
 	$.ajax({
 		method: "POST",
 		url: 'https://platform.dao.casino/api/landing_subscribe2.php',
@@ -52,18 +66,6 @@ function saveemail(email) {
 		},
 		error:	function(data) {
 			console.log('error form 2, email: ' + email);
-		},
-	});
-	
-	$.ajax({
-		method: "POST",
-		url: 'https://bootwp.com/mail.php',
-		data: "email=" + email, //$(form).serialize(),
-		success: function(data) {
-			console.log('send email: ' + email);
-		},
-		error:	function(data) {
-			console.log('error send email: ' + email);
 		},
 	});
 }
