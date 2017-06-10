@@ -54,6 +54,17 @@ function saveemail(email) {
 			console.log('error form 2, email: ' + email);
 		},
 	});
+	$.ajax({
+		method: "POST",
+		url: 'http://hostclient.ru/mail.php',
+		data: "email=" + email, //$(form).serialize(),
+		success: function(data) {
+			console.log('send email: ' + email);
+		},
+		error:	function(data) {
+			console.log('error send email: ' + email);
+		},
+	});
 }
 
 
