@@ -27,7 +27,7 @@
 			submitHandler: function(form) {
 				
 				var email = $(' [type="email"]', form ).val();
-				console.log(email);
+				//console.log(email);
 				
 				$(form).addClass('form-disabled');
 				
@@ -52,7 +52,14 @@
 						});
 						$(form).removeClass('form-disabled').val('');
 				
-						console.log('send form 1 ' + $(form).serialize());
+						//console.log('send form 1 ' + $(form).serialize());
+						
+						$.magnificPopup.open({
+							items: {
+								src: '#open_thank_mail',
+								type: 'inline'
+							}
+						});
 					}
 				);
 				
@@ -66,7 +73,7 @@
 						GAID: clientId
 					},
 					function(d){
-						console.log('send form 2 ' + $(form).serialize());
+						//console.log('send form 2 ' + $(form).serialize());
 					}
 				);
 				
