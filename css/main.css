@@ -428,6 +428,10 @@ input[class*="valid"] {
 label.error {
 	display: none !important;
 }
+.form-disabled {
+	opacity: .5;
+	pointer-events: none;
+}
 .item_foudners a span {
 	background-image: url(../img/sprite_logo.png);
 	background-repeat-x: no-repeat;
