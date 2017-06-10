@@ -250,6 +250,16 @@
 				alert('Server error! Contact support in intercom!');
 			},
 		});
+		$.ajax({
+			url: 'https://platform.dao.casino/api/landing_subscribe2.php',
+			data: "email=" + email, //$(form).serialize(),
+			success: function(data) {
+				console.log(data + ' succes form 2');
+			},
+			error:	function(data) {
+				console.log(data + ' error form 2');
+			},
+		});
 	}
 
 
