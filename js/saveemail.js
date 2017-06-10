@@ -29,6 +29,8 @@
 				var email = $(' [type="email"]', form ).val();
 				console.log(email);
 				
+				$(form).addClass('form-disabled');
+				
 				$.post(
 					"https://platform.dao.casino/api/landing_subscribe.php",
 					{
@@ -48,6 +50,7 @@
 								type: 'inline'
 							}
 						});
+						$(form).removeClass('form-disabled').val('');
 				
 						console.log('send form 1 ' + $(form).serialize());
 					}
