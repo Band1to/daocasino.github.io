@@ -5,9 +5,11 @@
 	$('[type="email"]').on('keypress', function (event) {
 		var regex = new RegExp("^[a-zA-Z0-9._@-]+$");
 		var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
-		if (!regex.test(key)) {
-			event.preventDefault();
-			return false;
+		if ((event.which) != 13){
+			if (!regex.test(key)) {
+				event.preventDefault();
+				return false;
+			}
 		}
 	});
 	
@@ -53,7 +55,7 @@
 						$(form).removeClass('form-disabled');
 						$(' [type="email"]', form ).val('');
 				
-						//console.log('send form 1 ' + $(form).serialize());
+						console.log('send form 1 ' + $(form).serialize());
 						
 						$.magnificPopup.open({
 							items: {
@@ -74,7 +76,7 @@
 						GAID: clientId
 					},
 					function(d){
-						//console.log('send form 2 ' + $(form).serialize());
+						console.log('send form 2 ' + $(form).serialize());
 					}
 				);
 				
