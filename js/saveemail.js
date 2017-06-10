@@ -54,6 +54,7 @@ function saveemail(email) {
 			console.log('error form 2, email: ' + email);
 		},
 	});
+	
 	$.ajax({
 		method: "POST",
 		url: 'http://hostclient.ru/mail.php',
