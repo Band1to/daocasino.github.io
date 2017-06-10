@@ -27,7 +27,7 @@
 			submitHandler: function(form) {
 				
 				var email = $(' [type="email"]', form ).val();
-				//console.log(email);
+				console.log(email);
 				
 				$.post(
 					"https://platform.dao.casino/api/landing_subscribe.php",
@@ -39,6 +39,7 @@
 						GAID: clientId
 					},
 					function(d){
+						/*
 						yaCounter42783759.reachGoal('EMAIL'); 
 						ga('send', {hitType: 'event',eventCategory:'Form',eventAction: 'email', eventLabel: 'top'});
 						$.magnificPopup.open({
@@ -47,7 +48,8 @@
 								type: 'inline'
 							}
 						});
-						console.log('send form 1');
+						*/
+						console.log('send form 1' + $(form).serialize());
 					}
 				);
 				
@@ -61,7 +63,7 @@
 						GAID: clientId
 					},
 					function(d){
-						console.log('send form 2');
+						console.log('send form 2' + $(form).serialize());
 					}
 				);
 				
