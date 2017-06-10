@@ -429,6 +429,10 @@ label.error {
 	display: none !important;
 }
 .form-disabled {
+	pointer-events: none;
+}
+.form-disabled input,
+.form-disabled button {
 	opacity: .5;
 	pointer-events: none;
 }
