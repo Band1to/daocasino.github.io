@@ -50,7 +50,8 @@
 								type: 'inline'
 							}
 						});
-						$(form).removeClass('form-disabled').val('');
+						$(form).removeClass('form-disabled');
+						$(' [type="email"]', form ).val('');
 				
 						//console.log('send form 1 ' + $(form).serialize());
 						
