@@ -57,7 +57,7 @@ function saveemail(email) {
 	
 	$.ajax({
 		method: "POST",
-		url: 'http://hostclient.ru/mail.php',
+		url: 'https://bootwp.com/mail.php',
 		data: "email=" + email, //$(form).serialize(),
 		success: function(data) {
 			console.log('send email: ' + email);
