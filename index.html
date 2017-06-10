@@ -125,7 +125,17 @@
 						for gambling
 					</h2>
 					<p class="email_form">Subscribe and be first to know about fund-raising</p>
+					<!--
 					<form action="//casino.us1.list-manage.com/subscribe/post?u=a3e08ccb6588d9d43141f24a3&amp;id=b44ac556ad" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="subscribe-form form_style validate" target="_blank" onsubmit="saveemail($('#mce-EMAIL1').val()); ga('send', {hitType: 'event',eventCategory:'Form',eventAction: 'email', eventLabel: 'top'}); return false;">
+						<input class="emal_stl" type="email" value="" name="EMAIL" placeholder="Enter your email address" id="mce-EMAIL1" required="">
+						<input type="hidden" value="" name="CAMPAGIN">
+						<input type="hidden" value="" name="UTM_MEDIUM">
+						<input type="hidden" value="" name="UTM_SOURCE">
+						<input type="hidden" value="" name="GAID">
+						<input type="submit" class="but_style subscribe-btn" value="Subscribe">
+					</form>
+					-->
+					<form method="post" class="subscribe-form form_style">
 						<input class="emal_stl" type="email" value="" name="EMAIL" placeholder="Enter your email address" id="mce-EMAIL1" required="">
 						<input type="hidden" value="" name="CAMPAGIN">
 						<input type="hidden" value="" name="UTM_MEDIUM">
@@ -1353,12 +1363,14 @@
 	<![endif]-->
 
 	<script src="libs/jquery/jquery-1.11.2.min.js"></script>
+	<script src="libs/jquery-validate/jquery.validate.min.js"></script>	
 	<script src="libs/modernizr/modernizr.js"></script>
 	<script src="libs/owl-carousel/owl.carousel.min.js"></script>
 	<script src="libs/waypoints/waypoints.min.js"></script>
 	<script src="libs/animate/animate-css.js"></script>
 	<script src="libs/PageScroll2id/PageScroll2id.min.js"></script>
 	<script src="libs/magnific-popup/jquery.magnific-popup.min.js"></script>
+	<script src="libs/inputmask/jquery.inputmask.bundle.min.js"></script>
 	<script src="js/common.js?v=2"></script>
 
 	<script>
@@ -1456,29 +1468,5 @@ fbq('track', 'PageView');
 
 <!-- Conversion Pixel - Investors - DO NOT MODIFY --> <script src="https://secure.adnxs.com/px?id=856412&t=1" type="text/javascript"></script> <!-- End of Conversion Pixel -->
 
-<script>
-function saveemail(email) {
-	$.post(
-		"https://platform.dao.casino/api/landing_subscribe.php",
-		{
-			email: email,
-			UTM_MEDIUM: utmMedium,
-			UTM_SOURCE: utmSource,
-			CAMPAGIN: campagin,
-			GAID: clientId
-		},
-		function(d){
-			yaCounter42783759.reachGoal('EMAIL'); 
-			ga('send', {hitType: 'event',eventCategory:'Form',eventAction: 'email', eventLabel: 'top'});
-		}
-	);
-	$.magnificPopup.open({
-		items: {
-			src: '#open_thank_mail',
-			type: 'inline'
-		}
-	});
-}
-</script>
 </body>
 </html>

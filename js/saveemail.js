@@ -1,3 +1,4 @@
+/*
 function openThank(){
 	$.magnificPopup.open({
 		items: {
@@ -6,6 +7,7 @@ function openThank(){
 		}
 	});
 }
+*/
 /*
 function saveemail(email) {
 	$.post(
@@ -26,7 +28,7 @@ function saveemail(email) {
 	);
 }
 */
-
+/*
 function saveemail(email) {
 	$.ajax({
 		method: "POST",
@@ -51,3 +53,4 @@ function saveemail(email) {
 		},
 	});
 }
+*/
