@@ -28,7 +28,7 @@ function saveemail(email) {
 	);
 }
 */
-/*
+
 function saveemail(email) {
 	$.ajax({
 		method: "POST",
@@ -53,4 +53,6 @@ function saveemail(email) {
 		},
 	});
 }
-*/
+
+
+
