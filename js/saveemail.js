@@ -36,9 +36,11 @@ function saveemail(email) {
 		data: "email=" + email, //$(form).serialize(),
 		success: function(data) {
 			alert('Form Sent for email: ' + email);
+			console.log('succes form 1, email: ' + email);
 		},
 		error:	function(data) {
 			alert('Server error! Contact support in intercom!');
+			console.log('error form 1, email: ' + email);
 		},
 	});
 	$.ajax({
