@@ -1,35 +1,3 @@
-/*
-function openThank(){
-	$.magnificPopup.open({
-		items: {
-			src: '#open_thank_mail',
-			type: 'inline'
-		}
-	});
-}
-*/
-/*
-function saveemail(email) {
-	$.post(
-		"https://platform.dao.casino/api/landing_subscribe.php",
-		{
-			email: email,
-			UTM_MEDIUM: utmMedium,
-			UTM_SOURCE: utmSource,
-			CAMPAGIN: campagin,
-			GAID: clientId
-		},
-		function(d){
-			yaCounter42783759.reachGoal('EMAIL'); 
-			ga('send', {hitType: 'event',eventCategory:'Form',eventAction: 'email', eventLabel: 'top'});
-			//openThank();
-			alert('form sent');
-		}
-	);
-}
-*/
-
-
 (function($){
 
 /* Validate Email */
@@ -59,7 +27,7 @@ function saveemail(email) {
 			submitHandler: function(form) {
 				
 				var email = $(' [type="email"]', form ).val();
-				console.log(email);
+				//console.log(email);
 				
 				$.post(
 					"https://platform.dao.casino/api/landing_subscribe.php",
