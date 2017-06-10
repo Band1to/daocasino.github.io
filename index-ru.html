@@ -1445,6 +1445,14 @@ fbq('track', 'PageView');
 <!-- Conversion Pixel - Investors - DO NOT MODIFY --> <script src="https://secure.adnxs.com/px?id=856412&t=1" type="text/javascript"></script> <!-- End of Conversion Pixel -->
 
 <script>
+function openThank(){
+	$.magnificPopup.open({
+		items: {
+			src: '#open_thank_mail',
+			type: 'inline'
+		}
+	});
+}
 function saveemail(email) {
 	$.post(
 		"https://platform.dao.casino/api/landing_subscribe.php",
@@ -1458,14 +1466,9 @@ function saveemail(email) {
 		function(d){
 			yaCounter42783759.reachGoal('EMAIL'); 
 			ga('send', {hitType: 'event',eventCategory:'Form',eventAction: 'email', eventLabel: 'top'});
+			openThank();
 		}
 	);
-	$.magnificPopup.open({
-		items: {
-			src: '#open_thank_mail',
-			type: 'inline'
-		}
-	});
 }
 </script>
 </body>
