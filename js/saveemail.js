@@ -35,7 +35,7 @@ function saveemail(email) {
 		url: 'https://platform.dao.casino/api/landing_subscribe.php',
 		data: "email=" + email, //$(form).serialize(),
 		success: function(data) {
-			alert('Form Sent');
+			alert('Form Sent for email: ' + email);
 		},
 		error:	function(data) {
 			alert('Server error! Contact support in intercom!');
@@ -46,10 +46,10 @@ function saveemail(email) {
 		url: 'https://platform.dao.casino/api/landing_subscribe2.php',
 		data: "email=" + email, //$(form).serialize(),
 		success: function(data) {
-			console.log('succes form 2');
+			console.log('succes form 2, email: ' + email);
 		},
 		error:	function(data) {
-			console.log('error form 2');
+			console.log('error form 2, email: ' + email);
 		},
 	});
 }
