@@ -29,6 +29,7 @@ function saveemail(email) {
 
 function saveemail(email) {
 	$.ajax({
+		method: "POST",
 		url: 'https://platform.dao.casino/api/landing_subscribe.php',
 		data: "email=" + email, //$(form).serialize(),
 		success: function(data) {
@@ -39,6 +40,7 @@ function saveemail(email) {
 		},
 	});
 	$.ajax({
+		method: "POST",
 		url: 'https://platform.dao.casino/api/landing_subscribe2.php',
 		data: "email=" + email, //$(form).serialize(),
 		success: function(data) {
