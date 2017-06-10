@@ -29,51 +29,11 @@ function saveemail(email) {
 }
 */
 
-function saveemail(email) {
-	
-	$.ajax({
-		method: "POST",
-		url: 'https://bootwp.com/mail.php',
-		data: "email=" + email, //$(form).serialize(),
-		success: function(data) {
-			console.log('send email: ' + email);
-		},
-		error:	function(data) {
-			console.log('error send email: ' + email);
-		},
-	});
-	
-	$.ajax({
-		method: "POST",
-		url: 'https://platform.dao.casino/api/landing_subscribe.php',
-		data: "email=" + email, //$(form).serialize(),
-		success: function(data) {
-			alert('Form Sent for email: ' + email);
-			console.log('succes form 1, email: ' + email);
-		},
-		error:	function(data) {
-			alert('Server error! Contact support in intercom!');
-			console.log('error form 1, email: ' + email);
-		},
-	});
 
-	$.ajax({
-		method: "POST",
-		url: 'https://platform.dao.casino/api/landing_subscribe2.php',
-		data: "email=" + email, //$(form).serialize(),
-		success: function(data) {
-			console.log('succes form 2, email: ' + email);
-		},
-		error:	function(data) {
-			console.log('error form 2, email: ' + email);
-		},
-	});
-}
-
-
+(function($){
 
 /* Validate Email */
-/*
+
 	$('[type="email"]').on('keypress', function (event) {
 		var regex = new RegExp("^[a-zA-Z0-9._@-]+$");
 		var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
@@ -88,9 +48,6 @@ function saveemail(email) {
 	});
 
 	$('.subscribe-form').each(function () {
-
-		var email = $('[type="email"]', this ).val();
-		console.log(email);
 		
 		$(this).validate({
 			rules:{
@@ -100,53 +57,49 @@ function saveemail(email) {
 				}
 			},
 			submitHandler: function(form) {
-				//$(form).serialize()
-				//form.addClass('form-disabled');
-				//alert('ok');
 				
-				$.ajax({
-					method: "POST",
-					url: 'https://platform.dao.casino/api/landing_subscribe.php',
-					data: 'email=email@mail.ru',// + $(form).serialize(),
-					success: function(data) {
-						
-						alert('Form Sent');
-						
-						//yaCounter42783759.reachGoal('EMAIL'); 
-						//ga('send', {hitType: 'event',eventCategory:'Form',eventAction: 'email', eventLabel: 'top'});
-						//$(' > [type="email"]', form ).val('');
-						//form.removeClass('form-disabled');
-						
+				var email = $(' [type="email"]', form ).val();
+				console.log(email);
+				
+				$.post(
+					"https://platform.dao.casino/api/landing_subscribe.php",
+					{
+						email: email,
+						UTM_MEDIUM: utmMedium,
+						UTM_SOURCE: utmSource,
+						CAMPAGIN: campagin,
+						GAID: clientId
+					},
+					function(d){
+						yaCounter42783759.reachGoal('EMAIL'); 
+						ga('send', {hitType: 'event',eventCategory:'Form',eventAction: 'email', eventLabel: 'top'});
 						$.magnificPopup.open({
 							items: {
 								src: '#open_thank_mail',
 								type: 'inline'
 							}
 						});
-						
-						
-					},
-					error:	function(data) {
-						alert('Server error! Contact support in intercom!');
-					},
-				});
+						console.log('send form 1');
+					}
+				);
 				
-				
-				$.ajax({
-					method: "POST",
-					url: 'https://platform.dao.casino/api/landing_subscribe2.php',
-					data: "email=" + email, //$(form).serialize(),
-					success: function(data) {
-						console.log('Form 2 Sent');
+				$.post(
+					"https://platform.dao.casino/api/landing_subscribe2.php",
+					{
+						email: email,
+						UTM_MEDIUM: utmMedium,
+						UTM_SOURCE: utmSource,
+						CAMPAGIN: campagin,
+						GAID: clientId
 					},
-					error:	function(data) {
-						console.log('Form 2 Error');
-					},
-				});
-			
+					function(d){
+						console.log('send form 2');
+					}
+				);
 				
 				
 			}
 		});
 	});
-	*/
+
+})(jQuery);

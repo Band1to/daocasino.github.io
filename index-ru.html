@@ -121,7 +121,7 @@
 						для игорного бизнеса
 					</h2>
 					<p class="email_form">Подпишись и узнай первым о сборе средств</p>
-					<form onsubmit="saveemail($('#mce-EMAIL1').val()); ga('send', {hitType: 'event',eventCategory:'Form',eventAction: 'email', eventLabel: 'top'}); return false;" method="post" name="mc-embedded-subscribe-form" class="subscribe-form form_style validate">
+					<form method="post" name="mc-embedded-subscribe-form" class="subscribe-form form_style">
 						<input class="emal_stl" type="email" value="" name="EMAIL" placeholder="Укажите ваш email" id="mce-EMAIL1" required="">
 						<input type="hidden" value="" name="CAMPAGIN">
 						<input type="hidden" value="" name="UTM_MEDIUM">
@@ -415,7 +415,7 @@
 					<div class="col_6">
 						<div class="pre-sale_wrap-form">
 							<p class="pre-sale_miss">Подпишитесь и первыми узнайте о начале кампании по сбору средств</p>
-							<form action="//casino.us1.list-manage.com/subscribe/post?u=a3e08ccb6588d9d43141f24a3&amp;id=b44ac556ad" onsubmit="saveemail($('#mce-EMAIL2').val()); ga('send', {hitType: 'event', eventCategory: 'Form', eventAction: 'email', eventLabel: 'center'}); return false;" method="post" name="mc-embedded-subscribe-form" class="subscribe-form form_style validate" target="_blank">
+							<form method="post" name="mc-embedded-subscribe-form" class="subscribe-form form_style">
 								<input class="emal_stl" type="email" value="" name="EMAIL" placeholder="Введите адрес эл. почты" id="mce-EMAIL2" required="">
 								<input type="hidden" value="" name="CAMPAGIN">
 								<input type="hidden" value="" name="UTM_MEDIUM">
@@ -793,7 +793,7 @@
 			<div class="container">
 				<h3>Интересует наша технология?</h3>
 				<span>Подпишись и узнай первым о сборе средств</span>
-				<form action="//casino.us1.list-manage.com/subscribe/post?u=a3e08ccb6588d9d43141f24a3&amp;id=b44ac556ad" method="post" onsubmit="saveemail($('#mce-EMAIL3').val()); ga('send', {hitType: 'event', eventCategory: 'Form', eventAction: 'email', eventLabel: 'bottom'}); return false;" name="mc-embedded-subscribe-form" class="subscribe-form form_style validate" target="_blank">
+				<form method="post" name="mc-embedded-subscribe-form" class="subscribe-form form_style">
 					<input class="emal_stl" type="email" value="" name="EMAIL" placeholder="Укажите ваш email" id="mce-EMAIL3" required="">
 					<input type="hidden" value="" name="CAMPAGIN">
 					<input type="hidden" value="" name="UTM_MEDIUM">
@@ -1342,6 +1342,7 @@
 	<![endif]-->
 
 	<script src="libs/jquery/jquery-1.11.2.min.js"></script>
+	<script src="libs/jquery-validate/jquery.validate.min.js"></script>	
 	<script src="libs/modernizr/modernizr.js"></script>
 	<script src="libs/owl-carousel/owl.carousel.min.js"></script>
 	<script src="libs/waypoints/waypoints.min.js"></script>
