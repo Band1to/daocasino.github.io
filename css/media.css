@@ -4,7 +4,7 @@
 @media (min-width: 1151px) {
 	.ru_index ul.top_menu li,
 	.sp_index ul.top_menu li {
-		margin-right: 35px;
+		margin-right: 25px;
 	}
 }
 @media only screen and (max-width : 1150px) {
@@ -24,17 +24,27 @@
 }
 
 @media (min-width: 1200px) {
-	.japan_index .item_bottom_three,
-	.cor_index .item_bottom_three {
+	.japan_index .item_bottom_three {
 		left: 480px;
+	}
+	.cor_index .item_bottom_one {
+		left: 170px;
+	}
+	.cor_index .item_bottom_three {
+		left: 390px;
+	}
+	.cor_index .item_bottom_four {
+		left: 670px;
+	}
+	.cor_index .item_bottom_five {
+		left: 900px;
 	}
 	.japan_index .item_bottom_four{
 		left: 665px;
 	}
-	.cor_index .item_bottom_four {
-		left: 650px;
+	.sp_index .item_bottom_three {
+		left: 450px;
 	}
-	
 }
 @media (max-width: 1199px) {
 	.roadmap-progress {
