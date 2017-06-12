@@ -710,6 +710,9 @@ main {
 	margin: 95px auto 0;
 	position: relative;
 }
+.sp_index .how-it-works-wrapper{
+	background-image: url(../img/br_arrow_sp.png);
+}
 .item-oval_top,
 .item-oval_bottom{
 	position: absolute;
