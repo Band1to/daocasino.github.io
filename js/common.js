@@ -1,4 +1,47 @@
+
+function redirect2Lang(){
+	if (window.location.protocol == 'file:') {
+		return
+	}
+
+	var redirect = function(lang){
+		var langs_pages = {
+			'en' : '/',
+			'ru' : '/index-ru.html',
+			'es' : '/index-sp.html',
+			'ja' : '/index-japan.html',
+			'zh' : '/index-ch.html',
+			'ko' : '/index-cor.html',
+		};
+		if (!langs_pages[lang]) { return };
+
+		window.location = langs_pages[lang];
+	}
+
+
+	var lang = navigator.language || navigator.userLanguage
+	if (!lang) {
+		$.ajax({ 
+			url: "https://ajaxhttpheaders.appspot.com", 
+			dataType: 'jsonp', 
+			success: function(headers) {
+				lang = headers['Accept-Language'].split('-')[0];
+				redirect(lang)
+			}
+		})
+		return
+	}
+
+	lang = lang.split('-')[0]
+	
+	redirect(lang);
+};
+
+
+
+
 ( function($) {
+	// redirect2Lang()
 
 	/**
 	 * Is Mobile
