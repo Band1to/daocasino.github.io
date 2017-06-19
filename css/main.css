@@ -921,7 +921,7 @@ main {
 }
 .progress_line{
 	display: block;
-	width: 33%;
+	width: 50%;
 	height: 1px;
 	position: absolute;
 	left: 0;
@@ -985,7 +985,7 @@ span.active{
 	z-index: 10;
 }
 span.enable:before, 
-span.disable:before, 
+span.disable:before,
 span.active:before {
 	content: "";
 	display: block;
@@ -1003,6 +1003,14 @@ span.active:before {
 	height: 9px;
 	left: -4px;
 	bottom: -65px !important;
+}
+.item_bottom span.active {
+	background: #f2961e;
+	border: 0 !important;
+	width: 9px;
+	height: 9px;
+	left: -4px;
+	top: -70px;
 }
 span.enable{
 	background: #f2961e !important;
