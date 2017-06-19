@@ -24,26 +24,38 @@
 }
 
 @media (min-width: 1200px) {
-	.japan_index .item_bottom_three {
-		left: 480px;
-	}
 	.cor_index .item_bottom_one {
 		left: 170px;
 	}
 	.cor_index .item_bottom_three {
-		left: 390px;
+		left: 440px;
 	}
 	.cor_index .item_bottom_four {
-		left: 670px;
+		left: 710px;
 	}
 	.cor_index .item_bottom_five {
 		left: 900px;
 	}
+	.cor_index .progress_line {
+		width: 42%;
+	}
+	.japan_index .item_top_two {
+		left: 590px;
+	}
+	.japan_index .item_bottom_three {
+		left: 480px;
+	}
 	.japan_index .item_bottom_four{
-		left: 665px;
+		left: 720px;
+	}
+	.japan_index .progress_line {
+		width: 45%;
 	}
 	.sp_index .item_bottom_three {
 		left: 450px;
+	}
+	.sp_index .progress_line {
+		width: 43%;
 	}
 }
 @media (max-width: 1199px) {
@@ -60,6 +72,10 @@
 	.item_top span.active {
 		left: -56px;
 		top: 0;
+	}
+	.item_bottom span.active {
+		left: -56px;
+		top: 4px;
 	}
 	.item_top.item_top_one2 {
 		left: 120px;
