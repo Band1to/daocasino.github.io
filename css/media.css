@@ -39,11 +39,14 @@
 	.cor_index .progress_line {
 		width: 42%;
 	}
+	.japan_index .item_top_two {
+		left: 590px;
+	}
 	.japan_index .item_bottom_three {
 		left: 480px;
 	}
 	.japan_index .item_bottom_four{
-		left: 665px;
+		left: 720px;
 	}
 	.japan_index .progress_line {
 		width: 45%;
