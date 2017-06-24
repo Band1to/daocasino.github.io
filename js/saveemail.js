@@ -46,7 +46,7 @@
 				email:      email,
 				UTM_MEDIUM: utmMedium,
 				UTM_SOURCE: utmSource,
-				CAMPAGIN:   campagin,
+				CAMPAIGN:   campaign,
 				GAID:       clientId
 			},
 			function(d){
