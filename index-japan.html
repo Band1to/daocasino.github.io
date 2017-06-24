@@ -123,7 +123,7 @@
 					<p class="email_form">電子メールアドレスを記入し、最新ニュースを配信</p>
 					<form method="post" class="subscribe-form form_style">
 						<input class="emal_stl" type="email" value="" name="EMAIL" placeholder="電子メールアドレスを記入してください。" id="mce-EMAIL1" required="">
-						<input type="hidden" value="" name="CAMPAGIN">
+						<input type="hidden" value="" name="CAMPAIGN">
 						<input type="hidden" value="" name="UTM_MEDIUM">
 						<input type="hidden" value="" name="UTM_SOURCE">
 						<input type="hidden" value="" name="GAID">
@@ -410,7 +410,7 @@
 							<p class="pre-sale_miss">電子メールアドレスを記入し、最新ニュースを配信</p>
 							<form method="post" class="subscribe-form form_style">
 								<input class="emal_stl" type="email" value="" name="EMAIL" placeholder="電子メールアドレスを記入してください。" id="mce-EMAIL2" required="">
-								<input type="hidden" value="" name="CAMPAGIN">
+								<input type="hidden" value="" name="CAMPAIGN">
 								<input type="hidden" value="" name="UTM_MEDIUM">
 								<input type="hidden" value="" name="UTM_SOURCE">
 								<input type="hidden" value="" name="GAID">
@@ -792,7 +792,7 @@
 				<span>電子メールアドレスを記入し、最新ニュースを配信</span>
 				<form method="post" class="subscribe-form form_style">
 					<input class="emal_stl" type="email" value="" name="EMAIL" placeholder="電子メールアドレスを記入してください。" id="mce-EMAIL3" required="">
-					<input type="hidden" value="" name="CAMPAGIN">
+					<input type="hidden" value="" name="CAMPAIGN">
 					<input type="hidden" value="" name="UTM_MEDIUM">
 					<input type="hidden" value="" name="UTM_SOURCE">
 					<input type="hidden" value="" name="GAID">
@@ -1433,10 +1433,10 @@
 			}
 			return(false);
 		}
-		var campagin  = getQueryVariable('utm_campagin');
+		var campaign  = getQueryVariable('utm_campaign');
 		var utmMedium = getQueryVariable('utm_medium');
 		var utmSource = getQueryVariable('utm_source');
-		$('[name="CAMPAGIN"]').val(campagin);
+		$('[name="CAMPAIGN"]').val(campaign);
 		$('[name="UTM_MEDIUM"]').val(utmMedium);
 		$('[name="UTM_SOURCE"]').val(utmSource);
 	</script>
