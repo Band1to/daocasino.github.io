@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="140" viewBox="0 0 130 140">
+    <g fill="none" fill-rule="evenodd">
+        <g transform="translate(27 3)">
+            <path stroke="#F90" stroke-width="3" d="M34 0l34 19.5v39L34 78 0 58.5v-39z"/>
+            <path stroke="#F90" stroke-width="3" d="M68 20L34 40 0 20"/>
+            <circle cx="34" cy="19" r="2" fill="#F90"/>
+            <circle cx="11" cy="40" r="2" fill="#F90"/>
+            <circle cx="22" cy="47" r="2" fill="#F90"/>
+            <circle cx="11" cy="52" r="2" fill="#F90"/>
+            <circle cx="22" cy="59" r="2" fill="#F90"/>
+            <g fill="#F90" transform="translate(43 38)">
+                <circle cx="2" cy="22" r="2"/>
+                <circle cx="8" cy="12" r="2"/>
+                <circle cx="14" cy="2" r="2"/>
+            </g>
+            <path stroke="#F90" stroke-linecap="square" stroke-width="3" d="M34 41v36"/>
+        </g>
+        <path stroke="#4C4C4C" stroke-width="3" d="M1.5 101.5h13v37h-13zM15 106s12.75-10 25.75-10 13.5 5.25 21.75 5.25H82s6.025.25 6.25 6C88.475 113 82.5 114 82.5 114H46.727"/>
+        <path stroke="#4C4C4C" stroke-width="3" d="M14 130.5s14.974.022 29.5 1.25 21.117 3.312 24.751 2.5c8.607-1.924 56.498-28.501 56.498-28.501s6.001-4.249 2.751-9.249c-3.25-5-9-2.25-9-2.25l-30.001 14.499"/>
+    </g>
+</svg>
