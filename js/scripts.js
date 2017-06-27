@@ -122,7 +122,7 @@
 	 * CountDown
 	 */
 	var austDay = new Date();
-	austDay = new Date( austDay.getFullYear(), austDay.getMonth() + 1, 0, -9);
+	austDay = new Date(Date.UTC(2017, 07, 29, 1, 0));
 	$('.countdown-compact').countdown({
 		until: austDay,
 		format: 'DHMS',
