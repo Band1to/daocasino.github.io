@@ -56,9 +56,6 @@
 	/**
 	 * Fade in body after load
 	 */
-	//$(window).load(function(){
-		//$('body').removeClass('before-load');
-	//});
 	$('body').css('visibility','visible');
 
 	/**
@@ -175,8 +172,8 @@
 	 * CountDown
 	 */
 	var austDay = new Date();
-	austDay = new Date( Date.UTC( 2017, 05, 29, 13, 0) );
-	$('.countdown-full').countdown({
+	austDay = new Date(Date.UTC(2017, 05, 29, 13, 0));
+	$('.countdown-compact').countdown({
 		until: austDay,
 		format: 'DHMS',
 		padZeroes: true,
