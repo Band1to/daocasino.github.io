@@ -56,9 +56,10 @@
 	/**
 	 * Fade in body after load
 	 */
-	$(window).load(function(){
-		$('body').removeClass('before-load');
-	});
+	//$(window).load(function(){
+		//$('body').removeClass('before-load');
+	//});
+	$('body').css('visibility','visible');
 
 	/**
 	 * Magnific Popup
@@ -76,7 +77,64 @@
 		
 		midClick: true,
 		removalDelay: 300,
+		mainClass: 'my-mfp-zoom-in',
+	});
+	
+	$('.team-member').on('mfpOpen', function(e /*, params */) {
+		var magnificPopup = $.magnificPopup.instance;
+		var thisPopupId = magnificPopup.currItem.src;
+		var thisImgSrc = $(thisPopupId).find('.modal-profile-photo').data('image');
+		var img = $("<img />").attr('src', thisImgSrc)
+		.on('load', function() {
+			if (!this.complete || typeof this.naturalWidth == "undefined" || this.naturalWidth == 0) {
+				alert('broken image!');
+			} else {
+				$(thisPopupId).find('.modal-profile-photo').html(img);
+			}
+		});
+	});
+
+	$('[href="#modal-get-contract"]').magnificPopup({
+		type: 'inline',
+		removalDelay: 300,
 		mainClass: 'my-mfp-zoom-in'
+	});
+	
+	/**
+	 * Agreements
+	 */
+	$('.checkbox').on('click', function(){
+		$(this).removeClass('error');
+	})
+	$('[href="#continue"]').on('click', function(event){
+		event.preventDefault();
+		var thisBtn = $(this);
+		var errorCount = 0;
+		$('.agreement-item').find('input[type="checkbox"]').each(function(){
+			thisInput = $(this);
+			if (thisInput.prop('checked')==true){ 
+				thisInput.parent().removeClass('error animated bounce');
+			} else {
+				errorCount++;
+				thisInput.parent().addClass('error animated bounce');
+			}
+		});
+		setTimeout(function(){
+			$('.agreement-item .checkbox').removeClass('animated bounce');
+		}, 1000 );
+		if( errorCount == 0 ){
+			$.magnificPopup.close();
+			setTimeout(function(){
+				$.magnificPopup.open({
+					items: {
+						src: '#modal-contract-address',
+						type: 'inline',
+					},
+					removalDelay: 300,
+					mainClass: 'my-mfp-zoom-in'
+				});
+			}, 300 );	
+		}
 	});
 
 	/**
@@ -114,24 +172,26 @@
 	});
 
 	/**
-	 * Animate elements on load
-	 */
-	/*$(".contant_header h1, .contant_header h2, .contant_header form, .email_form").animated("bounceTop");*/
-
-	/**
 	 * CountDown
 	 */
 	var austDay = new Date();
-	austDay = new Date( austDay.getFullYear(), austDay.getMonth() + 1, 0, -8);
-	$('.countdown-compact').countdown({
-		until: austDay,
-		format: 'DHMS',
-		padZeroes: true,
-	});
+	austDay = new Date( Date.UTC( 2017, 05, 29, 13, 0) );
 	$('.countdown-full').countdown({
 		until: austDay,
 		format: 'DHMS',
 		padZeroes: true,
+	});
+	var austDayToken = new Date();
+	austDayToken = new Date( Date.UTC( 2017, 05, 29, 13, 0) );
+	$('.countdown-compact').countdown({
+		since: austDayToken,
+		format: 'DHMS',
+		padZeroes: true,
+	});
+	$('.informer-day').countdown({
+		since: austDayToken,
+		format: 'D',
+		padZeroes: false,
 	});
 
 	/**
@@ -186,6 +246,21 @@
 	$('.navbar-menu > li > a[href^="#"]').smoothScroll({
 		fromTop: 70
 	});
+	
+	/**
+	 * Clipboard.js
+	 */
+	if(typeof Clipboard == 'function'){
+		$('body').append('<span class="copy-alert">Copied!</span>');
+		var clipboard = new Clipboard('[data-clipboard-target]');
+		clipboard.on('success', function(e) {
+			$('.copy-alert').addClass('in');
+			setTimeout(function(){
+				$('.copy-alert').removeClass('in');
+			}, 2000 );
+			e.clearSelection();
+		});
+	}
 
 	/**
 	 * Chart.js
