@@ -289,9 +289,6 @@ p {
 	font-size: 36px;
 	min-width: 60px;
 }
-.countdown-compact .countdown-show4 .countdown-section:first-child {
-	display: none;
-}
 .countdown-period {
 	font-size: 18px;
 }
@@ -350,31 +347,37 @@ p {
 }
 .financing-progress-line {
 	float: left;
-	width: 100%;
+	margin-left: 33.333333332%;
+	width: 66.66666667%;
 	height: 6px;
-	background-image: linear-gradient(to right, #313131, #313131 93%, #202020);
+	background-color: #313131;
+	-webkit-transition: all 1000 ease-out;
+			transition: all 1000 ease-out;
 }
 .financing-progress-bar {
 	background-color: #ff9900;
+	-webkit-transition: all 1000 ease-out;
+			transition: all 1000 ease-out;
 }
 .financing-step {
-	width: 29%;
+	width: 33.333332%;
 	float: left;
 	min-height: 68px;
 	font-size: 14px;
 	color: #999;
-	padding: 25px 0 0 20px;
+	padding: 25px 20px 0 20px;
 	white-space: nowrap;
+	text-align: right;
 	border-left: dashed 2px #313131;
+}
+.financing-step:last-child {
+	border-right: dashed 2px #313131;
 }
 .financing-step.active {
 	font-weight: bold;
 	color: #ee9828;
 }
 @media (min-width: 992px) {
-	.financing-step:last-child {
-		width: 13%;
-	}
 	.informer {
 		max-width: 500px;
 		float: right;
@@ -398,8 +401,10 @@ p {
 		margin: 0 auto;
 		float: none;
 	}
-	.financing-step {
-		width: 25%;
+}
+@media (min-width: 576px) and (max-width: 991px) {
+	.financing-step-one {
+		clear: left;
 	}
 }
 @media (max-width: 767px) {
@@ -414,7 +419,20 @@ p {
 		font-size: 12px;
 	}
 }
-@media (min-width: 576px) {
+@media (min-width: 576px){
+	.financing-step-one {
+		position: relative;
+	}
+	.financing-step-one:before {
+		content: '';
+		display: block;
+		height: 6px;
+		position: absolute;
+		top: -6px;
+		left: -2px;
+		right: -2px;
+		background-color: #ff9900;
+	}
 	.financing-progress-bar {
 		height: 6px !important;
 	}
@@ -438,7 +456,7 @@ p {
 		text-align: center;
 	}
 	.financing-progress {
-		height: 400px;
+		height: 350px;
 		position: relative;
 		text-align: left;
 		width: 260px;
@@ -446,11 +464,12 @@ p {
 	}
 	.financing-progress-line {
 		position: absolute;
-		top: 0;
+		top: 33.3333332%;
 		left: 0;
+		margin-left: 0;
 		width: 6px;
-		height: 100%;
-		background-image: linear-gradient(to bottom, #313131, #313131 93%, #202020);
+		height: 66.666667%;
+		background-color: #313131;
 	}
 	.financing-progress-bar {
 		width: 6px !important;
@@ -461,13 +480,29 @@ p {
 		float: none;
 		padding-left: 15px;
 		margin-left: 6px;
-		border-left: 0;
-		height: 27%;
+		padding-top: 60px;
+		height: 33.3333332%;
 		font-size: 14px;
+		text-align: left;
+		border-left: 0;
 		border-top: dashed 2px #313131;
 	}
+	.financing-step-one {
+		position: relative;
+	}
 	.financing-step:last-child {
-		height: 19%;
+		border-right: 0;
+		border-bottom: dashed 2px #313131;
+	}
+	.financing-step-one:before {
+		content: '';
+		position: absolute;
+		display: block;
+		width: 6px;
+		top: -2px;
+		bottom: 0;
+		left: -6px;
+		background-color: #ff9900;
 	}
 	.informer-form {
 		width: auto;
@@ -931,6 +966,9 @@ p {
 	.navbar-info {
 		display: none;
 	}
+	.navbar-info.pull-right {
+		display: block;
+	}
 }
 @media (max-width: 480px) {
 	.logo img:last-child {
@@ -1061,6 +1099,11 @@ section:not(.block-dark) + section:not(.block-dark) {
 @media (max-width: 767px) {
 	.block-charts .row [class*="col-"]:first-child .pie-chart {
 		margin-bottom: 50px;
+	}
+}
+@media (max-width: 480px) {
+	.block-charts {
+		padding: 40px 0;
 	}
 }
 
@@ -2436,8 +2479,6 @@ section:not(.block-dark) + section:not(.block-dark) {
 .social-menu > li > a:hover {
 	border-color: #ff9900;
 }
-
-
 .open_info_block {
 	position: absolute;
 	visibility: hidden;
@@ -2580,211 +2621,6 @@ section:not(.block-dark) + section:not(.block-dark) {
 	position: relative;
 	//top: -50px;
 	margin-bottom: 58px;
-}
-/* MAIN STYLE =====================
-==============================================*/
-main {
-	background: #202020;
-}
-.founders_slog{
-	font-size: 26px;
-	color: #fff;
-	line-height: 36px;
-}
-
-
-
-
-
-/* OUR TEAM ===================
-======================================*/
-.our_team {
-	padding: 125px 0 60px;
-	border-bottom: 1px solid #313131;
-}
-.photo_collaborator img {
-	border-radius: 50%;
-}
-.photo_collaborator{
-	max-width: 140px;
-	float: left;
-}
-.block_collaborator{
-	text-align: center;
-	font-family: "BasisGrotesquePro-Regular";
-	padding-top: 120px;
-}
-.text_collaborator {
-	width: 150px;
-	float: left;
-	padding-left: 32px;
-}
-.text_collaborator h4{
-	font-size: 22px;
-	color: #fff;
-	line-height: 33px;
-	padding-top: 4px;
-}
-.text_collaborator span{
-	color: #f2961e;
-	line-height: 22px;
-	display: inline-block;
-	margin-top: 17px;
-}
-.block_collaborator .col_4,
-.block_collaborator .col_3 {
-	text-align: left;
-	max-width: 330px;
-	margin-bottom: 78px;
-	display: inline-block;
-	vertical-align: top;
-	float: none;
-	width: auto;
-	/* overflow: hidden; */
-	min-width: 300px;
-	margin-left: 30px;
-	margin-right: 20px;
-}
-.japan_index .text_collaborator span{
-	font-size: 14px;
-}
-.japan_index .text_collaborator {
-	padding-left: 16px;
-}
-/* OUR TEAM POPUP ===================
-======================================*/
-.popup-dialog {
-	background: #202020;
-	max-width: 800px;
-	margin: 40px auto;
-	position: relative;
-}
-.popup-dialog .container {
-	padding: 0;
-}
-.photo_popup{
-	max-width: 280px;
-	width: 35%;
-	float: left;
-}
-.photo_popup img {
-	float: left;
-}
-.text_popup h1{
-	font-size: 22px;
-	font-family: "BasisGrotesquePro-Bold";
-	color: #fff;
-	margin-bottom: 21px;
-}
-.text_popup {
-	width: 65%;
-	max-width: 480px;
-	padding-top: 43px;
-	padding-left: 40px;
-	float: left;
-}
-.text_popup span{
-	font-size: 16px;
-	font-family: "BasisGrotesquePro-Regular";
-	color: #f2961e;
-	display: block;
-	margin-bottom: 24px;
-}
-.text_popup p{
-	color: #999999;
-	line-height: 26px;
-	margin-bottom: 26px;
-}
-.text_popup b{
-	color: #fff;
-}
-.text_popup .social{
-	margin-top: 34px;
-	padding-bottom: 15px;
-	float: none;
-}
-
-/* BLOCK POST ===================
-======================================*/
-.block_post {
-	padding: 120px 0 118px;
-	border-bottom: 1px solid #313131;
-}
-.block_post h3{
-	line-height: 49px;
-	margin-bottom: 60px;
-}
-.block_post_contant {
-	max-width: 500px;
-}
-.block_post_contant p {
-	line-height: 26px;
-	margin-bottom: 25px;
-}
-.block_post_contant p:last-child {
-	margin-bottom: 0;
-}
-/* TECHNOLOGY ===================
-======================================*/
-.technology_form h3{
-	font-size: 36px;
-	margin-bottom: 12px;
-}
-.technology_form span{
-	font-size: 24px;
-}
-.technology_form {
-	text-align: center;
-	padding: 119px 0 120px;
-}
-.technology_form .form_style{
-	margin: 45px auto 0;
-}
-.question{
-	font-size: 14px;
-	line-height: 22px;
-	color: #878787;
-	margin-top: 27px;
-}
-.question a{
-	color: #cb8325;
-}
-/* FOTTER ===================
-======================================*/
-
-ul.social {
-	float: right;
-}
-.social li{
-	list-style: none;
-	display: block;
-	float: left;
-	width: 46px;
-	height: 46px;
-	margin-right: 16px;
-	border-radius: 50%;
-	border: 1px solid #3d3d3d;
-	text-align: center;
-}
-.social li:hover {
-	background-color: #f3951a;
-	border-color: #f3951a;
-}
-.social li:last-child{
-	margin-right: 0;
-}
-.social .tbl{
-	display: table;
-	width: 100%;
-	height: 46px;
-}
-.tbl a{
-	color: #fff;
-	display: table-cell;
-	vertical-align: middle;
-}
-.tbl i {
-	font-size: 20px;
 }
 
 
@@ -3123,28 +2959,18 @@ form input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3
  * Fade-zoom animation for first dialog
  */
 
- /* start state */
- .my-mfp-zoom-in .zoom-anim-dialog {
- 	opacity: 0;
+/* start state */
+.my-mfp-zoom-in .zoom-anim-dialog {
+	opacity: 0;
+	-webkit-transition: all 0.2s ease-in-out; 
+		transition: all 0.2s ease-in-out; 
+	-webkit-transform: scale(0.8); 
+		transform: scale(0.8); 
+}
 
- 	-webkit-transition: all 0.2s ease-in-out; 
- 	-moz-transition: all 0.2s ease-in-out; 
- 	-o-transition: all 0.2s ease-in-out; 
- 	transition: all 0.2s ease-in-out; 
-
-
-
- 	-webkit-transform: scale(0.8); 
- 	-moz-transform: scale(0.8); 
- 	-ms-transform: scale(0.8); 
- 	-o-transform: scale(0.8); 
- 	transform: scale(0.8); 
- }
-
- /* animate in */
+/* animate in */
  .my-mfp-zoom-in.mfp-ready .zoom-anim-dialog {
  	opacity: 1;
-
  	-webkit-transform: scale(1); 
  	-moz-transform: scale(1); 
  	-ms-transform: scale(1); 
@@ -3178,8 +3004,6 @@ form input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3
 .my-mfp-zoom-in.mfp-removing.mfp-bg {
 	opacity: 0;
 }
-
-
 
 /*
 Fade-move animation for second dialog
@@ -3249,103 +3073,6 @@ Fade-move animation for second dialog
 	color: #ed9726 !important;
 }
 
-.hamburger {
-	cursor: pointer;
-	width: 48px;
-	height: 48px;
-	-webkit-transition: all 0.25s;
-	-o-transition: all 0.25s;
-	transition: all 0.25s;
-	display: block;
-}
-.hamburger:after,
-.hamburger__top-bun,
-.hamburger__bottom-bun {
-	content: '';
-	width: 25px;
-	height: 2px;
-	border-radius: 2px;
-	background-color: #ffffff;
-	display: block;
-	position: absolute;
-	left: 15px;
-	-webkit-transform: rotate(0);
-	-ms-transform: rotate(0);
-	-o-transform: rotate(0);
-	transform: rotate(0);
-	-webkit-transition: all 0.3s;
-	-o-transition: all 0.3s;
-	transition: all 0.3s;
-}
-.hamburger:after { 
-	top:9px;
-}
-.hamburger:hover [class*="-bun"] {
-	background: #fff;
-}
-
-.hamburger__top-bun {
-	top: 23px;
-	transform: translateY(-5px);
-}
-
-.hamburger__bottom-bun {
-	bottom: 23px;
-	transform: translateY(5px);
-}
-
-
-
-.open .hamburger__top-bun {
-	transform: 
-	rotate(45deg) 
-	translateY(0px);
-}
-
-.open .hamburger__bottom-bun {
-	transform: 
-	rotate(-45deg) 
-	translateY(0px);
-}
-.hamburger.open:after { 
-	top:17px; left:22px;
-	transform: rotate(45deg) translateY(9px);
-	opacity:0;
-}
-
-.top_mnu {
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, 0.85);
-	z-index: 1001;
-	right: 0;
-	top: 0;
-	margin: 0;
-	display: none;
-}
-
-.top_mnu li {
-	display: block;
-	text-align: center;
-}
-
-.top_mnu li a {
-	font-size: 24px;
-	font-family: "BasisGrotesquePro-Regular";
-	color: #fff;
-}
-
-.ovh {
-	overflow: hidden;
-}
-
-
-
-
-
-
-
 /**
  * 0.0 Icons
  * =========================================== */
@@ -3386,6 +3113,15 @@ Fade-move animation for second dialog
 /**
  * 0.0 Modals
  * =========================================== */
+.popup-dialog {
+	background: #202020;
+	max-width: 800px;
+	margin: 40px auto;
+	position: relative;
+}
+.popup-dialog .container {
+	padding: 0;
+}
 .popup-dialog .container-fluid {
 	padding: 0;
 	display: table;
