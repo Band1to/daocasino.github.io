@@ -57,6 +57,22 @@
 	 * Fade in body after load
 	 */
 	$('body').css('visibility','visible');
+	
+	/**
+	 * Financing Progress
+	 */
+	function numberWithCommas(x) {
+		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+	}
+	var dataEth = $('.financing-progress-line').data('eth');
+	var currentDol = Math.round(dataEth * 300);
+	var currentDolStart = currentDol - 5000000;
+	var prc = Math.round(currentDolStart / 20000000 * 100);
+	var prcMarket = prc + '%';
+	$('.financing-progress-bar').css({'width': prcMarket , 'height': prcMarket });
+	$('.total-dolar').text(numberWithCommas(currentDol));
+	$('.total-eth').text(numberWithCommas(dataEth));
+	
 
 	/**
 	 * Magnific Popup
@@ -178,13 +194,15 @@
 		format: 'DHMS',
 		padZeroes: true,
 	});
-	var austDayToken = new Date();
-	austDayToken = new Date( Date.UTC( 2017, 05, 29, 13, 0) );
+	var austDay2 = new Date();
+	austDay2 = new Date( Date.UTC( 2017, 06, 2, 13, 0) );
 	$('.countdown-compact').countdown({
-		since: austDayToken,
+		until: austDay2,
 		format: 'DHMS',
 		padZeroes: true,
 	});
+	var austDayToken = new Date();
+	austDayToken = new Date( Date.UTC( 2017, 05, 28, 13, 0) );
 	$('.informer-day').countdown({
 		since: austDayToken,
 		format: 'D',
@@ -199,7 +217,6 @@
 		var thisUrl = $(this).data('video');
 		var youtubeUrl = '<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/' + thisUrl + '?autoplay=1&loop=0&showinfo=0&theme=light&color=red&controls=1&modestbranding=0&start=0&fs=1&iv_load_policy=3&wmode=transparent&rel=0" allowfullscreen></iframe>';
 		$(this).parent('.embed-responsive').html(youtubeUrl);
-	
 	});
 
 	/**
