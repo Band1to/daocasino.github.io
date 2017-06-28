@@ -64,6 +64,7 @@
 	function numberWithCommas(x) {
 		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 	}
+
 	if($('.financing-progress-line').length > 0 ){
 		var dataEth = $('.financing-progress-line').data('eth');
 		var currentDol = Math.round(dataEth * 300);
@@ -74,6 +75,7 @@
 		$('.total-dolar').text(numberWithCommas(currentDol));
 		$('.total-eth').text(numberWithCommas(dataEth));
 	}
+
 	
 
 	/**
