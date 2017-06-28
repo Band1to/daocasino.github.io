@@ -1861,12 +1861,18 @@ section:not(.block-dark) + section:not(.block-dark) {
 		margin-right: auto;
 	}
 	*/
+	.advisers .container .row > [class*="col-"] {
+		max-width: 350px;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 @media (max-width: 480px) {
 	.advisers {
 		padding: 40px 0;
 	}
 }
+
 
 /**
  * 6.9 Block FAQ
@@ -3572,4 +3578,3 @@ Fade-move animation for second dialog
 		transform: translate3d(0,-4px,0);
 	}
 }
-
