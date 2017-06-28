@@ -217,7 +217,6 @@
 		var thisUrl = $(this).data('video');
 		var youtubeUrl = '<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/' + thisUrl + '?autoplay=1&loop=0&showinfo=0&theme=light&color=red&controls=1&modestbranding=0&start=0&fs=1&iv_load_policy=3&wmode=transparent&rel=0" allowfullscreen></iframe>';
 		$(this).parent('.embed-responsive').html(youtubeUrl);
-	
 	});
 
 	/**
