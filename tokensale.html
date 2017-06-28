@@ -13,16 +13,8 @@
 	<link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-touch-icon-72x72.png" />
 	<link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-touch-icon-76x76.png" />
 	<link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-touch-icon-114x114.png" />
-	<!-- Styles -->
-
-	<link rel="stylesheet" href="libs/magnific-popup/magnific-popup.css?v=2" type="text/css"/>
-
-	<link rel="stylesheet" href="css/normalize.css?v=1.0" type="text/css">
-	<link rel="stylesheet" href="css/grid.css?v=1.0" type="text/css">
-	<link rel="stylesheet" href="css/main-new.css?v=1.0" type="text/css">
-
 </head>
-<body class="en_index before-load">
+<body class="en_index" style="visibility: hidden;">
 
 	<!-- Navabar -->
 	<nav class="navbar">
@@ -31,11 +23,11 @@
 				<img src="images/logo.svg" alt="Dao Casino Logo">
 				<img src="images/dao-casino.svg" alt="Dao Casino Brand">
 			</a>
+			<!--
 			<span class="btn-menu">
 				<span></span>
 			</span>
 			<div class="navbar-right">
-				<!--
 				<ul class="navbar-menu">
 					<!- -
 					<li class="active">
@@ -69,8 +61,8 @@
 							</li>
 						</ul>
 					</li><!- - .language-switcher - ->
-				</ul><!- - .navbar-menu -->
-			</div><!-- .navbar-right -->
+				</ul><!- - .navbar-menu - ->
+			</div><!- - .navbar-right -->
 		</div><!-- .container-fluid -->
 	</nav>
 	<!-- End Navbar -->
@@ -86,7 +78,14 @@
 				<div class="col-md-6">
 					<div class="informer">
 						<div class="informer-left">
-							<span class="informer-day">Day 1</span>
+							<span class="informer-day">
+								<span class="countdown-row">
+									<span class="countdown-section">
+										<span class="countdown-amount">0</span>
+										<span class="countdown-period">Day</span>
+									</span>
+								</span>	
+							</span>
 							<span class="informer-exchange">1 ETH = 2000 BET</span>
 							<span class="informer-label">DAO.Casino tokens</span>
 						</div>
@@ -108,7 +107,7 @@
 							<span class="informer-label">DAO.Casino tokens</span>
 						</div>
 					</div><!-- .informer -->
-					<a href="#" class="btn btn-primary">Get contract address</a>
+					<a href="#modal-get-contract" class="btn btn-primary">Get contract address</a>
 				</div><!-- .col-xx-6 -->
 				<div class="financing">
 					<span class="financing-label">Total Value</span>
@@ -118,9 +117,9 @@
 							<div class="financing-progress-bar" style="width: 60%; height: 60%"></div>
 						</div>
 						<div class="financing-step"></div>
-						<div class="financing-step active">5,000,000 USD<br> 1,600 ETH</div>
-						<div class="financing-step active">10,000,000 USD<br> 20,600 ETH</div>
-						<div class="financing-step">15,000,000 USD<br> 41,600 ETH</div>
+						<div class="financing-step active">5,000,000 USD<br> 22,000 ETH</div>
+						<div class="financing-step active">15,000,000 USD<br> 67,000 ETH</div>
+						<div class="financing-step">25,000,000 USD<br> 112,000 ETH</div>
 					</div><!-- .financing-progress -->
 				</div><!-- .financing -->
 			</div><!-- .container -->
@@ -150,6 +149,68 @@
 		</div><!-- .container -->
 	</section>
 	<!-- End Charts -->
+	
+	<!-- Block FAQ -->
+	<section id="block-faq" class="block-faq">
+		<div class="container">
+			<h2 class="block-title">Token Sale FAQ</h2>
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="faq-item open">
+						<h3>When is the crowdfunding campaign starts? </h3>
+						<div class="faq-content">
+							<p>June 29th, 2017 at 1:00 pm GMT</p>
+						</div>
+					</div>
+					<div class="faq-item">
+						<h3>How to participate?</h3>
+						<div class="faq-content">
+							<p>Tokens will be distributed to crowdfunding campaign backers, use any Ethereum client of choice (Geth, Parity, Mist) or Myetherwallet to send ether to a crowdfunding contract address that will be announced on the day campaign starts. Make sure you keep your private keys for the address you used to send ether to the contract safe and secure, this will be the address that also holds your BET token balance. Please do not send ether to DAO.Casino crowdfunding contract from wallets hosted by exchanges, make sure you always have your private key.</p>
+						</div>
+					</div>
+					<div class="faq-item">
+						<h3>What is the maximum cap?</h3>
+						<div class="faq-content">
+							<p>The cap is 25.000.000 USD.</p>
+						</div>
+					</div>
+					<div class="faq-item">
+						<h3>Would BET be listed on exchanges, if yes which ones?</h3>
+						<div class="faq-content">
+							<p>BET is a functional token that is intended to circulate within DAO.Casino reward system and to be used as an ingame currency in the games integrated with the system. Whether BET will be listed on exchanges depends on exchanges themselves. Most token exchanges have a token request form and you can ask whether your token exchange platform of choice is planning to list a particular token. </p>
+						</div>
+					</div>
+				</div><!-- .col-xx-n -->
+				<div class="col-sm-6">
+					<div class="faq-item">
+						<h3>Can US citizens participate in the Token Sale?</h3>
+						<div class="faq-content">
+							<p>The sale is not open to US citizens.  Crowdsale participants must digitally sign a statement that they are not a US citizen. Our token BET will be tradeable after the sale. Interested US participants could buy them on the secondary market.</p>
+						</div>
+					</div>
+					<div class="faq-item">
+						<h3>Do token holders get dividends?</h3>
+						<div class="faq-content">
+							<p>No. DAO.Casino is meant to be a dynamic system. Giving people tokens or money for sitting on their tokens would create counter incentives. Token holders can get more tokens if their use their existing tokens to become RNG providers or crowdfund a bankroll of the game of their choice.</p>
+						</div>
+					</div>
+					<div class="faq-item">
+						<h3>Can I send my DAO.Casino tokens back & get me Ether back?</h3>
+						<div class="faq-content">
+							<p>No, but there will be independent token exchange contracts that you can use for swapping tokens to other tokens. </p>
+						</div>
+					</div>
+					<div class="faq-item">
+						<h3>What can I do with the DAO.Casino tokens? What are they good for?</h3>
+						<div class="faq-content">
+							<p>Tokens are used as in game currency and to perform other functions in the system - such as allow people to become RNG providers. For the full description of how the token works, it’s functions, solidity contract and specs see token section in the WP.</p>
+						</div>
+					</div>
+				</div><!-- .col-xx-n -->
+			</div><!-- .row -->
+		</div><!-- .container -->
+	</section>
+	<!-- End Block FAQ -->
 
 	<!-- Prohibited -->
 	<section id="prohibited" class="prohibited">
@@ -224,6 +285,18 @@
 						<p>How to contribute<br> via MyEtherWallet</p>
 					</div>
 				</div>
+				<div class="col-md-6">
+					<div class="pdf-item">
+						<a href="#" class="pdf-btn" target="_blank"></a>
+						<p>How to contribute<br> via Mist (Ethereum Wallet)</p>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="pdf-item">
+						<a href="#" class="pdf-btn" target="_blank"></a>
+						<p>How to contribute<br> via Parity</p>
+					</div>
+				</div>
 			</div><!-- .row -->
 		</div><!-- .container -->
 	</section>
@@ -232,7 +305,7 @@
 	<!-- The Future -->
 	<section id="the-future" class="the-future">
 		<div class="container">
-			<h2 class="the-future-title">"The future of betting<br> now belongs on the blockchain."</h2>
+			<h2 class="the-future-title">Explore our technology</h2>
 			<div class="the-future-action">
 				<a href="https://platform.dao.casino/" target="_blank" class="btn btn-primary">Prototype</a>
 				<a href="https://github.com/DaoCasino/Whitepaper/blob/master/DAO.Casino%20WP.md" target="_blank" class="btn btn-primary">White Paper</a>
@@ -530,68 +603,6 @@
 	</section>
 	<!-- End Advisers -->
 
-	<!-- Block FAQ -->
-	<section id="block-faq" class="block-faq">
-		<div class="container">
-			<h2 class="block-title">Token Sale FAQ</h2>
-			<div class="row">
-				<div class="col-sm-6">
-					<div class="faq-item open">
-						<h3>When is the crowdfunding campaign starts? </h3>
-						<div class="faq-content">
-							<p>June 29th, 2017 at 1:00 pm GMT</p>
-						</div>
-					</div>
-					<div class="faq-item">
-						<h3>How to participate?</h3>
-						<div class="faq-content">
-							<p>Tokens will be distributed to crowdfunding campaign backers, use any Ethereum client of choice (Geth, Parity, Mist) or Myetherwallet to send ether to a crowdfunding contract address that will be announced on the day campaign starts. Make sure you keep your private keys for the address you used to send ether to the contract safe and secure, this will be the address that also holds your BET token balance. Please do not send ether to DAO.Casino crowdfunding contract from wallets hosted by exchanges, make sure you always have your private key.</p>
-						</div>
-					</div>
-					<div class="faq-item">
-						<h3>What is the maximum cap?</h3>
-						<div class="faq-content">
-							<p>The cap is 25.000.000 USD.</p>
-						</div>
-					</div>
-					<div class="faq-item">
-						<h3>Would BET be listed on exchanges, if yes which ones?</h3>
-						<div class="faq-content">
-							<p>BET is a functional token that is intended to circulate within DAO.Casino reward system and to be used as an ingame currency in the games integrated with the system. Whether BET will be listed on exchanges depends on exchanges themselves. Most token exchanges have a token request form and you can ask whether your token exchange platform of choice is planning to list a particular token. </p>
-						</div>
-					</div>
-				</div><!-- .col-xx-n -->
-				<div class="col-sm-6">
-					<div class="faq-item">
-						<h3>Can US citizens participate in the Token Sale?</h3>
-						<div class="faq-content">
-							<p>The sale is not open to US citizens.  Crowdsale participants must digitally sign a statement that they are not a US citizen. Our token BET will be tradeable after the sale. Interested US participants could buy them on the secondary market.</p>
-						</div>
-					</div>
-					<div class="faq-item">
-						<h3>Do token holders get dividends?</h3>
-						<div class="faq-content">
-							<p>No. DAO.Casino is meant to be a dynamic system. Giving people tokens or money for sitting on their tokens would create counter incentives. Token holders can get more tokens if their use their existing tokens to become RNG providers or crowdfund a bankroll of the game of their choice.</p>
-						</div>
-					</div>
-					<div class="faq-item">
-						<h3>Can I send my DAO.Casino tokens back & get me Ether back?</h3>
-						<div class="faq-content">
-							<p>No, but there will be independent token exchange contracts that you can use for swapping tokens to other tokens. </p>
-						</div>
-					</div>
-					<div class="faq-item">
-						<h3>What can I do with the DAO.Casino tokens? What are they good for?</h3>
-						<div class="faq-content">
-							<p>Tokens are used as in game currency and to perform other functions in the system - such as allow people to become RNG providers. For the full description of how the token works, it’s functions, solidity contract and specs see token section in the WP.</p>
-						</div>
-					</div>
-				</div><!-- .col-xx-n -->
-			</div><!-- .row -->
-		</div><!-- .container -->
-	</section>
-	<!-- End Block FAQ -->
-
 	<!-- Footer -->
 	<footer class="footer">
 		<div class="container">
@@ -626,11 +637,11 @@
 	</footer>
 	<!-- End Footer -->
 
-		<!-- Hidden Modals -->
+	<!-- Hidden Modals -->
 	<div class="hidden">
 		<div id="modal-tarutov" class="zoom-anim-dialog popup-dialog">
 			<div class="container-fluid">
-				<div class="modal-profile-photo"><img src="images/team/ilya-profile.png" alt=""></div>
+				<div class="modal-profile-photo" data-image="images/team/ilya-profile.png"></div>
 				<div class="modal-profile-content">
 					<h2>Ilya Tarutov</h2>
 					<span>CEO</span>
@@ -657,7 +668,7 @@
 
 		<div id="modal-lomashuk" class="zoom-anim-dialog popup-dialog">
 			<div class="container-fluid">
-				<div class="modal-profile-photo"><img src="images/team/konstantin-profile.png" alt=""></div>
+				<div class="modal-profile-photo" data-image="images/team/konstantin-profile.png"></div>
 				<div class="modal-profile-content">
 					<h2>Konstantin Lomashuk</h2>
 					<span>Protocol Architect</span>
@@ -688,7 +699,7 @@
 
 		<div id="modal-noxon" class="zoom-anim-dialog popup-dialog">
 			<div class="container-fluid">
-				<div class="modal-profile-photo"><img src="images/team/noxon-profile.png" alt=""></div>
+				<div class="modal-profile-photo" data-image="images/team/noxon-profile.png"></div>
 				<div class="modal-profile-content">
 					<h2>Alexander Noxon</h2>
 					<span>CTO / Platform development</span>
@@ -712,7 +723,7 @@
 
 		<div id="modal-ksenia" class="zoom-anim-dialog popup-dialog">
 			<div class="container-fluid">
-				<div class="modal-profile-photo"><img src="images/team/ksenya-profile.png" alt=""></div>
+				<div class="modal-profile-photo" data-image="images/team/ksenya-profile.png"></div>
 				<div class="modal-profile-content">
 					<h2>Ksenya Bellman</h2>
 					<span>Business Development</span>
@@ -733,7 +744,7 @@
 
 		<div id="modal-alexandra" class="zoom-anim-dialog popup-dialog">
 			<div class="container-fluid">
-				<div class="modal-profile-photo"><img src="images/team/alexandra-profile.png" alt=""></div>
+				<div class="modal-profile-photo" data-image="images/team/alexandra-profile.png"></div>
 				<div class="modal-profile-content">
 					<h2>Alexandra Fetisova</h2>
 					<span>Project Manager</span>
@@ -757,7 +768,7 @@
 
 		<div id="modal-sergey" class="zoom-anim-dialog popup-dialog">
 			<div class="container-fluid">
-				<div class="modal-profile-photo"><img src="images/team/sergey-profile.png" alt=""></div>
+				<div class="modal-profile-photo" data-image="images/team/sergey-profile.png"></div>
 				<div class="modal-profile-content">
 					<h2>Sergey Pomorin</h2>
 					<span>Game Developer</span>
@@ -779,7 +790,7 @@
 
 		<div id="modal-sergey-l" class="zoom-anim-dialog popup-dialog">
 			<div class="container-fluid">
-				<div class="modal-profile-photo"><img src="images/team/sergey-l-profile.png" alt=""></div>
+				<div class="modal-profile-photo" data-image="images/team/sergey-l-profile.png"></div>
 				<div class="modal-profile-content">
 					<h2>Sergey Lonshakov</h2>
 					<span>DAO design and implementation</span>
@@ -803,7 +814,7 @@
 
 		<div id="modal-alexander" class="zoom-anim-dialog popup-dialog">
 			<div class="container-fluid">
-				<div class="modal-profile-photo"><img src="images/team/alexander-profile.png" alt=""></div>
+				<div class="modal-profile-photo" data-image="images/team/alexander-profile.png"></div>
 				<div class="modal-profile-content">
 					<h2>Alexander Krupenkin</h2>
 					<span>Solidity Developer</span>
@@ -822,7 +833,7 @@
 
 		<div id="modal-evgene" class="zoom-anim-dialog popup-dialog">
 			<div class="container-fluid">
-				<div class="modal-profile-photo"><img src="images/team/evgene-profile.png" alt=""></div>
+				<div class="modal-profile-photo" data-image="images/team/evgene-profile.png"></div>
 				<div class="modal-profile-content">
 					<h2>Eugene Radchenko</h2>
 					<span>Program Manager</span>
@@ -840,7 +851,7 @@
 
 		<div id="modal-alexander-d" class="zoom-anim-dialog popup-dialog">
 			<div class="container-fluid">
-				<div class="modal-profile-photo"><img src="images/team/alexander-d-profile.png" alt=""></div>
+				<div class="modal-profile-photo" data-image="images/team/alexander-d-profile.png"></div>
 				<div class="modal-profile-content">
 					<h2>Alexander Davydov</h2>
 					<span>Solidity Developer</span>
@@ -861,7 +872,7 @@
 
 		<div id="modal-alex" class="zoom-anim-dialog popup-dialog">
 			<div class="container-fluid">
-				<div class="modal-profile-photo"><img src="images/team/alex-profile.png" alt=""></div>
+				<div class="modal-profile-photo" data-image="images/team/alex-profile.png"></div>
 				<div class="modal-profile-content">
 					<h2>Alex Kirillov</h2>
 					<span>CFO</span>
@@ -885,7 +896,7 @@
 
 		<div id="modal-akbar" class="zoom-anim-dialog popup-dialog">
 			<div class="container-fluid">
-				<div class="modal-profile-photo"><img src="images/team/akbar-profile.png" alt=""></div>
+				<div class="modal-profile-photo" data-image="images/team/akbar-profile.png"></div>
 				<div class="modal-profile-content">
 					<h2>Akbar Murataliev</h2>
 					<span>Marketing Executive</span>
@@ -907,7 +918,7 @@
 
 		<div id="modal-stepanchenko" class="zoom-anim-dialog popup-dialog">
 			<div class="container-fluid">
-				<div class="modal-profile-photo"><img src="images/team/stepanchenko-profile.png" alt=""></div>
+				<div class="modal-profile-photo" data-image="images/team/stepanchenko-profile.png"></div>
 				<div class="modal-profile-content">
 					<h2>Stepanchenko Alexander</h2>
 					<span>Full Stack Developer</span>
@@ -938,7 +949,7 @@
 
 		<div id="modal-eric" class="zoom-anim-dialog popup-dialog">
 			<div class="container-fluid">
-				<div class="modal-profile-photo"><img src="images/team/eric-profile.png" alt=""></div>
+				<div class="modal-profile-photo" data-image="images/team/eric-profile.png"></div>
 				<div class="modal-profile-content">
 					<h2>Eric Benz</h2>
 					<span>Adviser</span>
@@ -952,7 +963,7 @@
 
 		<div id="modal-theo" class="zoom-anim-dialog popup-dialog">
 			<div class="container-fluid">
-				<div class="modal-profile-photo"><img src="images/team/theo-profile.png" alt=""></div>
+				<div class="modal-profile-photo" data-image="images/team/theo-profile.png"></div>
 				<div class="modal-profile-content">
 					<h2>Theo Goodman</h2>
 					<span>Community Manager (Germany)</span>
@@ -973,7 +984,7 @@
 
 		<div id="modal-bruce" class="zoom-anim-dialog popup-dialog">
 			<div class="container-fluid">
-				<div class="modal-profile-photo"><img src="images/team/bruce-profile.png" alt=""></div>
+				<div class="modal-profile-photo" data-image="images/team/bruce-profile.png"></div>
 				<div class="modal-profile-content">
 					<h2>Bruce Elliott</h2>
 					<span>Adviser</span>
@@ -987,7 +998,7 @@
 		<!-- Thanks -->
 		<div id="modal-thanks" class="zoom-anim-dialog popup-dialog">
 			<div class="container-fluid">
-				<div class="modal-profile-photo"><img src="images/team/alexandra-profile.png" alt=""></div>
+				<div class="modal-profile-photo" data-image="images/team/alexandra-profile.png"></div>
 				<div class="modal-profile-content">
 					<h2>Thank you!</h2>
 					<p>
@@ -1020,17 +1031,81 @@
 			</div>
 		</div>
 		<!-- End Thanks -->
+		
+		<!-- Modal Get Contract -->
+		<div id="modal-get-contract" class="zoom-anim-dialog popup-dialog">
+			<header class="modal-header">
+				<h4>Read and confirm<br> all agreements to proceed</h4>
+			</header>
+			<div class="modal-body">
+				<div class="agreements">
+					<div class="agreement-item">
+						<label class="checkbox">
+							<input type="checkbox">
+							<span></span>
+						</label>
+						<p>Check here to confirm that you are not a U.S. citizen, resident or entity (a “U.S. Person”) nor are you purchasing or signing on behalf of a U.S. Person</p>
+					</div>
+					<div class="agreement-item">
+						<label class="checkbox">
+							<input type="checkbox">
+							<span></span>
+						</label>
+						<p>Check here to confirm that you have read, understand and agree to the DAO.Casino <a href="#" target="_blank">Terms of the Token Sale</a></p>
+					</div>
+					<div class="agreement-item">
+						<label class="checkbox">
+							<input type="checkbox">
+							<span></span>
+						</label>
+						<p>Check here to confirm that you have read, understand and agree to the DAO.Casino <a href="#" target="_blank">Terms and Conditions</a></p>
+					</div>
+					<div class="agreement-item">
+						<label class="checkbox">
+							<input type="checkbox">
+							<span></span>
+						</label>
+						<p>Check here to confirm that you have read and understand the DAO.Casino <a href="#" target="_blank">White Paper</a></p>
+					</div>
+				</div><!-- .agreements -->
+			</div>
+			<footer class="modal-footer">
+				<a href="#continue" class="btn btn-primary">Continue</a>
+			</footer>
+		</div>
+		<!-- End Modal Get Contract -->
+		
+		<!-- Modal Get Contract -->
+		<div id="modal-contract-address" class="zoom-anim-dialog popup-dialog">
+			<header class="modal-header">
+				<h4>Send any amount of Ether<br> to this contract address</h4>
+			</header>
+			<div class="modal-body">
+				<div class="contract-address">000000000000000000000000000000000</div>
+			</div>
+			<footer class="modal-footer">
+				<a href="#copy-address" class="btn btn-primary" data-clipboard-target=".contract-address">Copy Contract Address</a>
+			</footer>
+		</div>
+		<!-- End Modal Get Contract -->
 
 	</div>
 	<!-- End Modals -->
+	
+	<!-- Styles -->
+	<link rel="stylesheet" href="css/normalize.css?v=1.0" type="text/css">
+	<link rel="stylesheet" href="css/grid.css?v=1.0" type="text/css">
+	<link rel="stylesheet" href="css/magnific-popup.css?v=2" type="text/css">
+	<link rel="stylesheet" href="css/main-new.css?v=1.0" type="text/css">
 
+	<!-- Scripts -->
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery.plugin.min.js"></script>
 	<script src="js/jquery.countdown.min.js"></script>
 	<script src="js/chart.bundle.min.js"></script>
-	<script src="libs/magnific-popup/jquery.magnific-popup.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/clipboard.min.js"></script>
 	<script src="js/scripts.js?v=1"></script>
-	<script src="js/mail.js?v=1"></script>
 
 </body>
 </html>
