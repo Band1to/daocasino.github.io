@@ -210,38 +210,38 @@
 		<div class="container">
 			<h2 class="block-title">Video Tutorials</h2>
 			<div class="row">
-				<div class="col-md-6">
+				<!-- <div class="col-md-6">
 					<div class="video-item">
 						<a href="#" class="video-btn" target="_blank"></a>
 						<p>How to contribute<br> via MetaMask
 							<time>08:55</time>
 						</p>
 					</div>
-				</div>
+				</div> -->
 				<div class="col-md-6">
 					<div class="video-item">
-						<a href="#" class="video-btn" target="_blank"></a>
+						<a href="https://www.youtube.com/watch?v=Y21Bc4DwHz8" class="video-btn" rel="noopener" target="_blank"></a>
 						<p>How to contribute<br> via MyEtherWallet
-							<time>08:55</time>
+							<time>02:46</time>
 						</p>
 					</div>
 				</div>
 				<div class="col-md-6">
 					<div class="video-item">
-						<a href="#" class="video-btn" target="_blank"></a>
+						<a href="https://www.youtube.com/watch?v=k4hPatINTdE" class="video-btn" rel="noopener" target="_blank"></a>
 						<p>How to contribute<br> via Mist (Ethereum Wallet)
-							<time>08:55</time>
+							<time>02:29</time>
 						</p>
 					</div>
 				</div>
-				<div class="col-md-6">
+				<!-- <div class="col-md-6">
 					<div class="video-item">
 						<a href="#" class="video-btn" target="_blank"></a>
 						<p>How to contribute<br> via Parity
 							<time>08:55</time>
 						</p>
 					</div>
-				</div>
+				</div> -->
 			</div><!-- .row -->
 		</div><!-- .container -->
 	</section>
@@ -254,25 +254,25 @@
 			<div class="row">
 				<div class="col-md-6">
 					<div class="pdf-item">
-						<a href="#" class="pdf-btn" target="_blank"></a>
+						<a href="tutors/Metamask.pdf" class="pdf-btn" target="_blank"></a>
 						<p>How to contribute<br> via MetaMask</p>
 					</div>
 				</div>
 				<div class="col-md-6">
 					<div class="pdf-item">
-						<a href="#" class="pdf-btn" target="_blank"></a>
+						<a href="tutors/Myetherwallet.pdf" class="pdf-btn" target="_blank"></a>
 						<p>How to contribute<br> via MyEtherWallet</p>
 					</div>
 				</div>
 				<div class="col-md-6">
 					<div class="pdf-item">
-						<a href="#" class="pdf-btn" target="_blank"></a>
+						<a href="tutors/Mist.pdf" class="pdf-btn" target="_blank"></a>
 						<p>How to contribute<br> via Mist (Ethereum Wallet)</p>
 					</div>
 				</div>
 				<div class="col-md-6">
 					<div class="pdf-item">
-						<a href="#" class="pdf-btn" target="_blank"></a>
+						<a href="tutors/Parity.pdf" class="pdf-btn" target="_blank"></a>
 						<p>How to contribute<br> via Parity</p>
 					</div>
 				</div>
@@ -1384,27 +1384,39 @@ function ICOProgress(){
 	/**
 	 * CountDown
 	 */
-	var austDay = new Date();
-	austDay = new Date(Date.UTC(2017, 05, 29, 13, 0));
-	$('.countdown-full').countdown({
-		until: austDay,
-		format: 'DHMS',
-		padZeroes: true,
-	});
-	var austDay2 = new Date();
-	austDay2 = new Date( Date.UTC( 2017, 06, 2, 13, 0) );
-	$('.countdown-compact').countdown({
-		until: austDay2,
-		format: 'DHMS',
-		padZeroes: true,
-	});
-	var austDayToken = new Date();
-	austDayToken = new Date( Date.UTC( 2017, 05, 28, 13, 0) );
-	$('.informer-day').countdown({
-		since: austDayToken,
-		format: 'D',
-		padZeroes: false,
-	});
+	function startTimer(diff){
+		var austDay = new Date((Date.UTC(2017, 05, 29, 13, 0)-diff));
+		$('.countdown-full').countdown({
+			until: austDay,
+			format: 'DHMS',
+			padZeroes: true,
+		});
+
+		var austDay2 = new Date( Date.UTC( 2017, 06, 0, 13, 0)-diff );
+		$('.countdown-compact').countdown({
+			until: austDay2,
+			format: 'DHMS',
+			padZeroes: true,
+		});
+		// var austDayToken = new Date( Date.UTC( 2017, 05, 28, 13, 0)-diff );
+		var austDayToken = new Date( Date.UTC( 2017, 05, 29, 13, 0)-diff );
+		$('.informer-day').countdown({
+			since: austDayToken,
+			format: 'D',
+			padZeroes: false,
+		});
+	}
+	
+	startTimer(0);
+
+	$.getJSON('https://platform.dao.casino/api/proxy.php?a=time', function(r){
+		var diff = 0;
+		if (r && r.time && !isNaN(r.time*1)) {
+			diff = (r.time*1000) - (new Date().getTime())
+		}
+		startTimer(diff)
+	})
+	
 
 	/**
 	 * Video Ajax
