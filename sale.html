@@ -97,7 +97,7 @@
 							<div class="financing-progress-bar" style="width: 0; height: 0"></div>
 						</div>
 						<div class="financing-step financing-step-one active">5,000,000 USD<br> 16666,67 ETH</div>
-						<div class="financing-step financing-step-two active">15,000,000 USD<br> 50000 ETH</div>
+						<div class="financing-step financing-step-two">15,000,000 USD<br> 50000 ETH</div>
 						<div class="financing-step financing-step-three">25,000,000 USD<br> 83333,33 ETH</div>
 					</div><!-- .financing-progress -->
 				</div><!-- .financing -->
@@ -1426,8 +1426,8 @@ function ICOProgress(){
 			format: 'DHMS',
 			padZeroes: true,
 		});
-		// var austDayToken = new Date( Date.UTC( 2017, 05, 28, 13, 0)-diff );
-		var austDayToken = new Date( Date.UTC( 2017, 05, 29, 13, 0)-diff );
+		var austDayToken = new Date( Date.UTC( 2017, 05, 28, 13, 0)-diff );
+		// var austDayToken = new Date( Date.UTC( 2017, 05, 29, 13, 0)-diff );
 		$('.informer-day').countdown({
 			since: austDayToken,
 			format: 'D',
