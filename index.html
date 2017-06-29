@@ -1259,7 +1259,7 @@ function startTimer(diff){
 	var start_day = 29 - move_days;
 
 	var curday  = new Date().getTime() - new Date( Date.UTC( 2017, 05, (start_day-1), 13, 0)-diff ).getTime();
-		curday  = Math.round(curday/24/60/60/1000);
+		curday  = Math.floor(curday/24/60/60/1000);
 
 	var nextday = 2;
 
@@ -1274,9 +1274,10 @@ function startTimer(diff){
 		if (curday >= d.start && curday <= d.end) {
 			price      = d.price
 			
+			nextday    = d.end
+			
 			if (next_d) {
 				next_price = next_d.price
-				nextday    = next_d.start 
 			}
 		}
 	}
@@ -1286,12 +1287,16 @@ function startTimer(diff){
 	$('.informer-left  .informer-exchange .current-bet').text(price)
 	$('.informer-right .informer-exchange .before-bet').text(next_price)
 
-	var austDay2 = new Date( -(move_days*24*60*60*1000)+Date.UTC( 2017, 06, nextday-2, 13, 0)-diff );
-	$('.countdown-compact').countdown({
-		until: austDay2,
-		format: 'DHMS',
-		padZeroes: true,
-	});
+	if (curday < 28) {
+		var austDay2 = new Date( -(move_days*24*60*60*1000)+Date.UTC( 2017, 06, nextday-2, 13, 0)-diff );
+		$('.countdown-compact').countdown({
+			until: austDay2,
+			format: 'DHMS',
+			padZeroes: true,
+		});
+	} else {
+		$('.informer-right').hide()
+	}
 
 	var austDay = new Date((Date.UTC(2017, 05, start_day, 13, 0)-diff));
 	$('.countdown-full').countdown({
