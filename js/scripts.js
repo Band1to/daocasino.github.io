@@ -1,4 +1,45 @@
+/**
+ * Financing Progress
+ */
+function ICOProgress(){
+	var contract    = '0x829bd824b016326a401d083b33d092293333a830';
+	var presale     = 4000;
+	var dolRate     = 300;
+	var needDolSumm = 25000000;
+	
+	if(!$('.financing-progress-line').length){
+		return
+	}
+
+	function numberWithCommas(x) {
+		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+	}
+
+	var jsonUrl = 'https://api.etherscan.io/api?module=account&action=balance&address='+contract+'&tag=latest&apikey=YourApiKeyToken';
+	$.getJSON(jsonUrl, function(data) {
+		
+		var dataEth    = Math.round(data.result / 1000000000000000000);
+		var currentDol = (presale + dataEth) * dolRate;
+		
+		var prc        = Math.round(currentDol / needDolSumm * 100);
+		var prcMarket  = prc + '%';
+
+		$('.financing-progress-bar').css({'width': prcMarket , 'height': prcMarket });
+		$('.total-dolar').text(numberWithCommas(currentDol));
+		$('.total-eth').text(numberWithCommas(dataEth));
+
+		setTimeout(function(){
+			ICOProgress()
+		}, 7777);
+
+	});
+}
+
+
 ( function($) {
+
+	ICOProgress();
+
 
 	/**
 	 * Is Mobile
@@ -58,26 +99,6 @@
 	 */
 	$('body').css('visibility','visible');
 	
-	/**
-	 * Financing Progress
-	 */
-	function numberWithCommas(x) {
-		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-	}
-	if($('.financing-progress-line').length > 0 ){
-		var dataEth;
-		var jsonUrl = 'https://api.etherscan.io/api?module=account&action=balance&address=0x829bd824b016326a401d083b33d092293333a830&tag=latest&apikey=YourApiKeyToken';
-		$.getJSON(jsonUrl, function(data) {
-			dataEth = Math.round(data.result / 1000000000000000000);
-			var currentDol = dataEth * 300;
-			var currentDolStart = currentDol - 5000000;
-			var prc = Math.round(currentDolStart / 20000000 * 100);
-			var prcMarket = prc + '%';
-			$('.financing-progress-bar').css({'width': prcMarket , 'height': prcMarket });
-			$('.total-dolar').text(numberWithCommas(currentDol));
-			$('.total-eth').text(numberWithCommas(dataEth));
-		});
-	}
 
 	/**
 	 * Magnific Popup

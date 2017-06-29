@@ -354,14 +354,13 @@ p {
 	width: 66.66666667%;
 	height: 6px;
 	background-color: #313131;
-	-webkit-transition: all 1000 ease-out;
-			transition: all 1000 ease-out;
 }
 .financing-progress-bar {
 	background-color: #ff9900;
 	max-width: 100%;
-	-webkit-transition: all 1000 ease-out;
-			transition: all 1000 ease-out;
+	width:0; height:0;
+	-webkit-transition: all 0.7s ease-out;
+			transition: all 0.7s ease-out;
 }
 .financing-step {
 	width: 33.333332%;
@@ -1768,6 +1767,7 @@ section:not(.block-dark) + section:not(.block-dark) {
 	display: block;
 	width: 140px;
 	height: 140px;
+	overflow:hidden;
 	float: left;
 	-webkit-border-radius: 50%;
 			border-radius: 50%;
