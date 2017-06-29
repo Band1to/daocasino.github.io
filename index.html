@@ -1226,6 +1226,13 @@ function ICOProgress(){
 		$('.total-dolar').text(numberWithCommas(currentDol));
 		$('.total-eth').text(numberWithCommas(dataEth));
 
+		if (currentDol>=15000000) {
+			$('.financing-step-two').addClass('active');
+		}
+		if (currentDol>=25000000) {
+			$('.financing-step-three').addClass('active');
+		}
+
 		setTimeout(function(){
 			ICOProgress()
 		}, 7777);
