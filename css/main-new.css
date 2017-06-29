@@ -381,16 +381,6 @@ p {
 	color: #ee9828;
 }
 
-// .financing-step-one {
-// 	width:20%;
-// }
-// .financing-step-two {
-// 	width:40%;
-// }
-// .financing-step-three {
-// 	width:40%;
-// }
-
 @media (min-width: 992px) {
 	.informer {
 		max-width: 500px;
