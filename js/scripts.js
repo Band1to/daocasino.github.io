@@ -64,19 +64,20 @@
 	function numberWithCommas(x) {
 		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 	}
-
 	if($('.financing-progress-line').length > 0 ){
-		var dataEth = $('.financing-progress-line').data('eth');
-		var currentDol = Math.round(dataEth * 300);
-		var currentDolStart = currentDol - 5000000;
-		var prc = Math.round(currentDolStart / 20000000 * 100);
-		var prcMarket = prc + '%';
-		$('.financing-progress-bar').css({'width': prcMarket , 'height': prcMarket });
-		$('.total-dolar').text(numberWithCommas(currentDol));
-		$('.total-eth').text(numberWithCommas(dataEth));
+		var dataEth;
+		var jsonUrl = 'https://api.etherscan.io/api?module=account&action=balance&address=0x829bd824b016326a401d083b33d092293333a830&tag=latest&apikey=YourApiKeyToken';
+		$.getJSON(jsonUrl, function(data) {
+			dataEth = Math.round(data.result / 1000000000000000000);
+			var currentDol = dataEth * 300;
+			var currentDolStart = currentDol - 5000000;
+			var prc = Math.round(currentDolStart / 20000000 * 100);
+			var prcMarket = prc + '%';
+			$('.financing-progress-bar').css({'width': prcMarket , 'height': prcMarket });
+			$('.total-dolar').text(numberWithCommas(currentDol));
+			$('.total-eth').text(numberWithCommas(dataEth));
+		});
 	}
-
-	
 
 	/**
 	 * Magnific Popup
