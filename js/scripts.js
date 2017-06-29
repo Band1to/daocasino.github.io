@@ -1,9 +1,5 @@
-/**
- * Financing Progress
- */
 function ICOProgress(){
-	var contract    = '0x829bd824b016326a401d083b33d092293333a830';
-	var presale     = 4000;
+	var walletaddr  = '0x01dBB419d66bE0D389faB88064493f1D698DC27a';
 	var dolRate     = 300;
 	var needDolSumm = 25000000;
 	
@@ -15,18 +11,25 @@ function ICOProgress(){
 		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 	}
 
-	var jsonUrl = 'https://api.etherscan.io/api?module=account&action=balance&address='+contract+'&tag=latest&apikey=YourApiKeyToken';
+	var jsonUrl = 'https://api.etherscan.io/api?module=account&action=balance&address='+walletaddr+'&tag=latest&apikey=YourApiKeyToken';
 	$.getJSON(jsonUrl, function(data) {
-		
+
 		var dataEth    = Math.round(data.result / 1000000000000000000);
-		var currentDol = (presale + dataEth) * dolRate;
-		
+		var currentDol = dataEth * dolRate;
+	
 		var prc        = Math.round(currentDol / needDolSumm * 100);
 		var prcMarket  = prc + '%';
 
 		$('.financing-progress-bar').css({'width': prcMarket , 'height': prcMarket });
 		$('.total-dolar').text(numberWithCommas(currentDol));
 		$('.total-eth').text(numberWithCommas(dataEth));
+
+		if (currentDol>=15000000) {
+			$('.financing-step-two').addClass('active');
+		}
+		if (currentDol>=25000000) {
+			$('.financing-step-three').addClass('active');
+		}
 
 		setTimeout(function(){
 			ICOProgress()
@@ -36,9 +39,85 @@ function ICOProgress(){
 }
 
 
+/**
+ * CountDown
+ */
+
+var DaysPrices = [
+	{ start:0  , end:2  ,  price:2000},
+	{ start:2  , end:15 ,  price:1800},
+	{ start:16 , end:19 ,  price:1700},
+	{ start:19 , end:22 ,  price:1600},
+	{ start:22 , end:25 ,  price:1500},
+	{ start:25 , end:28 ,  price:1400},
+];
+
+function startTimer(diff){
+	var move_days = 0;
+
+	var start_day = 29 - move_days;
+
+	var curday  = new Date().getTime() - new Date( Date.UTC( 2017, 05, (start_day-1), 13, 0)-diff ).getTime();
+		curday  = Math.round(curday/24/60/60/1000);
+
+	var nextday = 2;
+
+	var price      = DaysPrices[0].price;
+	var next_price = DaysPrices[1].price;
+
+	for(let k in DaysPrices){
+		var next_k = k*1+1;
+		var d      = DaysPrices[k]
+		var next_d = DaysPrices[next_k]
+
+		if (curday >= d.start && curday <= d.end) {
+			price      = d.price
+			
+			if (next_d) {
+				next_price = next_d.price
+				nextday    = next_d.start 
+			}
+		}
+	}
+
+	$('.informer-day').text('Day ' + curday)
+
+	$('.informer-left  .informer-exchange .current-bet').text(price)
+	$('.informer-right .informer-exchange .before-bet').text(next_price)
+
+	var austDay2 = new Date( -(move_days*24*60*60*1000)+Date.UTC( 2017, 06, nextday-2, 13, 0)-diff );
+	$('.countdown-compact').countdown({
+		until: austDay2,
+		format: 'DHMS',
+		padZeroes: true,
+	});
+
+	var austDay = new Date((Date.UTC(2017, 05, start_day, 13, 0)-diff));
+	$('.countdown-full').countdown({
+		until: austDay,
+		format: 'DHMS',
+		padZeroes: true,
+	});
+
+	
+}
+
+
+
 ( function($) {
 
 	ICOProgress();
+
+	startTimer(0);
+
+	$.getJSON('https://platform.dao.casino/api/proxy.php?a=time', function(r){
+		var diff = 0;
+		if (r && r.time && !isNaN(r.time*1)) {
+			diff = (r.time*1000) - (new Date().getTime())
+		}
+		startTimer(diff)
+	})
+
 
 
 	/**
@@ -174,6 +253,8 @@ function ICOProgress(){
 				});
 			}, 300 );	
 		}
+		
+		ga('send', 'event', 'acceptterms');
 	});
 
 	/**
@@ -210,30 +291,7 @@ function ICOProgress(){
 		e.stopPropagation();
 	});
 
-	/**
-	 * CountDown
-	 */
-	var austDay = new Date();
-	austDay = new Date(Date.UTC(2017, 05, 29, 13, 0));
-	$('.countdown-full').countdown({
-		until: austDay,
-		format: 'DHMS',
-		padZeroes: true,
-	});
-	var austDay2 = new Date();
-	austDay2 = new Date( Date.UTC( 2017, 06, 2, 13, 0) );
-	$('.countdown-compact').countdown({
-		until: austDay2,
-		format: 'DHMS',
-		padZeroes: true,
-	});
-	var austDayToken = new Date();
-	austDayToken = new Date( Date.UTC( 2017, 05, 28, 13, 0) );
-	$('.informer-day').countdown({
-		since: austDayToken,
-		format: 'D',
-		padZeroes: false,
-	});
+	
 
 	/**
 	 * Video Ajax
