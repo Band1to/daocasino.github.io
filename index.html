@@ -1290,8 +1290,9 @@ function startTimer(diff){
 
 	var start_day = 29 - move_days;
 
-	var curday  = new Date().getTime() - new Date( Date.UTC( 2017, 05, (start_day-1), 13, 0)-diff ).getTime();
-		curday  = Math.ceil(curday/24/60/60/1000);
+	var curday  = (new Date().getTime()-diff) - new Date( Date.UTC( 2017, 05, (start_day-1), 13, 0)-diff ).getTime();
+		curday  = Math.round(curday/24/60/60/1000);
+
 
 	var nextday = 2;
 
