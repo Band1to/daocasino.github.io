@@ -126,7 +126,7 @@
 							<span class="informer-label">DAO.Casino tokens</span>
 						</div>
 					</div><!-- .informer -->
-					<a href="#modal-get-contract" onclick="ga('send', 'event', 'showaddress');" class="btn btn-primary">Get contract address</a>
+					<a href="#modal-get-contract" onclick="ga('send', 'event', 'showaddress');yaCounter42783759.reachGoal('showaddress');" class="btn btn-primary">Get contract address</a>
 				</div><!-- .col-xx-6 -->
 				<div class="financing">
 					<span class="financing-label">Total Value</span>
@@ -1179,7 +1179,7 @@
 				</p>
 			</div>
 			<footer class="modal-footer">
-				<a href="#copy-address" onclick="ga('send', 'event', 'copyaddress');" class="btn btn-primary" data-clipboard-target=".contract-address">Copy Contract Address</a>
+				<a href="#copy-address" onclick="ga('send', 'event', 'copyaddress');yaCounter42783759.reachGoal('copyaddress');" class="btn btn-primary" data-clipboard-target=".contract-address">Copy Contract Address</a>
 			</footer>
 		</div>
 		<!-- End Modal Get Contract -->
@@ -1508,6 +1508,7 @@ $(function(){
 		}
 		
 		ga('send', 'event', 'acceptterms');
+		yaCounter42783759.reachGoal ( 'acceptterms');
 	});
 
 	/**
