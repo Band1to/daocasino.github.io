@@ -1270,7 +1270,7 @@ function ICOProgress(){
 		}
 
 		setTimeout(function(){
-			ICOProgress()
+			ICOProgress();
 		}, 7777);
 
 	});
@@ -1283,7 +1283,7 @@ function ICOProgress(){
 
 var DaysPrices = [
 	{ start:0  , end:2  ,  price:2000},
-	{ start:2  , end:15 ,  price:1800},
+	{ start:2  , end:16 ,  price:1800},
 	{ start:16 , end:19 ,  price:1700},
 	{ start:19 , end:22 ,  price:1600},
 	{ start:22 , end:25 ,  price:1500},
@@ -1314,26 +1314,26 @@ function startTimer(diff){
 	var price      = DaysPrices[0].price;
 	var next_price = DaysPrices[1].price;
 
-	for(let k in DaysPrices){
+	for(var k in DaysPrices){
 		var next_k = k*1+1;
-		var d      = DaysPrices[k]
-		var next_d = DaysPrices[next_k]
+		var d      = DaysPrices[k];
+		var next_d = DaysPrices[next_k];
 
 		if (curday >= d.start && curday <= d.end) {
-			price      = d.price
+			price      = d.price;
 			
-			nextday    = d.end
+			nextday    = d.end;
 			
 			if (next_d) {
-				next_price = next_d.price
+				next_price = next_d.price;
 			}
 		}
 	}
 
-	$('.informer-day').text('Day ' + curday)
+	$('.informer-day').text('Day ' + curday);
 
-	$('.informer-left  .informer-exchange .current-bet').text(price)
-	$('.informer-right .informer-exchange .before-bet').text(next_price)
+	$('.informer-left  .informer-exchange .current-bet').text(price);
+	$('.informer-right .informer-exchange .before-bet').text(next_price);
 
 	if (curday < 28) {
 		var austDay2 = new Date( -(move_days*24*60*60*1000)+Date.UTC( 2017, 06, nextday-2, 13, 0)-diff );
@@ -1343,7 +1343,7 @@ function startTimer(diff){
 			padZeroes: true,
 		});
 	} else {
-		$('.informer-right').hide()
+		$('.informer-right').hide();
 	}
 
 	var austDay = new Date((Date.UTC(2017, 05, start_day, 13, 0)-diff));
@@ -1351,14 +1351,12 @@ function startTimer(diff){
 		until: austDay,
 		format: 'DHMS',
 		padZeroes: true,
-	});
-
-	
-}
+	});	
+};
 
 
 
-( function($) {
+$(function(){
 
 	ICOProgress();
 
@@ -1368,9 +1366,9 @@ function startTimer(diff){
 	$.getJSON('https://platform.dao.casino/api/proxy.php?a=time', function(r){
 		var diff = 0;
 		if (r && r.time && !isNaN(r.time*1)) {
-			diff = (r.time*1000) - (new Date().getTime())
+			diff = (r.time*1000) - (new Date().getTime());
 		}
-		startTimer(diff)
+		startTimer(diff);
 	})
 
 
@@ -1453,7 +1451,7 @@ function startTimer(diff){
 		mainClass: 'my-mfp-zoom-in',
 	});
 	
-	$('.team-member').on('mfpOpen', function(e /*, params */) {
+	$('.team-member').on('mfpOpen', function(e) {
 		var magnificPopup = $.magnificPopup.instance;
 		var thisPopupId = magnificPopup.currItem.src;
 		var thisImgSrc = $(thisPopupId).find('.modal-profile-photo').data('image');
@@ -1791,7 +1789,7 @@ function startTimer(diff){
 
 	document.getElementById('pie-chart-indented-legend').innerHTML = myChart.generateLegend();
 
-})(jQuery);
+});
 	</script>
 
 
