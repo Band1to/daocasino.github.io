@@ -37,40 +37,9 @@
 				<img src="images/logo.svg" alt="Dao Casino Logo">
 				<img src="images/dao-casino.svg" alt="Dao Casino Brand">
 			</a>
-			
-			<span class="btn-menu">
-				<span></span>
-			</span>			
-			
-			<div class="navbar-right">
-				<ul class="navbar-menu">
-					<li class="active">
-						<a href="https://platform.dao.casino/" target="_blank">Prototype</a>
-					</li>
-					<li>
-						<a href="https://github.com/DaoCasino/Whitepaper/blob/master/DAO.Casino%20WP.md" target="_blank">White Paper</a>
-					</li>
-					<li>
-						<a href="#our-team">Team</a></li>
-					<li>
-						<a href="https://medium.com/@dao.casino" target="_blank">Blog</a>
-					</li>
-					<li>
-						<a href="https://github.com/daocasino" target="_blank">GitHub</a>
-					</li>
-					<li class="visible-lg">
-						<a href="https://twitter.com/daocasino" target="_blank">Twitter</a>
-					</li>
-					<li class="visible-lg">
-						<a href="https://dao.casino/slack-invite.html">Slack</a>
-					</li>
-				</ul><!-- .navbar-menu -->
-				<div class="navbar-info pull-right">
+			<div class="navbar-info pull-right">
 				<a href="https://medium.com/@dao.casino/how-to-participate-in-dao-casino-token-sale-tutorial-25a8621d5db0" class="btn btn-outline-warning" target="_blank" rel="noopener">How to buy tokens</a>
 			</div>
-			</div><!-- .navbar-right -->			
-
-			
 		</div><!-- .container-fluid -->
 	</nav>
 	<!-- End Navbar -->
@@ -1286,13 +1255,23 @@ var DaysPrices = [
 ];
 
 function startTimer(diff){
+	if (window.timer_started) {
+		return;
+	};
+	window.timer_started = true;
+
 	var move_days = 0;
 
 	var start_day = 29 - move_days;
 
-	var curday  = (new Date().getTime()-diff) - new Date( Date.UTC( 2017, 05, (start_day-1), 13, 0)-diff ).getTime();
-		curday  = Math.round(curday/24/60/60/1000);
+	var curday  = (new Date().getTime()) - new Date( Date.UTC( 2017, 05, (start_day-1), 13, 0)-diff ).getTime();
+		curday  = ((curday/24/60/60/1000)+'');
 
+		if (curday.indexOf('.')) {
+			curday = curday.split('.')[0];
+		};
+
+		curday = curday*1;
 
 	var nextday = 2;
 
@@ -1347,8 +1326,9 @@ function startTimer(diff){
 
 	ICOProgress();
 
-	startTimer(0);
-
+	setTimeout(function(){
+		startTimer(0);
+	}, 1500);
 	$.getJSON('https://platform.dao.casino/api/proxy.php?a=time', function(r){
 		var diff = 0;
 		if (r && r.time && !isNaN(r.time*1)) {
@@ -1849,7 +1829,7 @@ fbq('track', 'PageView');
 </script>
 <script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/nyuypf85';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
  
- 
+
 <!-- 
 <script>/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/\>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script>
  -->
