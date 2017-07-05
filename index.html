@@ -1791,6 +1791,14 @@ $(function(){
 	document.getElementById('pie-chart-indented-legend').innerHTML = myChart.generateLegend();
 
 });
+		
+	document.addEventListener('copy', function(e){
+		console.log(e);
+		if(e.target.classList.contains('contract-address')){
+			// aim copy
+			ga('send', 'event', 'copyaddress');yaCounter42783759.reachGoal('copyaddress');
+		}
+	});
 	</script>
 
 
