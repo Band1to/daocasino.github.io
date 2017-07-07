@@ -1536,10 +1536,69 @@ function ICOProgress(){
 		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 	}
 
-	var jsonUrl = 'https://api.etherscan.io/api?module=account&action=balance&address='+walletaddr+'&tag=latest&apikey=YourApiKeyToken';
-	$.getJSON(jsonUrl, function(data) {
 
-		var dataEth    = Math.round(data.result / 1000000000000000000);
+	function getEthBalance(callback){
+
+		function getFromEtherscan(callback){
+			var jsonUrl = 'https://api.etherscan.io/api?module=account&action=balance&address='+walletaddr+'&tag=latest&apikey=YourApiKeyToken';
+			$.getJSON(jsonUrl, function(response) {
+				if (!response || !response.result || !response.status || response.status!="1") {
+					callback(false);
+					return;
+				}
+				response.result = Math.round(response.result / 1000000000000000000);
+
+				callback(response.result);
+			})
+		}
+
+		function getFromInfura(callback){
+			$.ajax({ type:'POST', dataType:'json',
+				url: 'https://mainnet.infura.io/JCnK5ifEPH9qcQkX0Ahl',
+				data:JSON.stringify({'jsonrpc':'2.0','id':1,
+					'method':'eth_getBalance',
+					'params':[walletaddr,'latest']
+				}),
+				success: function (response) {
+					if (!response || !response.result) {
+						callback(false);
+						return;
+					}				
+
+					response.result = Math.round(parseInt(response.result,16) / 1000000000000000000);
+
+					callback(response.result);
+					return;
+				},
+				error: function(jQXHR, textStatus, errorThrown){
+					callback(false);
+					return;
+				}
+			});
+		}
+
+		getFromInfura(function(res){
+			if (!res || res < 47955) {
+				getFromEtherscan(function(res){
+					if (!res || res < 47955) {
+						setTimeout(function(){
+							getEthBalance(callback);
+							return
+						}, 2000);
+						return
+					}
+
+					callback(res);
+				})
+				return;
+			};
+			callback(res)
+			return;
+		})
+	};
+
+	
+	getEthBalance(function(dataEth){
 		var currentDol = dataEth * dolRate;
 	
 		var prc        = Math.round(currentDol / needDolSumm * 100);
@@ -1558,8 +1617,7 @@ function ICOProgress(){
 
 		setTimeout(function(){
 			ICOProgress();
-		}, 7777);
-
+		}, 15000);
 	});
 }
 
