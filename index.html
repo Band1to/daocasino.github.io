@@ -141,9 +141,15 @@
 						<div class="financing-progress-line" data-eth="16666">
 							<div class="financing-progress-bar" style="width: 0; height: 0"></div>
 						</div>
-						<div class="financing-step financing-step-one active">5,000,000 USD<br> 16666,67 ETH</div>
-						<div class="financing-step financing-step-two">15,000,000 USD<br> 50000 ETH</div>
-						<div class="financing-step financing-step-three">25,000,000 USD<br> 83333,33 ETH</div>
+						<div class="financing-step financing-step-one active">
+							<!-- 5,000,000 USD<br>  -->
+							16666,67 ETH</div>
+						<div class="financing-step financing-step-two">
+							<!-- 15,000,000 USD<br>  -->
+							50000 ETH</div>
+						<div class="financing-step financing-step-three">
+							<!-- 25,000,000 USD<br>  -->
+							83333,33 ETH</div>
 					</div><!-- .financing-progress -->
 				</div><!-- .financing -->
 				
@@ -1528,7 +1534,7 @@
 	<script type="text/javascript">
 function ICOProgress(){
 	var walletaddr  = '0x01dBB419d66bE0D389faB88064493f1D698DC27a';
-	var dolRate     = 300;
+	var ethRate     = 300;
 	var needDolSumm = 25000000;
 	
 
@@ -1536,6 +1542,37 @@ function ICOProgress(){
 		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 	}
 
+
+	function getEthPrice(callback){
+		var default_price = 190
+
+		function getUrl(url, callback){		
+			$.getJSON(url, function(response) {
+				if (!response) { 
+					callback(false);
+					return false;
+				}
+
+				for(var k in response){
+					if(response[k].id && response[k].id == 'ethereum' && response[k].price_usd){
+						callback( response[k].price_usd*1 )
+						return
+					}
+				}
+				callback(false);
+				return false;				
+			});
+		}
+
+		getUrl('https://api.coinmarketcap.com/v1/ticker/?convert=EUR&limit=3', function(res){
+			if (res) {  callback(res); return; }
+			getUrl('https://platform.dao.casino/api/ether_curs.php', function(res){
+				if (res) {  callback(res); return; }
+				callback(default_price);
+			})
+		})
+	}
+	
 
 	function getEthBalance(callback){
 
@@ -1599,13 +1636,12 @@ function ICOProgress(){
 
 	
 	getEthBalance(function(dataEth){
-		var currentDol = dataEth * dolRate;
+		var currentDol = dataEth * ethRate;
 	
 		var prc        = Math.round(currentDol / needDolSumm * 100);
 		var prcMarket  = prc + '%';
 
 		$('.financing-progress-bar').css({'width': prcMarket , 'height': prcMarket });
-		$('.total-dolar').text(numberWithCommas(currentDol));
 		$('.total-eth').text(numberWithCommas(dataEth));
 
 		if (currentDol>=15000000) {
@@ -1617,7 +1653,12 @@ function ICOProgress(){
 
 		setTimeout(function(){
 			ICOProgress();
-		}, 15000);
+		}, 60*1000);
+
+		$('.total-dolar').text(numberWithCommas(dataEth*140));
+		getEthPrice(function(eth_price){
+			$('.total-dolar').text(numberWithCommas(dataEth*eth_price));
+		})
 	});
 }
 
