@@ -40,6 +40,11 @@
 .navbar .navbar-right {
 	min-height: 530px;
 }
+}
+
+.financing-total { opacity: 1; transition: opacity 0.3s ease; }
+.financing-total.invis { opacity: 0;}
+.total-dolar { display: inline-block; min-width: 120px; } 
 </style>
 </head>
 <body class="en_index">
@@ -136,7 +141,7 @@
 				</div><!-- .col-xx-6 -->
 				<div class="financing">
 					<span class="financing-label">Total Value</span>
-					<span class="financing-total"><span class="total-dolar">0</span> USD / <span class="total-eth">0</span> ETH</span>
+					<span class="financing-total invis"><span class="total-dolar">0</span> USD / <span class="total-eth">0</span> ETH</span>
 					<div class="financing-progress">
 						<div class="financing-progress-line" data-eth="16666">
 							<div class="financing-progress-bar" style="width: 0; height: 0"></div>
@@ -1620,18 +1625,18 @@ function ICOProgress(){
 					if (!res || res < 47955) {
 						setTimeout(function(){
 							getEthBalance(callback);
-							return
+							return;
 						}, 2000);
-						return
+						return;
 					}
 
 					callback(res);
 				})
 				return;
 			};
-			callback(res)
+			callback(res);
 			return;
-		})
+		});
 	};
 
 	
@@ -1655,9 +1660,9 @@ function ICOProgress(){
 			ICOProgress();
 		}, 60*1000);
 
-		$('.total-dolar').text(numberWithCommas(dataEth*140));
 		getEthPrice(function(eth_price){
 			$('.total-dolar').text(numberWithCommas(dataEth*eth_price));
+			$('.financing-total').removeClass('invis');
 		})
 	});
 }
