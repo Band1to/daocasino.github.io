@@ -1987,7 +1987,9 @@ section:not(.block-dark) + section:not(.block-dark) {
  * =========================================== */
 .how-it-works {
 	padding: 100px 0;
+	background:#0c0c0c;
 }
+
 .how-it-works-wrapper {
 	background-image: url(../images/br_arrow.png);
 	background-repeat: no-repeat;
@@ -2783,7 +2785,7 @@ section:not(.block-dark) + section:not(.block-dark) {
 
 .informer-form {
 	margin:0; width:100%;
-	min-height:300px;
+	min-height:200px;
 }
 .informer-form .btn-join {
 	max-width:200px;
