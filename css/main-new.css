@@ -1987,7 +1987,9 @@ section:not(.block-dark) + section:not(.block-dark) {
  * =========================================== */
 .how-it-works {
 	padding: 100px 0;
+	background:#0c0c0c;
 }
+
 .how-it-works-wrapper {
 	background-image: url(../images/br_arrow.png);
 	background-repeat: no-repeat;
@@ -2777,11 +2779,43 @@ section:not(.block-dark) + section:not(.block-dark) {
 /**
  * 13.0 Forms
  * =========================================== */
+.informer-form {
+	
+}
+
+.informer-form {
+	margin:0; width:100%;
+	min-height:200px;
+}
+.informer-form .btn-join {
+	max-width:200px;
+	display:inline-block;
+	height:66px;
+	margin-left:10px;
+	border-radius:4px;
+}
+
 .subscribe-form {
 	position: relative;
 	max-width: 500px;
-	margin: 0 auto;
+	min-width:400px;
+	display: inline-block;
+	margin:0;
 }
+
+
+@media (max-width: 767px) {
+	.informer-form {
+		text-align:center;
+	}
+	.informer-form .btn-join {
+		display:block;
+		margin:10px auto;
+	}
+
+}
+
+
 .subscribe-form [type="email"] {
 	font-size: 16px;
 	color: #333;
@@ -2882,6 +2916,9 @@ section:not(.block-dark) + section:not(.block-dark) {
 	opacity: 1;
 }
 @media (max-width: 480px) {
+	.subscribe-form {
+		min-width:100px;
+	}
 	.subscribe-form [type="email"] {
 		border-radius: 6px 6px 0px 0px;
 	}
@@ -2893,6 +2930,8 @@ section:not(.block-dark) + section:not(.block-dark) {
 		top: auto;
 	}
 }
+
+
 
 /**
  * 14.0 Custom
